@@ -5,14 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.vidyaksha.presentation.dashboard.DashboardScreen
-import com.example.vidyaksha.presentation.theme.StudyboardTheme
+import com.example.vidyaksha.presentation.theme.VidyakshaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            StudyboardTheme {
+            VidyakshaTheme {
                 DashboardScreen()
             }
         }
