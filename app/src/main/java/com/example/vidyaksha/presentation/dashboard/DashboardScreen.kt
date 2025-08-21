@@ -36,8 +36,13 @@ import com.example.vidyaksha.presentation.components.CountCard
 import com.example.vidyaksha.presentation.components.SubjectCard
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.model.Task
+import com.example.vidyaksha.presentation.components.AddSubjectDialog
 import com.example.vidyaksha.presentation.components.studySessionList
 import com.example.vidyaksha.presentation.components.tasksList
 
@@ -143,6 +148,16 @@ fun DashboardScreen() {
         )
     )
 
+    var isAddSubjectDialog by rememberSaveable { mutableStateOf(false) }
+
+    AddSubjectDialog(
+        isOpen = isAddSubjectDialog,
+        onDismissRequest = { isAddSubjectDialog = false},
+        onConfirmButtonClick = {
+            isAddSubjectDialog = false
+        }
+    )
+
     Scaffold (
         topBar = { DashboardScreenTopBar() }
     ) {paddingValues ->
@@ -150,7 +165,7 @@ fun DashboardScreen() {
             modifier = Modifier.fillMaxSize().padding(paddingValues)
         ) {
             item{
-                CountCardSelection(
+                CountCardSection(
                     modifier = Modifier.fillMaxWidth().padding(12.dp),
                     subjectCount = 5,
                     studiedHours = "10",
@@ -158,9 +173,12 @@ fun DashboardScreen() {
                 )
             }
             item{
-                SubjectCardSelection(
+                SubjectCardSection(
                     modifier = Modifier.fillMaxWidth(),
-                    subjectList = subjects
+                    subjectList = subjects,
+                    onAddIconClicked = {
+                        isAddSubjectDialog = true
+                    }
                 )
             }
             item {
@@ -205,7 +223,7 @@ private fun DashboardScreenTopBar() {
 }
 
 @Composable
-private fun CountCardSelection(
+private fun CountCardSection(
     modifier: Modifier,
     subjectCount: Int,
     studiedHours: String,
@@ -235,10 +253,11 @@ private fun CountCardSelection(
 }
 
 @Composable
-private fun SubjectCardSelection(
+private fun SubjectCardSection(
     modifier: Modifier,
     subjectList: List<Subject>,
-    emptyListText: String = "You don't have any subjects. \n Click the + button to add new subject."
+    emptyListText: String = "You don't have any subjects. \n Click the + button to add new subject.",
+    onAddIconClicked: () -> Unit
 ){
     Column(modifier = modifier){
         Row(
@@ -251,7 +270,7 @@ private fun SubjectCardSelection(
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(start = 12.dp)
             )
-            IconButton(onClick = {/*TODO*/}) {
+            IconButton(onClick = {onAddIconClicked}) {
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "Add Subject"
