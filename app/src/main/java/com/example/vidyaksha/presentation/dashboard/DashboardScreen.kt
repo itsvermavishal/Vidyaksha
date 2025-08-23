@@ -1,6 +1,7 @@
 package com.example.vidyaksha.presentation.dashboard
 
 import androidx.compose.foundation.Image
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -38,11 +39,13 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.presentation.components.AddSubjectDialog
+import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.studySessionList
 import com.example.vidyaksha.presentation.components.tasksList
 
@@ -110,52 +113,82 @@ fun DashboardScreen() {
         )
     )
 
-    val sessions = listOf(
-        Session(
-            relatedToSubject = "English",
-            date = 0L,
-            duration = 2,
-            sessionSubjectId = 0,
-            sessionId = 0
-        ),
-        Session(
-            relatedToSubject = "English",
-            date = 0L,
-            duration = 2,
-            sessionSubjectId = 0,
-            sessionId = 0
-        ),
-        Session(
-            relatedToSubject = "Physics",
-            date = 0L,
-            duration = 2,
-            sessionSubjectId = 0,
-            sessionId = 0
-        ),
-        Session(
-            relatedToSubject = "Math",
-            date = 0L,
-            duration = 2,
-            sessionSubjectId = 0,
-            sessionId = 0
-        ),
-        Session(
-            relatedToSubject = "Science",
-            date = 0L,
-            duration = 2,
-            sessionSubjectId = 0,
-            sessionId = 0
+    val sessions = remember {
+        mutableStateListOf(
+            Session(
+                relatedToSubject = "English",
+                date = 0L,
+                duration = 2,
+                sessionSubjectId = 0,
+                sessionId = 0
+            ),
+            Session(
+                relatedToSubject = "English",
+                date = 0L,
+                duration = 2,
+                sessionSubjectId = 0,
+                sessionId = 0
+            ),
+            Session(
+                relatedToSubject = "Physics",
+                date = 0L,
+                duration = 2,
+                sessionSubjectId = 0,
+                sessionId = 0
+            ),
+            Session(
+                relatedToSubject = "Math",
+                date = 0L,
+                duration = 2,
+                sessionSubjectId = 0,
+                sessionId = 0
+            ),
+            Session(
+                relatedToSubject = "Science",
+                date = 0L,
+                duration = 2,
+                sessionSubjectId = 0,
+                sessionId = 0
+            )
         )
-    )
+    }
 
-    var isAddSubjectDialog by rememberSaveable { mutableStateOf(false) }
+
+
+    var isAddSubjectDialogOpen by rememberSaveable { mutableStateOf(false) }
+    var isDeleteSessionDialogOpen by rememberSaveable { mutableStateOf(false) }
+
+    var sessionToDelete by remember { mutableStateOf<Session?>(null) }
+
+    var subjectName by remember { mutableStateOf("") }
+    var goalHours by remember { mutableStateOf("") }
+    var selectedColor by remember { mutableStateOf(Subject.subjectCardColors.random()) }
 
     AddSubjectDialog(
-        isOpen = isAddSubjectDialog,
-        onDismissRequest = { isAddSubjectDialog = false},
+        isOpen = isAddSubjectDialogOpen,
+        subjectName = subjectName,
+        goalHours = goalHours,
+        onSubjectNameChange = { subjectName = it},
+        onGoalHoursChange = { goalHours = it},
+        selectedColors = selectedColor,
+        onColorChange = { selectedColor = it},
+        onDismissRequest = { isAddSubjectDialogOpen = false},
         onConfirmButtonClick = {
-            isAddSubjectDialog = false
+            isAddSubjectDialogOpen = false
         }
+    )
+
+    DeleteDialog(
+        isOpen = isDeleteSessionDialogOpen,
+        title = "Delete Session?",
+        bodyText = "Are you sure, you want to delete this session? Your studied hours will be reduced"+
+        " by this session time. This session can not be undo.",
+        onDismissRequest = { isDeleteSessionDialogOpen = false
+                           sessionToDelete = null },
+        onConfirmButtonClick = {
+            sessionToDelete?.let { sessions.remove(it) }
+            isDeleteSessionDialogOpen = false
+        sessionToDelete = null}
     )
 
     Scaffold (
@@ -177,7 +210,7 @@ fun DashboardScreen() {
                     modifier = Modifier.fillMaxWidth(),
                     subjectList = subjects,
                     onAddIconClicked = {
-                        isAddSubjectDialog = true
+                        isAddSubjectDialogOpen = true
                     }
                 )
             }
@@ -203,7 +236,9 @@ fun DashboardScreen() {
                 sectionTitle = "RECENT",
                 emptyListText = "You don't have any recent study session. \n" + "Start a study session to begin recording your progress.",
                 session = sessions,
-                onDeleteIconClick = {}
+                onDeleteIconClick = { session ->
+                    sessionToDelete = session
+                    isDeleteSessionDialogOpen = true}
             )
         }
     }
@@ -270,7 +305,7 @@ private fun SubjectCardSection(
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(start = 12.dp)
             )
-            IconButton(onClick = {onAddIconClicked}) {
+            IconButton(onClick = {onAddIconClicked()}) {
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "Add Subject"
