@@ -48,117 +48,16 @@ import com.example.vidyaksha.presentation.components.AddSubjectDialog
 import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.studySessionList
 import com.example.vidyaksha.presentation.components.tasksList
+import com.example.vidyaksha.sessions
+import com.example.vidyaksha.subjects
+import com.example.vidyaksha.tasks
 
 @Composable
 fun DashboardScreen() {
 
-    val subjects = listOf(
-        Subject(name = "English", goalHours = 10f, colors = Subject.subjectCardColors[0], subjectId = 0),
-        Subject(name = "Physics", goalHours = 10f, colors = Subject.subjectCardColors[1], subjectId = 0),
-        Subject(name = "Maths", goalHours = 10f, colors = Subject.subjectCardColors[2], subjectId = 0),
-        Subject(name = "Geology", goalHours = 10f, colors = Subject.subjectCardColors[3], subjectId = 0),
-        Subject(name = "Fine Arts", goalHours = 10f, colors = Subject.subjectCardColors[4], subjectId = 0),
-    )
-
-    val tasks = listOf(
-        Task(
-            title = "Prepare notes",
-            description = "",
-            dueDate = 0L,
-            priority = 1,
-            relatedToSubject = "",
-            isComplete = true,
-            taskSubjectId = 0,
-            taskId = 1
-        ),
-        Task(
-            title = "Do HomeWork",
-            description = "",
-            dueDate = 0L,
-            priority = 2,
-            relatedToSubject = "",
-            isComplete = true,
-            taskSubjectId = 0,
-            taskId = 1
-        ),
-        Task(
-            title = "Go Coaching",
-            description = "",
-            dueDate = 0L,
-            priority = 0,
-            relatedToSubject = "",
-            isComplete = false,
-            taskSubjectId = 0,
-            taskId = 1
-        ),
-        Task(
-            title = "Assignments",
-            description = "",
-            dueDate = 0L,
-            priority = 2,
-            relatedToSubject = "",
-            isComplete = false,
-            taskSubjectId = 0,
-            taskId = 1
-        ),
-        Task(
-            title = "Write Poems",
-            description = "",
-            dueDate = 0L,
-            priority = 1,
-            relatedToSubject = "",
-            isComplete = true,
-            taskSubjectId = 0,
-            taskId = 1
-        )
-    )
-
-    val sessions = remember {
-        mutableStateListOf(
-            Session(
-                relatedToSubject = "English",
-                date = 0L,
-                duration = 2,
-                sessionSubjectId = 0,
-                sessionId = 0
-            ),
-            Session(
-                relatedToSubject = "English",
-                date = 0L,
-                duration = 2,
-                sessionSubjectId = 0,
-                sessionId = 0
-            ),
-            Session(
-                relatedToSubject = "Physics",
-                date = 0L,
-                duration = 2,
-                sessionSubjectId = 0,
-                sessionId = 0
-            ),
-            Session(
-                relatedToSubject = "Math",
-                date = 0L,
-                duration = 2,
-                sessionSubjectId = 0,
-                sessionId = 0
-            ),
-            Session(
-                relatedToSubject = "Science",
-                date = 0L,
-                duration = 2,
-                sessionSubjectId = 0,
-                sessionId = 0
-            )
-        )
-    }
-
-
-
     var isAddSubjectDialogOpen by rememberSaveable { mutableStateOf(false) }
     var isDeleteSessionDialogOpen by rememberSaveable { mutableStateOf(false) }
 
-    var sessionToDelete by remember { mutableStateOf<Session?>(null) }
 
     var subjectName by remember { mutableStateOf("") }
     var goalHours by remember { mutableStateOf("") }
@@ -183,12 +82,8 @@ fun DashboardScreen() {
         title = "Delete Session?",
         bodyText = "Are you sure, you want to delete this session? Your studied hours will be reduced"+
         " by this session time. This session can not be undo.",
-        onDismissRequest = { isDeleteSessionDialogOpen = false
-                           sessionToDelete = null },
-        onConfirmButtonClick = {
-            sessionToDelete?.let { sessions.remove(it) }
-            isDeleteSessionDialogOpen = false
-        sessionToDelete = null}
+        onDismissRequest = { isDeleteSessionDialogOpen = false },
+        onConfirmButtonClick = {isDeleteSessionDialogOpen = false}
     )
 
     Scaffold (
@@ -236,9 +131,7 @@ fun DashboardScreen() {
                 sectionTitle = "RECENT",
                 emptyListText = "You don't have any recent study session. \n" + "Start a study session to begin recording your progress.",
                 session = sessions,
-                onDeleteIconClick = { session ->
-                    sessionToDelete = session
-                    isDeleteSessionDialogOpen = true}
+                onDeleteIconClick = { isDeleteSessionDialogOpen = true}
             )
         }
     }
@@ -264,26 +157,24 @@ private fun CountCardSection(
     studiedHours: String,
     goalStudyHours: String
 ){
-    Row{
-        Row(modifier = modifier){
-            CountCard(
-                modifier = Modifier.weight(1f),
-                headingText = "Subject Count",
-                count = "$subjectCount"
-            )
-            Spacer(modifier = Modifier.width(10.dp))
-            CountCard(
-                modifier = Modifier.weight(1f),
-                headingText = "studied Hours",
-                count = studiedHours
-            )
-            Spacer(modifier = Modifier.width(10.dp))
-            CountCard(
-                modifier = Modifier.weight(1f),
-                headingText = "Goal Study Hours",
-                count = goalStudyHours
-            )
-        }
+    Row(modifier = modifier){
+        CountCard(
+            modifier = Modifier.weight(1f),
+            headingText = "Subject Count",
+            count = "$subjectCount"
+        )
+        Spacer(modifier = Modifier.width(10.dp))
+        CountCard(
+            modifier = Modifier.weight(1f),
+            headingText = "Studied Hours",
+            count = studiedHours
+        )
+        Spacer(modifier = Modifier.width(10.dp))
+        CountCard(
+            modifier = Modifier.weight(1f),
+            headingText = "Goal Study Hours",
+            count = goalStudyHours
+        )
     }
 }
 
@@ -325,17 +216,18 @@ private fun SubjectCardSection(
                 color = Color.Gray,
                 textAlign = TextAlign.Center
             )
-        }
-        LazyRow(
-            horizontalArrangement = Arrangement.spacedBy (12.dp),
-            contentPadding = PaddingValues(start = 12.dp, end = 12.dp)
-        ){
-            items(subjectList){subject ->
-                SubjectCard(
-                    subjectName = subject.name,
-                    gradientColors = subject.colors,
-                    onClick = {}
-                )
+        }else{
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy (12.dp),
+                contentPadding = PaddingValues(start = 12.dp, end = 12.dp)
+            ){
+                items(subjectList){subject ->
+                    SubjectCard(
+                        subjectName = subject.name,
+                        gradientColors = subject.colors,
+                        onClick = {}
+                    )
+                }
             }
         }
     }
