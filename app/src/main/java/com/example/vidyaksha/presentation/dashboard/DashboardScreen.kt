@@ -48,16 +48,48 @@ import com.example.vidyaksha.presentation.components.AddSubjectDialog
 import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.studySessionList
 import com.example.vidyaksha.presentation.components.tasksList
+import com.example.vidyaksha.presentation.destinations.SessionScreenRouteDestination
+import com.example.vidyaksha.presentation.destinations.SubjectScreenRouteDestination
+import com.example.vidyaksha.presentation.destinations.TaskScreenRouteDestination
+import com.example.vidyaksha.presentation.subject.SubjectScreenNavArgs
+import com.example.vidyaksha.presentation.task.TaskScreenNavArgs
 import com.example.vidyaksha.sessions
 import com.example.vidyaksha.subjects
 import com.example.vidyaksha.tasks
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+
+@Destination(start = true)
+@Composable
+fun DashboardScreenRoute(
+    navigator: DestinationsNavigator
+){
+    DashboardScreen(
+        onSubjectCardClick = {subjectId ->
+            subjectId?.let {
+                val navArg = SubjectScreenNavArgs(subjectId = subjectId)
+                navigator.navigate(SubjectScreenRouteDestination(navArgs = navArg))
+            }
+        },
+        onTaskCardClick = {taskId ->
+            val navArg = TaskScreenNavArgs(taskId = taskId, subjectId = null)
+            navigator.navigate(TaskScreenRouteDestination(navArgs = navArg))
+        },
+        onStartSessionButtonClick = {
+            navigator.navigate(SessionScreenRouteDestination())
+        }
+    )
+}
 
 @Composable
-fun DashboardScreen() {
+private fun DashboardScreen(
+    onSubjectCardClick: (Int?) -> Unit,
+    onTaskCardClick: (Int?) -> Unit,
+    onStartSessionButtonClick: () -> Unit
+) {
 
     var isAddSubjectDialogOpen by rememberSaveable { mutableStateOf(false) }
     var isDeleteSessionDialogOpen by rememberSaveable { mutableStateOf(false) }
-
 
     var subjectName by remember { mutableStateOf("") }
     var goalHours by remember { mutableStateOf("") }
@@ -105,13 +137,13 @@ fun DashboardScreen() {
                     modifier = Modifier.fillMaxWidth(),
                     subjectList = subjects,
                     onAddIconClicked = {
-                        isAddSubjectDialogOpen = true
-                    }
+                        isAddSubjectDialogOpen = true },
+                    onSubjectCardClick = onSubjectCardClick
                 )
             }
             item {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = onStartSessionButtonClick,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 48.dp, vertical = 20.dp)
                 ) {
                     Text(text = "Start Study Session")
@@ -122,7 +154,7 @@ fun DashboardScreen() {
                 emptyListText = "You don't have any upcoming tasks. \n" + "Click the + button in subjects to add new task.",
                 tasks = tasks,
                 onCheckBoxClick = {},
-                onTaskCardClick = {}
+                onTaskCardClick = onTaskCardClick
             )
             item{
                 Spacer(modifier = Modifier.height(20.dp))
@@ -183,7 +215,8 @@ private fun SubjectCardSection(
     modifier: Modifier,
     subjectList: List<Subject>,
     emptyListText: String = "You don't have any subjects. \n Click the + button to add new subject.",
-    onAddIconClicked: () -> Unit
+    onAddIconClicked: () -> Unit,
+    onSubjectCardClick: (Int?) -> Unit
 ){
     Column(modifier = modifier){
         Row(
@@ -225,7 +258,7 @@ private fun SubjectCardSection(
                     SubjectCard(
                         subjectName = subject.name,
                         gradientColors = subject.colors,
-                        onClick = {}
+                        onClick = {onSubjectCardClick(subject.subjectId)}
                     )
                 }
             }

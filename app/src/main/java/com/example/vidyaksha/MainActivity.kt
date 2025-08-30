@@ -4,16 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.remember
 import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.model.Subject
 import com.example.vidyaksha.domain.model.Task
-import com.example.vidyaksha.presentation.dashboard.DashboardScreen
-import com.example.vidyaksha.presentation.session.SessionScreen
-import com.example.vidyaksha.presentation.subject.SubjectScreen
-import com.example.vidyaksha.presentation.task.TaskScreen
+import com.example.vidyaksha.presentation.NavGraphs
 import com.example.vidyaksha.presentation.theme.VidyakshaTheme
+import com.ramcosta.composedestinations.DestinationsNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VidyakshaTheme {
-                SessionScreen()
+                DestinationsNavHost(navGraph = NavGraphs.root)
             }
         }
     }

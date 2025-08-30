@@ -52,14 +52,34 @@ import com.example.vidyaksha.presentation.theme.Red
 import com.example.vidyaksha.subjects
 import com.example.vidyaksha.util.Priority
 import com.example.vidyaksha.util.changeMillsToDateString
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 
+data class TaskScreenNavArgs(
+    val taskId: Int?,
+    val subjectId: Int?
+)
+
+@Destination(navArgsDelegate = TaskScreenNavArgs::class)
+@Composable
+fun TaskScreenRoute(
+    navigator: DestinationsNavigator
+){
+    TaskScreen(
+        onBackButtonClick = {navigator.navigateUp()}
+    )
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TaskScreen(){
+private fun TaskScreen(
+    onBackButtonClick: () -> Unit
+){
+
 
     var isDeleteDialogOpen by rememberSaveable { mutableStateOf(false) }
 
@@ -131,7 +151,7 @@ fun TaskScreen(){
                 isTaskExist = true,
                 isComplete = false,
                 checkBoxBorderColor = Red,
-                onBackButtonClick = {},
+                onBackButtonClick = onBackButtonClick,
                 onDeleteButtonClick = { isDeleteDialogOpen = true},
                 onCheckBoxClick = {}
             )

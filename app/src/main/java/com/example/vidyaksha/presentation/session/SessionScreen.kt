@@ -40,11 +40,25 @@ import com.example.vidyaksha.presentation.components.SubjectListBottomSheet
 import com.example.vidyaksha.presentation.components.studySessionList
 import com.example.vidyaksha.sessions
 import com.example.vidyaksha.subjects
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
+
+@Destination
+@Composable
+fun SessionScreenRoute(
+    navigator: DestinationsNavigator
+){
+    SessionScreen(
+        onBackButtonClick = {navigator.navigateUp()}
+    )
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SessionScreen (){
+private fun SessionScreen (
+    onBackButtonClick: () -> Unit
+){
 
     var isDeleteDialogOpen by rememberSaveable { mutableStateOf(false) }
 
@@ -78,7 +92,7 @@ fun SessionScreen (){
 
     Scaffold (
         topBar = {
-            SessionScreenTopBar (onBackButtonClick = {})
+            SessionScreenTopBar (onBackButtonClick = onBackButtonClick)
         }
     ){paddingValues ->
         LazyColumn (
