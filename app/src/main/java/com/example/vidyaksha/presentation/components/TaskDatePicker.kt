@@ -7,6 +7,9 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneId
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -16,13 +19,13 @@ fun TaskDatePicker(
     confirmButtonText: String = "OK",
     dismissButtonText: String = "Cancel",
     onDismissRequest:  () -> Unit,
-    onConfirmuttonClicked: () -> Unit
+    onConfirmButtonClicked: () -> Unit
 ){
     if (isOpen){
         DatePickerDialog(
             onDismissRequest = onDismissRequest,
             confirmButton = {
-                TextButton(onClick = onConfirmuttonClicked) {
+                TextButton(onClick = onConfirmButtonClicked) {
                     Text(text = confirmButtonText)
                 }
             },
@@ -32,7 +35,9 @@ fun TaskDatePicker(
                 }
             },
             content = {
-                DatePicker(state = state)
+                DatePicker(
+                    state = state
+                )
             }
         )
     }

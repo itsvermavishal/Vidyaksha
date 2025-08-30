@@ -28,6 +28,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SelectableDates
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDatePickerState
@@ -46,6 +47,10 @@ import com.example.vidyaksha.presentation.components.TaskCheckBox
 import com.example.vidyaksha.presentation.components.TaskDatePicker
 import com.example.vidyaksha.presentation.theme.Red
 import com.example.vidyaksha.util.Priority
+import com.example.vidyaksha.util.changeMillsToDateString
+import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneId
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +59,18 @@ fun TaskScreen(){
     var isDeleteDialogOpen by rememberSaveable { mutableStateOf(false) }
 
     var isDatePickerDialogOpen by rememberSaveable { mutableStateOf(false) }
-    val datePickerState = rememberDatePickerState()
+    val datePickerState = rememberDatePickerState(
+        initialSelectedDateMillis = Instant.now().toEpochMilli(),
+        selectableDates = object : SelectableDates {
+            override fun isSelectableDate(utcTimeMillis: Long): Boolean {
+                val selectedDate = Instant.ofEpochMilli(utcTimeMillis)
+                    .atZone(ZoneId.systemDefault())
+                    .toLocalDate()
+                val currentDate = LocalDate.now(ZoneId.systemDefault())
+                return selectedDate >= currentDate
+            }
+        }
+    )
 
     var title by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
@@ -82,7 +98,7 @@ fun TaskScreen(){
         state = datePickerState,
         isOpen = isDatePickerDialogOpen,
         onDismissRequest = { isDatePickerDialogOpen = false},
-        onConfirmuttonClicked = {
+        onConfirmButtonClicked = {
             isDatePickerDialogOpen = false
         }
     )
@@ -133,7 +149,7 @@ fun TaskScreen(){
                 verticalAlignment = Alignment.CenterVertically
             ){
                 Text(
-                    text = "27 Aug 2025",
+                    text = datePickerState.selectedDateMillis.changeMillsToDateString(),
                     style = MaterialTheme.typography.bodyLarge
                 )
                 IconButton(onClick = {isDatePickerDialogOpen = true}){
