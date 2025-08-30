@@ -10,6 +10,7 @@ import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.model.Subject
 import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.presentation.dashboard.DashboardScreen
+import com.example.vidyaksha.presentation.session.SessionScreen
 import com.example.vidyaksha.presentation.subject.SubjectScreen
 import com.example.vidyaksha.presentation.task.TaskScreen
 import com.example.vidyaksha.presentation.theme.VidyakshaTheme
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VidyakshaTheme {
-                TaskScreen()
+                SessionScreen()
             }
         }
     }

@@ -159,7 +159,7 @@ fun SubjectScreen(){
                 Spacer(modifier = Modifier.height(20.dp))
             }
             studySessionList(
-                sectionTitle = "RECENT",
+                sectionTitle = "RECENT STUDY SESSIONS",
                 emptyListText = "You don't have any recent study session. \n" + "Start a study session to begin recording your progress.",
                 session = sessions,
                 onDeleteIconClick = { isDeleteSessionDialogOpen = true}
