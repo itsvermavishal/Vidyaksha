@@ -28,7 +28,7 @@ import com.example.vidyaksha.subjects
 fun SubjectListBottomSheet(
     sheetState: SheetState,
     isOpen: Boolean,
-    subject: List<Subject>,
+    subjects: List<Subject>,
     bottomSheetTitle: String = "Related to subject",
     onSubjectClicked: (Subject) -> Unit,
     onDismissRequest: () -> Unit
