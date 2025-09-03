@@ -42,6 +42,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.presentation.components.AddSubjectDialog
@@ -64,6 +65,9 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 fun DashboardScreenRoute(
     navigator: DestinationsNavigator
 ){
+
+    val viewModel: DashboardViewModel1 = hiltViewModel()
+
     DashboardScreen(
         onSubjectCardClick = {subjectId ->
             subjectId?.let {
@@ -257,7 +261,7 @@ private fun SubjectCardSection(
                 items(subjectList){subject ->
                     SubjectCard(
                         subjectName = subject.name,
-                        gradientColors = subject.colors,
+                        gradientColors = subject.colors.map { Color(it) },
                         onClick = {onSubjectCardClick(subject.subjectId)}
                     )
                 }
