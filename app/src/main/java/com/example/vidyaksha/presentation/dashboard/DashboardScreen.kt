@@ -1,7 +1,6 @@
 package com.example.vidyaksha.presentation.dashboard
 
 import androidx.compose.foundation.Image
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -43,8 +42,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.vidyaksha.domain.model.Session
-import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.presentation.components.AddSubjectDialog
 import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.studySessionList
@@ -66,7 +63,7 @@ fun DashboardScreenRoute(
     navigator: DestinationsNavigator
 ){
 
-    val viewModel: DashboardViewModel1 = hiltViewModel()
+    val viewModel: DashboardViewModel = hiltViewModel()
 
     DashboardScreen(
         onSubjectCardClick = {subjectId ->
