@@ -5,6 +5,7 @@ import com.example.vidyaksha.domain.model.Session
 import com.example.vidyaksha.domain.repository.SessionRepository
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.take
 
 class SessionRepositoryImpl @Inject constructor(
     private val sessionDao: SessionDao
@@ -22,7 +23,7 @@ class SessionRepositoryImpl @Inject constructor(
     }
 
     override fun getRecentFiveSessions(): Flow<List<Session>> {
-        TODO("Not yet implemented")
+        return sessionDao.getAllSessions().take(count = 5)
     }
 
     override fun getRecentTenSessionsForSubject(subjectId: Int): Flow<List<Session>> {

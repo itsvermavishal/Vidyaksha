@@ -3,8 +3,10 @@ package com.example.vidyaksha.data.repository
 import com.example.vidyaksha.data.local.TaskDao
 import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.domain.repository.TaskRepository
+import com.example.vidyaksha.tasks
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
 class TaskRepositoryImpl @Inject constructor(
     private val taskDao: TaskDao
@@ -30,6 +32,11 @@ class TaskRepositoryImpl @Inject constructor(
     }
 
     override fun getAllUpcomingTasks(): Flow<List<Task>> {
-        TODO("Not yet implemented")
+        return taskDao.getAllTasks()
+            .map { tasks -> tasks.filter { it.isComplete.not() } }
+    }
+
+    private fun sortTasks(tasks: List<Task>): List<Task> {
+        return tasks.sortedWith(compareBy<Task> { it.dueDate }.thenByDescending { it.priority })
     }
 }
