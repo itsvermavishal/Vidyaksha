@@ -59,11 +59,13 @@ import com.example.vidyaksha.presentation.subject.SubjectScreenNavArgs
 import com.example.vidyaksha.presentation.task.TaskScreenNavArgs
 import com.example.vidyaksha.util.SnackbarEvent
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.collectLatest
 
-@Destination(start = true)
+@RootNavGraph(start = true)
+@Destination
 @Composable
 fun DashboardScreenRoute(
     navigator: DestinationsNavigator
