@@ -8,6 +8,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.vidyaksha.domain.model.Subject
+import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.domain.repository.SessionRepository
 import com.example.vidyaksha.domain.repository.SubjectRepository
 import com.example.vidyaksha.domain.repository.TaskRepository
@@ -15,6 +16,7 @@ import com.example.vidyaksha.util.SnackbarEvent
 import com.example.vidyaksha.util.toHours
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -23,6 +25,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @HiltViewModel
 class SubjectViewModel @Inject constructor(
@@ -81,9 +84,11 @@ class SubjectViewModel @Inject constructor(
             }
             SubjectEvent.UpdateSubject -> updateSubject()
             SubjectEvent.DeleteSession -> deleteSubject()
-            SubjectEvent.DeleteSubject -> TODO()
-            is SubjectEvent.OnDeleteSessionButtonClick -> TODO()
-            is SubjectEvent.OnTaskIsCompleteChange -> TODO()
+            SubjectEvent.DeleteSubject -> {}
+            is SubjectEvent.OnDeleteSessionButtonClick -> {}
+            is SubjectEvent.OnTaskIsCompleteChange -> {
+                updateTask(event.task)
+            }
             SubjectEvent.UpdateProgress -> {
                 val goalStudyHours = state.value.goalStudyHours.toFloatOrNull() ?: 1f
                 _state.update {
@@ -140,10 +145,13 @@ class SubjectViewModel @Inject constructor(
             try {
                 val currentSubjectId = state.value.currentSubjectId
                 if (currentSubjectId != null){
-                    subjectRepository.deleteSubject(subjectId = currentSubjectId)
+                    withContext(Dispatchers.IO) {
+                        subjectRepository.deleteSubject(subjectId = currentSubjectId)
+                    }
                     _snackbarEventFlow.emit(
                         SnackbarEvent.ShowSnackbar(message = "Subject deleted successfully")
                     )
+                    _snackbarEventFlow.emit(SnackbarEvent.NavigateUp)
                 } else{
                     _snackbarEventFlow.emit(
                         SnackbarEvent.ShowSnackbar(message = "No subject to delete")
@@ -158,6 +166,35 @@ class SubjectViewModel @Inject constructor(
                     )
                 )
             }
+        }
+    }
+
+    private fun updateTask(task: Task) {
+        viewModelScope.launch {
+            try {
+                taskRepository.upsertTask(
+                    task = task.copy(
+                        isComplete = !task.isComplete
+                    )
+                )
+                if (task.isComplete){
+                    _snackbarEventFlow.emit(
+                        SnackbarEvent.ShowSnackbar(message = "Saved in upcoming tasks.")
+                    )
+                } else{
+                    _snackbarEventFlow.emit(
+                        SnackbarEvent.ShowSnackbar(message = "Saved in completed tasks.")
+                    )
+                }
+            }catch (e: Exception){
+                _snackbarEventFlow.emit(
+                    SnackbarEvent.ShowSnackbar(
+                        "Couldn't update task. ${e.message}",
+                        SnackbarDuration.Long
+                    )
+                )
+            }
+
         }
     }
 }
