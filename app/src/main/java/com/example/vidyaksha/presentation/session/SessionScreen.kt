@@ -1,5 +1,6 @@
 package com.example.vidyaksha.presentation.session
 
+import android.content.Intent
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -44,11 +45,19 @@ import com.example.vidyaksha.sessions
 import com.example.vidyaksha.subjects
 import com.example.vidyaksha.util.Constants.ACTION_SERVICE_CANCEL
 import com.example.vidyaksha.util.Constants.ACTION_SERVICE_START
+import com.ramcosta.composedestinations.annotation.DeepLink
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
 
-@Destination
+@Destination(
+    deepLinks = [
+        DeepLink(
+            action = Intent.ACTION_VIEW,
+            uriPattern = "com.example.vidyaksha://dashboard/session"
+        )
+    ]
+)
 @Composable
 fun SessionScreenRoute(
     navigator: DestinationsNavigator

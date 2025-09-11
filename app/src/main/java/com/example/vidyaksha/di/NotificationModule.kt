@@ -3,6 +3,7 @@ package com.example.vidyaksha.di
 import android.app.NotificationManager
 import android.content.Context
 import androidx.core.app.NotificationCompat
+import com.example.vidyaksha.presentation.session.ServiceHelper
 import com.example.vidyaksha.util.Constants.NOTIFICATION_CHANNEL_ID
 import dagger.Module
 import dagger.Provides
@@ -26,6 +27,7 @@ object NotificationModule {
             .setContentText("00:00:00")
             .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
             .setOngoing(true)
+            .setContentIntent(ServiceHelper.clickPendingIntent(context))
     }
 
 
