@@ -21,7 +21,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.vidyaksha.domain.model.Subject
-import com.example.vidyaksha.subjects
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

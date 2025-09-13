@@ -1,6 +1,5 @@
 package com.example.vidyaksha.presentation.task
 
-import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -53,8 +52,6 @@ import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.SubjectListBottomSheet
 import com.example.vidyaksha.presentation.components.TaskCheckBox
 import com.example.vidyaksha.presentation.components.TaskDatePicker
-import com.example.vidyaksha.presentation.theme.Red
-import com.example.vidyaksha.subjects
 import com.example.vidyaksha.util.Priority
 import com.example.vidyaksha.util.SnackbarEvent
 import com.example.vidyaksha.util.changeMillsToDateString
