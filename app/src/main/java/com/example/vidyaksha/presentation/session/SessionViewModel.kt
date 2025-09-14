@@ -44,9 +44,13 @@ class SessionViewModel @Inject constructor(
 
     fun onEvent(event: SessionEvent){
         when(event){
-            SessionEvent.CheckSubjectId -> {}
-            SessionEvent.DeleteSession -> {}
-            is SessionEvent.OnDeleteSessionButtonClick -> {}
+            SessionEvent.NotifyToUpdateSubject -> notifyToUpdateSubject()
+            SessionEvent.DeleteSession -> deleteSession()
+            is SessionEvent.OnDeleteSessionButtonClick -> {
+                _state.update{
+                    it.copy(session = event.session)
+                }
+            }
             is SessionEvent.OnRelatedSubjectChange -> {
                 _state.update{
                     it.copy(
@@ -56,12 +60,59 @@ class SessionViewModel @Inject constructor(
                 }
             }
             is SessionEvent.SaveSession -> insertSession(event.duration)
-            is SessionEvent.UpdateSubjectIdAndRelatedSubject -> {}
+            is SessionEvent.UpdateSubjectIdAndRelatedSubject -> {
+                _state.update {
+                    it.copy(
+                        relatedToSubject = event.relatedSubject,
+                        subjectId = event.subjectId
+                    )
+                }
+            }
+        }
+    }
+
+    private fun notifyToUpdateSubject() {
+        viewModelScope.launch {
+            if (state.value.subjectId == null || state.value.relatedToSubject == null){
+                _snackbarEventFlow.emit(
+                    SnackbarEvent.ShowSnackbar(
+                        message = "Please select a subject related to the session."
+                    )
+                )
+            }
+        }
+    }
+
+    private fun deleteSession(){
+        viewModelScope.launch {
+            try {
+                state.value.session?.let{
+                    sessionRepository.deleteSession(it)
+                    _snackbarEventFlow.emit(
+                        SnackbarEvent.ShowSnackbar(message = "Session deleted successfully")
+                    )
+                }
+            }catch (e: Exception){
+                _snackbarEventFlow.emit(
+                    SnackbarEvent.ShowSnackbar(
+                        message = "Couldn't delete session. ${e.message}",
+                        duration = SnackbarDuration.Long
+                    )
+                )
+            }
         }
     }
 
     private fun insertSession(duration: Long) {
         viewModelScope.launch {
+            if (duration < 36){
+                _snackbarEventFlow.emit(
+                    SnackbarEvent.ShowSnackbar(
+                        message = "Single session must be less than 36 seconds"
+                    )
+                )
+                return@launch
+            }
             try {
                 sessionRepository.insertSession(
                     session = Session(

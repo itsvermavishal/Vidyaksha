@@ -27,6 +27,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.vidyaksha.R
 import com.example.vidyaksha.domain.model.Session
+import com.example.vidyaksha.util.changeMillsToDateString
+import com.example.vidyaksha.util.toHours
 
 fun LazyListScope.studySessionList(
     sectionTitle: String,
@@ -93,13 +95,13 @@ private fun StudySessionCard(
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
-                    text = "${session.date}",
+                    text = session.date.changeMillsToDateString(),
                     style = MaterialTheme.typography.bodySmall
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
             Text(
-                text = "${session.duration} hr",
+                text = "${session.duration.toHours()} hr",
                 style = MaterialTheme.typography.titleMedium
             )
             IconButton(onClick = {onDeleteIconClick()}) {
