@@ -6,7 +6,6 @@ import android.app.Service
 import android.content.Intent
 import android.os.Binder
 import android.os.Build
-import android.os.IBinder
 import androidx.compose.runtime.mutableStateOf
 import androidx.core.app.NotificationCompat
 import com.example.vidyaksha.util.Constants.ACTION_SERVICE_CANCEL
@@ -17,7 +16,7 @@ import com.example.vidyaksha.util.Constants.NOTIFICATION_CHANNEL_NAME
 import com.example.vidyaksha.util.Constants.NOTIFICATION_ID
 import com.example.vidyaksha.util.pad
 import dagger.hilt.android.AndroidEntryPoint
-import java.time.Duration
+import kotlin.time.Duration
 import java.util.Timer
 import javax.inject.Inject
 import kotlin.concurrent.fixedRateTimer

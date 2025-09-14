@@ -51,6 +51,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.vidyaksha.presentation.components.DeleteDialog
 import com.example.vidyaksha.presentation.components.SubjectListBottomSheet
 import com.example.vidyaksha.presentation.components.studySessionList
@@ -133,7 +134,7 @@ private fun SessionScreen (
         }
     }
 
-    LaunchedEffect(key1 = state.subjectId) {
+    LaunchedEffect(key1 = state.subjects) {
         val subjectId = timerService.subjectId.value
         onEvent(
             SessionEvent.UpdateSubjectIdAndRelatedSubject(
@@ -147,8 +148,8 @@ private fun SessionScreen (
         sheetState = sheetState,
         isOpen = isBottomSheetOpen,
         subjects = state.subjects,
-        onSubjectClicked = {isBottomSheetOpen = false},
-        onDismissRequest = { subject ->
+        onDismissRequest = {isBottomSheetOpen = false},
+        onSubjectClicked = { subject ->
             scope.launch { sheetState.hide() }.invokeOnCompletion {
                 if (!sheetState.isVisible) isBottomSheetOpen = false
             }

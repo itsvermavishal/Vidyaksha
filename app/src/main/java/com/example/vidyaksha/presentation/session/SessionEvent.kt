@@ -17,6 +17,6 @@ sealed class SessionEvent {
 
     data class UpdateSubjectIdAndRelatedSubject(
         val subjectId: Int?,
-        val relatedSubject: String?
+        val relatedToSubject: String?
     ): SessionEvent()
 }

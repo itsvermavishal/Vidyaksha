@@ -12,6 +12,7 @@ import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.domain.repository.SessionRepository
 import com.example.vidyaksha.domain.repository.SubjectRepository
 import com.example.vidyaksha.domain.repository.TaskRepository
+import com.example.vidyaksha.presentation.navArgs
 import com.example.vidyaksha.util.SnackbarEvent
 import com.example.vidyaksha.util.toHours
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -50,7 +51,7 @@ class SubjectViewModel @Inject constructor(
             upcomingTasks = upcomingTasks,
             completedTasks = completedTasks,
             recentSessions = recentSessions,
-            totalSessionsDuration = totalSessionsDuration.toHours()
+            studiedHours = totalSessionsDuration.toHours()
         )
     }.stateIn(
         scope = viewModelScope,
@@ -204,24 +205,23 @@ class SubjectViewModel @Inject constructor(
             }
         }
     }
-}
-
-private fun deleteSession(){
-    viewModelScope.launch {
-        try {
-            state.value.session?.let{
-                sessionRepository.deleteSession(it)
+    private fun deleteSession(){
+        viewModelScope.launch {
+            try {
+                state.value.session?.let{
+                    sessionRepository.deleteSession(it)
+                    _snackbarEventFlow.emit(
+                        SnackbarEvent.ShowSnackbar(message = "Session deleted successfully")
+                    )
+                }
+            }catch (e: Exception){
                 _snackbarEventFlow.emit(
-                    SnackbarEvent.ShowSnackbar(message = "Session deleted successfully")
+                    SnackbarEvent.ShowSnackbar(
+                        message = "Couldn't delete session. ${e.message}",
+                        duration = SnackbarDuration.Long
+                    )
                 )
             }
-        }catch (e: Exception){
-            _snackbarEventFlow.emit(
-                SnackbarEvent.ShowSnackbar(
-                    message = "Couldn't delete session. ${e.message}",
-                    duration = SnackbarDuration.Long
-                )
-            )
         }
     }
 }

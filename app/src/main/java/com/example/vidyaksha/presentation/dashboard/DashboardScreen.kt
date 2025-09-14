@@ -77,7 +77,7 @@ fun DashboardScreenRoute(
     val recentSessions by viewModel.recentSession.collectAsStateWithLifecycle()
 
     DashboardScreen(
-        state = state,
+        state = state.value,
         tasks = tasks,
         recentSessions = recentSessions,
         onEvent = viewModel::onEvent,
@@ -192,7 +192,7 @@ private fun DashboardScreen(
                 sectionTitle = "UPCOMING TASKS",
                 emptyListText = "You don't have any upcoming tasks. \n" + "Click the + button in subjects to add new task.",
                 tasks = tasks,
-                onCheckBoxClick = { onEvent(DashboardEvent.onTaskIsCompleteChange(it))},
+                onCheckBoxClick = { onEvent(DashboardEvent.OnTaskIsCompleteChange(it))},
                 onTaskCardClick = onTaskCardClick
             )
             item{

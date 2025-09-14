@@ -12,12 +12,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.graphics.toArgb
 import androidx.core.app.ActivityCompat
-import com.example.vidyaksha.domain.model.Session
-import com.example.vidyaksha.domain.model.Subject
-import com.example.vidyaksha.domain.model.Task
 import com.example.vidyaksha.presentation.NavGraphs
+import com.example.vidyaksha.presentation.destinations.SessionScreenRouteDestination
 import com.example.vidyaksha.presentation.session.StudySessionTimerService
 import com.example.vidyaksha.presentation.theme.VidyakshaTheme
 import com.ramcosta.composedestinations.DestinationsNavHost

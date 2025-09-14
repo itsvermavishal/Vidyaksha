@@ -1,15 +1,15 @@
 package com.example.vidyaksha.data.local
 
-import androidx.room.TypeConverters
+import androidx.room.TypeConverter
 
 class ColorListConverter {
 
-    @TypeConverters
+    @TypeConverter
     fun fromColorList(colorList: List<Int>): String{
         return colorList.joinToString(","){it.toString()}
     }
 
-    @TypeConverters
+    @TypeConverter
     fun toColorList(colorListString: String): List<Int>{
         return colorListString.split(",").map { it.toInt() }
     }

@@ -160,24 +160,23 @@ class DashboardViewModel @Inject constructor(
             }
         }
     }
-}
-
-private fun deleteSession(){
-    viewModelScope.launch {
-        try {
-            state.value.session?.let{
-                sessionRepository.deleteSession(it)
+    private fun deleteSession(){
+        viewModelScope.launch {
+            try {
+                state.value.session?.let{
+                    sessionRepository.deleteSession(it)
+                    _snackbarEventFlow.emit(
+                        SnackbarEvent.ShowSnackbar(message = "Session deleted successfully")
+                    )
+                }
+            }catch (e: Exception){
                 _snackbarEventFlow.emit(
-                    SnackbarEvent.ShowSnackbar(message = "Session deleted successfully")
+                    SnackbarEvent.ShowSnackbar(
+                        message = "Couldn't delete session. ${e.message}",
+                        duration = SnackbarDuration.Long
+                    )
                 )
             }
-        }catch (e: Exception){
-            _snackbarEventFlow.emit(
-                SnackbarEvent.ShowSnackbar(
-                    message = "Couldn't delete session. ${e.message}",
-                    duration = SnackbarDuration.Long
-                )
-            )
         }
     }
 }
