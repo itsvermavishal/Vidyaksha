@@ -370,15 +370,19 @@ private fun ButtonSection(
         horizontalArrangement = Arrangement.SpaceBetween
     ){
         Button(onClick = cancelButtonClick,
-            enabled = seconds != "00" && timerState != TimerState.STARTED
+            enabled = seconds != "00" && timerState != TimerState.STARTED,
+            modifier = Modifier.weight(1f)
         ) {
             Text(
                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                text = "Cancel"
+                text = "Cancel",
+                maxLines = 1,
+                softWrap = false
             )
         }
         Button(
             onClick = startButtonClick,
+            modifier = Modifier.weight(1f),
             colors = ButtonDefaults.buttonColors(
                 containerColor = if (timerState == TimerState.STARTED) Red
             else MaterialTheme.colorScheme.primary,
@@ -391,16 +395,21 @@ private fun ButtonSection(
                     TimerState.STARTED -> "Stop"
                     TimerState.STOPPED -> "Resume"
                     else -> "Start"
-                }
+                },
+                maxLines = 1,
+                softWrap = false
             )
         }
         Button(
             onClick = finishButtonClick,
-            enabled = seconds != "00" && timerState != TimerState.STARTED
+            enabled = seconds != "00" && timerState != TimerState.STARTED,
+            modifier = Modifier.weight(1f)
         ) {
             Text(
                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                text = "Finish"
+                text = "Finish",
+                maxLines = 1,
+                softWrap = false
             )
         }
     }
