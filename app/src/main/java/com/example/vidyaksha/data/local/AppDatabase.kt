@@ -8,8 +8,9 @@ import com.example.vidyaksha.domain.model.Subject
 import com.example.vidyaksha.domain.model.Task
 
 @Database(
-    entities = [Subject::class, Session::class, Task::class],
-    version = 1
+    entities = [Subject::class, Session::class, Task::class, NoteEntity::class],
+    version = 3,
+    exportSchema = false
 )
 @TypeConverters(ColorListConverter::class)
 abstract class AppDatabase: RoomDatabase() {
@@ -19,4 +20,6 @@ abstract class AppDatabase: RoomDatabase() {
     abstract fun taskDao(): TaskDao
 
     abstract fun sessionDao(): SessionDao
+
+    abstract fun noteDao(): NoteDao
 }
