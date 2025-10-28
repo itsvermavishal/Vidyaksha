@@ -1,20 +1,22 @@
 package com.example.vidyaksha.navigation
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
@@ -26,39 +28,53 @@ fun RoundedFloatingBottomBar(navController: NavHostController, items: List<Botto
     val navBackStackEntry = navController.currentBackStackEntryAsState()
     val currentDestination: NavDestination? = navBackStackEntry.value?.destination
 
-    // Bar container height (so it visually floats)
-    val containerHeight = 64.dp
+    val containerHeight = 100.dp // taller for floating feel
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(containerHeight)
-            .padding(horizontal = 16.dp)
+            .padding(horizontal = 20.dp, vertical = 12.dp)
     ) {
-        Surface(modifier = Modifier
+        Surface(
+            modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp)
+                .height(64.dp)
                 .align(Alignment.TopCenter)
-                .offset(y = (-12).dp)
-                .shadow(elevation = 8.dp, shape = RoundedCornerShape(20.dp)), color = MaterialTheme.colorScheme.surface, shape = RoundedCornerShape(20.dp), tonalElevation = 8.dp) {
+                .shadow(
+                    elevation = 10.dp,
+                    shape = RoundedCornerShape(24.dp)
+                ),
+            color = MaterialTheme.colorScheme.surface,
+            shape = RoundedCornerShape(24.dp),
+            tonalElevation = 6.dp
+        ) {
             Row(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 12.dp),
+                    .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                items.forEach { item ->
-                    // Check whether current destination matches this item's destination.route
-                    val selected = currentDestination?.hierarchy?.any { navDest ->
-                        // Compare using the generated DestinationSpec route string
-                        navDest.route == item.destination.route
+                items.forEachIndexed { index, item ->
+                    val selected = currentDestination?.hierarchy?.any {
+                        it.route == item.destination.route
                     } == true
 
+                    // Animated color and scale
                     val tint by animateColorAsState(
                         if (selected) MaterialTheme.colorScheme.primary else Color.Gray
                     )
+                    val scale by animateFloatAsState(
+                        targetValue = if (selected) 1.25f else 1.0f,
+                        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy)
+                    )
 
+                    // Center icon gets slight lift
+                    val lift by animateDpAsState(
+                        targetValue = if (index == 1) (-1).dp else 0.dp,
+                        animationSpec = spring(dampingRatio = Spring.DampingRatioNoBouncy)
+                    )
 
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
@@ -66,12 +82,11 @@ fun RoundedFloatingBottomBar(navController: NavHostController, items: List<Botto
                         modifier = Modifier
                             .weight(1f)
                             .fillMaxHeight()
+                            .offset(y = lift)
                             .clickable {
-                                // Navigate using the destination's route string
                                 val route = item.destination.route
                                 if (route != null && currentDestination?.route != route) {
                                     navController.navigate(route) {
-                                        // popUpTo start to avoid stacking many copies
                                         popUpTo(navController.graph.startDestinationId) {
                                             saveState = true
                                         }
@@ -81,12 +96,18 @@ fun RoundedFloatingBottomBar(navController: NavHostController, items: List<Botto
                                 }
                             }
                     ) {
-                        Icon(imageVector = item.icon, contentDescription = item.title, tint = tint)
-                        Spacer(modifier = Modifier.height(2.dp))
+                        val iconScale = if (index == 1) 1.3f else 1.0f // center slightly bigger
+                        Icon(
+                            imageVector = item.icon,
+                            contentDescription = item.title,
+                            tint = tint,
+                            modifier = Modifier.scale(scale * iconScale)
+                        )
+                        Spacer(modifier = Modifier.height(3.dp))
                         Text(
                             text = item.title,
                             color = tint,
-                            style = MaterialTheme.typography.labelSmall  // or labelMedium/bodySmall as per design
+                            fontSize = 11.sp
                         )
                     }
                 }
