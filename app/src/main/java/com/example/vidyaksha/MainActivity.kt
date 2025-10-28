@@ -9,14 +9,23 @@ import android.os.IBinder
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
 import androidx.core.app.ActivityCompat
 import com.example.vidyaksha.presentation.NavGraphs
 import com.example.vidyaksha.presentation.destinations.SessionScreenRouteDestination
 import com.example.vidyaksha.presentation.session.StudySessionTimerService
 import com.example.vidyaksha.presentation.theme.VidyakshaTheme
+import com.example.vidyaksha.navigation.BottomNavItems
+import com.example.vidyaksha.navigation.RoundedFloatingBottomBar
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.navigation.dependency
 import dagger.hilt.android.AndroidEntryPoint
@@ -52,14 +61,30 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            if (isBound){
-                VidyakshaTheme {
-                    DestinationsNavHost(navGraph = NavGraphs.root,
-                        dependenciesContainerBuilder = {
-                            dependency(SessionScreenRouteDestination){timerService}
+            VidyakshaTheme {
+                // Always set content (previous code only set content if isBound)
+                val navController = rememberNavController()
+
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        RoundedFloatingBottomBar(navController = navController, items = BottomNavItems)
+                    },
+                    content = { innerPadding: PaddingValues ->
+                        Surface(modifier = Modifier.padding(innerPadding)) {
+                            DestinationsNavHost(
+                                navGraph = NavGraphs.root,
+                                navController = navController,
+                                dependenciesContainerBuilder = {
+                                    // Register the timerService only when bound. (Same pattern you used.)
+                                    if (isBound) {
+                                        dependency(SessionScreenRouteDestination) { timerService }
+                                    }
+                                }
+                            )
                         }
-                    )
-                }
+                    }
+                )
             }
         }
         requestPermissions()
