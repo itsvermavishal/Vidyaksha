@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -21,7 +22,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.vidyaksha.R
+import com.example.vidyaksha.presentation.destinations.ModuleDetailScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.delay
 
 data class CarouselItem(val imageRes: Int, val title: String)
@@ -29,23 +33,34 @@ data class GridItem(val imageRes: Int, val label: String)
 
 @Destination
 @Composable
-fun SparkScreen(viewModel: SparkViewModel = hiltViewModel()) {
-    Surface(color = Color.White) {
+fun SparkScreen(
+    navigator: DestinationsNavigator,
+    viewModel: SparkViewModel = hiltViewModel()
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                Brush.verticalGradient(
+                    listOf(Color(0xFFFFF9E3), Color(0xFFF8F8FF))
+                )
+            )
+    ) {
         val carouselItems = listOf(
-            CarouselItem(com.example.vidyaksha.R.drawable.sample, "Market Trends"),
-            CarouselItem(com.example.vidyaksha.R.drawable.sample, "Top Gainers"),
-            CarouselItem(com.example.vidyaksha.R.drawable.sample, "Latest News")
+            CarouselItem(R.drawable.sample, "Market Trends"),
+            CarouselItem(R.drawable.sample, "Top Gainers"),
+            CarouselItem(R.drawable.sample, "Latest News")
         )
 
         val gridItems = listOf(
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Basics"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Fundamentals"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Technicals"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Personal Finance"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Commodity"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "F & O"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Others"),
-            GridItem(com.example.vidyaksha.R.drawable.bull_logo, "Coming Soon")
+            GridItem(R.drawable.bull_logo, "Basics"),
+            GridItem(R.drawable.bull_logo, "Fundamentals"),
+            GridItem(R.drawable.bull_logo, "Technicals"),
+            GridItem(R.drawable.bull_logo, "Personal Finance"),
+            GridItem(R.drawable.bull_logo, "Commodity"),
+            GridItem(R.drawable.bull_logo, "F & O"),
+            GridItem(R.drawable.bull_logo, "Others"),
+            GridItem(R.drawable.bull_logo, "Coming Soon")
         )
 
         Column(
@@ -57,7 +72,7 @@ fun SparkScreen(viewModel: SparkViewModel = hiltViewModel()) {
         ) {
             AutoSlidingCarousel(carouselItems)
             Spacer(Modifier.height(24.dp))
-            GridSection(gridItems)
+            GridSection(gridItems, navigator)
             Spacer(Modifier.height(24.dp))
             Text(
                 text = "Crafted with 💛",
@@ -73,7 +88,6 @@ fun SparkScreen(viewModel: SparkViewModel = hiltViewModel()) {
 fun AutoSlidingCarousel(items: List<CarouselItem>) {
     var currentIndex by remember { mutableStateOf(0) }
 
-    // Auto-slide every 4 seconds
     LaunchedEffect(currentIndex) {
         delay(4000)
         currentIndex = (currentIndex + 1) % items.size
@@ -95,12 +109,13 @@ fun AutoSlidingCarousel(items: List<CarouselItem>) {
                 shape = RoundedCornerShape(20.dp),
                 elevation = CardDefaults.cardElevation(10.dp),
                 modifier = Modifier
-                    .padding(horizontal = 40.dp) // Reduced width for better fit
+                    .padding(horizontal = 40.dp)
                     .clickable { /* navigate later */ }
                     .pointerInput(Unit) {
                         detectHorizontalDragGestures { _, dragAmount ->
                             if (dragAmount > 0)
-                                currentIndex = if (currentIndex - 1 < 0) items.lastIndex else currentIndex - 1
+                                currentIndex =
+                                    if (currentIndex - 1 < 0) items.lastIndex else currentIndex - 1
                             else
                                 currentIndex = (currentIndex + 1) % items.size
                         }
@@ -131,32 +146,29 @@ fun AutoSlidingCarousel(items: List<CarouselItem>) {
                 }
             }
 
-            // Left arrow
             IconButton(
                 onClick = { currentIndex = if (currentIndex - 1 < 0) items.lastIndex else currentIndex - 1 },
                 modifier = Modifier.align(Alignment.CenterStart)
             ) {
                 Icon(
-                    painter = painterResource(id = com.example.vidyaksha.R.drawable.ic_arrow_left),
+                    painter = painterResource(id = R.drawable.ic_arrow_left),
                     contentDescription = "Previous",
                     tint = Color(0xFF6C63FF)
                 )
             }
 
-            // Right arrow
             IconButton(
                 onClick = { currentIndex = (currentIndex + 1) % items.size },
                 modifier = Modifier.align(Alignment.CenterEnd)
             ) {
                 Icon(
-                    painter = painterResource(id = com.example.vidyaksha.R.drawable.ic_arrow_right),
+                    painter = painterResource(id = R.drawable.ic_arrow_right),
                     contentDescription = "Next",
                     tint = Color(0xFF6C63FF)
                 )
             }
         }
 
-        // Dots indicator BELOW card
         Row(
             modifier = Modifier.padding(top = 10.dp),
             horizontalArrangement = Arrangement.Center
@@ -177,17 +189,25 @@ fun AutoSlidingCarousel(items: List<CarouselItem>) {
 }
 
 @Composable
-fun GridSection(items: List<GridItem>) {
+fun GridSection(items: List<GridItem>, navigator: DestinationsNavigator) {
     Column(modifier = Modifier.padding(horizontal = 12.dp)) {
-        for (rowItems in items.chunked(2)) {
+        val flat = items
+        for (rowItems in flat.chunked(2)) {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp)
             ) {
-                for (item in rowItems) {
-                    GridItemCard(item, Modifier.weight(1f))
+                val startIndex = flat.indexOf(rowItems.first())
+                for ((colIndex, item) in rowItems.withIndex()) {
+                    val moduleIndex = startIndex + colIndex
+                    GridItemCard(
+                        item = item,
+                        moduleIndex = moduleIndex,
+                        navigator = navigator,
+                        modifier = Modifier.weight(1f)
+                    )
                 }
                 if (rowItems.size == 1) Spacer(modifier = Modifier.weight(1f))
             }
@@ -196,13 +216,25 @@ fun GridSection(items: List<GridItem>) {
 }
 
 @Composable
-fun GridItemCard(item: GridItem, modifier: Modifier = Modifier) {
+fun GridItemCard(
+    item: GridItem,
+    moduleIndex: Int,
+    navigator: DestinationsNavigator,
+    modifier: Modifier = Modifier
+) {
     Card(
         shape = RoundedCornerShape(20.dp),
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = modifier
-            .aspectRatio(1f) // makes perfect square
-            .clickable { /* navigate later */ }
+            .aspectRatio(1f)
+            .clickable {
+                navigator.navigate(
+                    ModuleDetailScreenDestination(
+                        moduleNumber = moduleIndex,
+                        moduleTitle = item.label
+                    )
+                )
+            }
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -214,7 +246,7 @@ fun GridItemCard(item: GridItem, modifier: Modifier = Modifier) {
                 contentDescription = item.label,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f), // edge-to-edge square image
+                    .weight(1f),
                 contentScale = ContentScale.Crop
             )
             Box(

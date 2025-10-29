@@ -3,6 +3,7 @@ package com.example.vidyaksha.presentation.home
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -28,14 +29,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.vidyaksha.R
 import com.example.vidyaksha.data.local.NoteEntity
 import com.example.vidyaksha.presentation.components.AddOrEditNoteDialog
 import com.example.vidyaksha.presentation.components.BrainfireCard
@@ -226,16 +227,22 @@ fun HomeScreen(
         "Fact: Markets reflect future expectations, not current events."
     )
 
-    val todayIndex = (LocalDate.now().dayOfYear % dailyFacts.size)
+    val todayIndex = LocalDate.now().dayOfYear % dailyFacts.size
     val currentFact = dailyFacts[todayIndex]
 
     var showDialog by remember { mutableStateOf(false) }
     var editingNote by remember { mutableStateOf<NoteEntity?>(null) }
 
+    // ✅ Archivo Black (downloadable font)
+    val archivoBlack = FontFamily(Font(R.font.archivo_black))
+
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
-                onClick = { editingNote = null; showDialog = true },
+                onClick = {
+                    editingNote = null
+                    showDialog = true
+                },
                 containerColor = Color(0xFF7C4DFF),
                 contentColor = Color.White,
                 shape = RoundedCornerShape(16.dp)
@@ -246,7 +253,9 @@ fun HomeScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(
-                Brush.verticalGradient(listOf(Color(0xFFFFF9E3), Color(0xFFF8F8FF)))
+                Brush.verticalGradient(
+                    listOf(Color(0xFFFFF9E3), Color(0xFFF8F8FF))
+                )
             )
     ) { padding ->
 
@@ -259,39 +268,55 @@ fun HomeScreen(
             contentPadding = PaddingValues(bottom = 100.dp)
         ) {
             item {
-                // ✅ Styled Quote Section — like Blinkit banner
-                Box(
+                // ✅ Auto-scaling banner (Blinkit-style)
+                BoxWithConstraints(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 24.dp, bottom = 16.dp),
                     contentAlignment = Alignment.Center
                 ) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    val screenWidthPx = maxWidth.value
+                    val baseWidthPx = 400f // reference width
+                    val scaleFactor = (screenWidthPx / baseWidthPx)
+                        .coerceIn(0.8f, 1.4f)
+
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
                         Text(
-                            text = buildAnnotatedString {
-                                withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold, fontSize = 50.sp, color = Color(0xFF222222))) {
-                                    append("Soul breathing?")
-                                }
-                            },
-                            textAlign = TextAlign.Center
+                            text = "Soul breathing?",
+                            fontFamily = archivoBlack,
+                            color = Color(0xFF444444).copy(alpha = 0.8f),
+                            fontSize = (40 * scaleFactor).sp,
+                            lineHeight = (42 * scaleFactor).sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 10.dp)
                         )
 
+                        Spacer(modifier = Modifier.height(6.dp))
+
                         Text(
-                            text = buildAnnotatedString {
-                                withStyle(style = SpanStyle(fontWeight = FontWeight.ExtraBold, fontSize = 34.sp, color = Color(0xFF222222))) {
-                                    append("Then keep learning! ")
-                                }
-                                withStyle(style = SpanStyle(fontSize = 34.sp,color = Color(0xFFFF5252))) {
-                                    append("☠\uFE0F")
-                                }
-                            },
-                            textAlign = TextAlign.Center
+                            text = "Then keep learning! ☠️",
+                            fontFamily = archivoBlack,
+                            color = Color(0xFF777777).copy(alpha = 0.75f),
+                            fontSize = (27 * scaleFactor).sp,
+                            lineHeight = (32 * scaleFactor).sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 10.dp)
                         )
                     }
                 }
 
                 BrainfireCard(fact = currentFact)
+
                 Spacer(Modifier.height(12.dp))
+
                 Text(
                     text = "Notes",
                     fontWeight = FontWeight.Bold,
@@ -322,36 +347,24 @@ fun HomeScreen(
                     val note = notes[index]
                     val color = remember {
                         listOf(
-                            Color(0xFFB3E5FC),
-                            Color(0xFFFFCDD2),
-                            Color(0xFFC8E6C9),
-                            Color(0xFFFFF9C4),
-                            Color(0xFFD1C4E9),
-                            Color(0xFFB3E5FC), // Original Sky Blue
-                            Color(0xFFFFCDD2), // Original Soft Pink
-                            Color(0xFFC8E6C9), // Original Green
-                            Color(0xFFFFF9C4), // Original Yellow
-                            Color(0xFFD1C4E9), // Original Purple
-
-                            Color(0xFF81D4FA), // Light Blue
-                            Color(0xFFF8BBD0), // Light Pink
-                            Color(0xFFA5D6A7), // Mint Green
-                            Color(0xFFFFF59D), // Soft Yellow
-                            Color(0xFFCE93D8), // Lavender
-                            Color(0xFFFFCC80), // Peach
-                            Color(0xFF9FA8DA), // Indigo
-                            Color(0xFFC5E1A5), // Sage
-                            Color(0xFFE0E0E0), // Light Gray
-                            Color(0xFFD7CCC8)  // Dusty Lavender
-                            // Add more colors as needed
+                            Color(0xFFB3E5FC), Color(0xFFFFCDD2), Color(0xFFC8E6C9),
+                            Color(0xFFFFF9C4), Color(0xFFD1C4E9), Color(0xFF81D4FA),
+                            Color(0xFFF8BBD0), Color(0xFFA5D6A7), Color(0xFFFFF59D),
+                            Color(0xFFCE93D8), Color(0xFFFFCC80), Color(0xFF9FA8DA),
+                            Color(0xFFC5E1A5), Color(0xFFE0E0E0), Color(0xFFD7CCC8)
                         ).random()
                     }
                     NoteCard(
                         title = note.title.ifBlank { "Untitled" },
                         description = note.content,
                         backgroundColor = color,
-                        onEdit = { editingNote = note; showDialog = true },
-                        onDelete = { viewModel.deleteNote(note) }
+                        onEdit = {
+                            editingNote = note
+                            showDialog = true
+                        },
+                        onDelete = {
+                            viewModel.deleteNote(note)
+                        }
                     )
                 }
             }
@@ -365,7 +378,9 @@ fun HomeScreen(
                     if (editingNote == null)
                         viewModel.addNote(title, desc)
                     else
-                        viewModel.updateNote(editingNote!!.copy(title = title, content = desc))
+                        viewModel.updateNote(
+                            editingNote!!.copy(title = title, content = desc)
+                        )
                     showDialog = false
                 }
             )
