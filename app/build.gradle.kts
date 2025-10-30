@@ -98,4 +98,6 @@ dependencies {
     //Desugaring
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
 }

@@ -42,8 +42,10 @@ import com.example.vidyaksha.presentation.components.AddOrEditNoteDialog
 import com.example.vidyaksha.presentation.components.BrainfireCard
 import com.example.vidyaksha.presentation.components.NoteCard
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import java.time.LocalDate
 
+@RootNavGraph(start = true)
 @Destination
 @Composable
 fun HomeScreen(
