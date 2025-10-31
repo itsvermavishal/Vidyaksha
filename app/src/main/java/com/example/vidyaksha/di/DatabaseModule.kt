@@ -38,7 +38,4 @@ object DatabaseModule {
     @Provides @Singleton
     fun provideSessionDao(database: AppDatabase): SessionDao = database.sessionDao()
 
-    @Provides @Singleton
-    fun provideNoteRepository(noteDao: NoteDao): NoteRepository =
-        NoteRepositoryImpl(noteDao)
 }

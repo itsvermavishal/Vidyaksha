@@ -1,8 +1,10 @@
 package com.example.vidyaksha.di
 
+import com.example.vidyaksha.data.repository.NoteRepositoryImpl
 import com.example.vidyaksha.data.repository.SessionRepositoryImpl
 import com.example.vidyaksha.data.repository.SubjectRepositoryImpl
 import com.example.vidyaksha.data.repository.TaskRepositoryImpl
+import com.example.vidyaksha.domain.repository.NoteRepository
 import com.example.vidyaksha.domain.repository.SessionRepository
 import com.example.vidyaksha.domain.repository.SubjectRepository
 import com.example.vidyaksha.domain.repository.TaskRepository
@@ -33,4 +35,10 @@ abstract class RepositoryModule {
     abstract fun bindSessionRepository(
         impl: SessionRepositoryImpl
     ): SessionRepository
+
+    @Singleton
+    @Binds
+    abstract fun bindNoteRepository(
+        impl: NoteRepositoryImpl
+    ): NoteRepository
 }

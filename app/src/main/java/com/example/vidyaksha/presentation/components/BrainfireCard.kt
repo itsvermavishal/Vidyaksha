@@ -25,66 +25,64 @@ fun BrainfireCard(fact: String) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 10.dp)
-            .heightIn(min = 130.dp)
+            .padding(vertical = 8.dp)
+            .height(120.dp) // ↓ fixed height for a rectangular look
     ) {
-        // Dashed outline (outer)
+        // Dashed border
         Canvas(modifier = Modifier.matchParentSize()) {
             val stroke = Stroke(
-                width = 2.5f,
-                pathEffect = PathEffect.dashPathEffect(floatArrayOf(18f, 10f), 0f)
+                width = 2.2f,
+                pathEffect = PathEffect.dashPathEffect(floatArrayOf(14f, 8f), 0f)
             )
             drawRoundRect(
                 color = Color.LightGray,
                 size = Size(size.width, size.height),
-                cornerRadius = CornerRadius(28.dp.toPx()),
+                cornerRadius = CornerRadius(22.dp.toPx()),
                 style = stroke
             )
         }
 
-        // Golden background centered with equal padding
+        // Inner surface (golden card)
         Surface(
-            shape = RoundedCornerShape(22.dp),
-            color = Color(0xFFD7C39A), // golden tone
+            shape = RoundedCornerShape(18.dp),
+            color = Color(0xFFD7C39A),
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(0.8f) // keep centered proportionally
+                .fillMaxHeight(0.9f)
                 .align(Alignment.Center)
-                .padding(horizontal = 14.dp)
+                .padding(horizontal = 10.dp)
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 20.dp, vertical = 18.dp),
+                    .padding(horizontal = 18.dp, vertical = 14.dp),
                 verticalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
                     text = fact,
                     color = Color(0xFF1A1A1A),
-                    fontSize = 17.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
-                    lineHeight = 22.sp,
+                    lineHeight = 20.sp,
                     textAlign = TextAlign.Start,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 8.dp)
+                    modifier = Modifier.fillMaxWidth()
                 )
 
                 Text(
                     text = "~ Today's fact",
                     color = Color(0xFF4B4B4B),
                     fontStyle = FontStyle.Italic,
-                    fontSize = 14.sp,
+                    fontSize = 13.sp,
                     modifier = Modifier.align(Alignment.End)
                 )
             }
         }
 
-        // Floating Brainfire badge (slightly above dashed line)
+        // Label badge
         Box(
             modifier = Modifier
                 .align(Alignment.TopStart)
-                .offset(x = 18.dp, y = (-16).dp) // moved slightly up
+                .offset(x = 16.dp, y = (-14).dp)
                 .background(Color(0xFFBBDEFB), RoundedCornerShape(8.dp))
                 .padding(horizontal = 10.dp, vertical = 4.dp)
         ) {
