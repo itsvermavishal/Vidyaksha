@@ -1,19 +1,31 @@
 package com.example.vidyaksha.domain.repository
 
+import com.example.vidyaksha.data.local.AttachmentEntity
 import com.example.vidyaksha.data.local.NoteEntity
+import com.example.vidyaksha.data.local.NoteWithAttachments
 import kotlinx.coroutines.flow.Flow
 
 interface NoteRepository {
 
-    /** Get all notes ordered by id DESC */
     fun getAllNotes(): Flow<List<NoteEntity>>
 
-    /** Insert a new note */
     suspend fun addNote(title: String, content: String)
 
-    /** Update existing note */
     suspend fun updateNote(note: NoteEntity)
 
-    /** Delete a note */
     suspend fun deleteNote(note: NoteEntity)
+
+    suspend fun saveNoteWithAttachments(
+        title: String,
+        contentWithTokens: String,
+        attachmentsToInsert: List<AttachmentEntity>
+    ): Long
+
+    suspend fun updateNoteWithAttachments(
+        note: NoteEntity,
+        toInsert: List<AttachmentEntity>,
+        toDelete: List<AttachmentEntity>
+    )
+
+    suspend fun getNoteWithAttachments(id: Long): NoteWithAttachments?
 }

@@ -100,4 +100,9 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.4.0")
 
+    implementation("com.airbnb.android:lottie-compose:6.3.0")
+
+    implementation ("com.google.android.exoplayer:exoplayer:2.18.5")
+
+
 }

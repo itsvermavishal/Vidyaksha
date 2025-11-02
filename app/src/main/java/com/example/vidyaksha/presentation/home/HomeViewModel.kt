@@ -1,5 +1,6 @@
 package com.example.vidyaksha.presentation.home
 
+import com.example.vidyaksha.data.local.AttachmentEntity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.vidyaksha.data.local.NoteEntity
@@ -44,4 +45,30 @@ class HomeViewModel @Inject constructor(
     fun deleteNote(note: NoteEntity) = viewModelScope.launch {
         noteRepository.deleteNote(note)
     }
+
+    fun addNoteWithAttachments(note: NoteEntity, attachments: List<AttachmentEntity>) {
+        viewModelScope.launch {
+            noteRepository.saveNoteWithAttachments(
+                title = note.title,
+                contentWithTokens = note.content,
+                attachmentsToInsert = attachments
+            )
+        }
+    }
+
+    fun updateNoteWithAttachments(
+        note: NoteEntity,
+        toInsert: List<AttachmentEntity>,
+        toDelete: List<AttachmentEntity>
+    ) {
+        viewModelScope.launch {
+            noteRepository.updateNoteWithAttachments(
+                note = note,
+                toInsert = toInsert,
+                toDelete = toDelete
+            )
+
+        }
+    }
+
 }

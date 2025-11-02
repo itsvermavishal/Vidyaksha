@@ -16,4 +16,10 @@ class Converters {
     fun fromStringToList(value: String?): List<String>? {
         return value?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }
     }
+
+    @TypeConverter
+    fun fromAttachmentType(type: AttachmentType): String = type.name
+
+    @TypeConverter
+    fun toAttachmentType(value: String): AttachmentType = AttachmentType.valueOf(value)
 }

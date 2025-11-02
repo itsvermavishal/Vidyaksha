@@ -14,13 +14,18 @@ interface NoteDao {
     @Query("SELECT * FROM notes ORDER BY updatedAt DESC")
     fun getAllNotes(): Flow<List<NoteEntity>>
 
+    // 🔹 Fetch a note with its attachments (relation)
+    @Transaction
+    @Query("SELECT * FROM notes WHERE id = :id")
+    suspend fun getNoteWithAttachments(id: Long): NoteWithAttachments?
+
     // 🔹 Fetch a single note by ID
     @Query("SELECT * FROM notes WHERE id = :id LIMIT 1")
-    suspend fun getNoteById(id: Int): NoteEntity?
+    suspend fun getNoteById(id: Long): NoteEntity?
 
     // 🔹 Insert a new note
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertNote(note: NoteEntity)
+    suspend fun insertNote(note: NoteEntity): Long
 
     // 🔹 Update an existing note
     @Update
@@ -30,7 +35,27 @@ interface NoteDao {
     @Delete
     suspend fun deleteNote(note: NoteEntity)
 
-    // 🔹 Delete all notes (optional helper)
+    // 🔹 Delete all notes
     @Query("DELETE FROM notes")
     suspend fun deleteAllNotes()
+
+    // 🔹 Attachments handling
+    @Insert
+    suspend fun insertAttachment(att: AttachmentEntity): Long
+
+    @Insert
+    suspend fun insertAttachments(list: List<AttachmentEntity>): List<Long>
+
+    @Query("DELETE FROM attachments WHERE noteId = :noteId")
+    suspend fun deleteAttachmentsForNote(noteId: Long)
+
+    @Query("SELECT * FROM attachments WHERE noteId = :noteId")
+    suspend fun getAttachmentsFor(noteId: Long): List<AttachmentEntity>
+
+    @Delete
+    suspend fun deleteAttachment(att: AttachmentEntity)
+
+    // ✅ New helper for batch delete (used in repository)
+    @Delete
+    suspend fun deleteAttachments(attachments: List<AttachmentEntity>)
 }

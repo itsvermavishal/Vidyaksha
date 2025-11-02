@@ -16,9 +16,10 @@ import com.example.vidyaksha.domain.model.Task
         Subject::class,
         Session::class,
         Task::class,
-        NoteEntity::class
+        NoteEntity::class,
+        AttachmentEntity::class
     ],
-    version = 4, // 🔺 bumped version since NoteEntity changed
+    version = 5, // 🔺 bumped version since NoteEntity changed
     exportSchema = false
 )
 @TypeConverters(
@@ -31,4 +32,5 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun taskDao(): TaskDao
     abstract fun sessionDao(): SessionDao
     abstract fun noteDao(): NoteDao
+    abstract fun attachmentDao(): AttachmentDao
 }
