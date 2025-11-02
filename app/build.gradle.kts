@@ -104,5 +104,7 @@ dependencies {
 
     implementation ("com.google.android.exoplayer:exoplayer:2.18.5")
 
+    implementation("androidx.compose.foundation:foundation:1.7.0")
+
 
 }
