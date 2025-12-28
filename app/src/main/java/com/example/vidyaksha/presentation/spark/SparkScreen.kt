@@ -1,6 +1,7 @@
 package com.example.vidyaksha.presentation.spark
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -50,6 +51,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -112,6 +115,10 @@ fun SparkScreen(
             GridItem(R.drawable.bull_logo, "Coming Soon")
         )
 
+        val RubikMono = FontFamily(
+            Font(R.font.rubik_mono_one_regular, FontWeight.Normal)
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -133,12 +140,31 @@ fun SparkScreen(
             Spacer(Modifier.height(24.dp))
             GridSection(gridItems, navigator)
             Spacer(Modifier.height(24.dp))
-            Text(
-                text = "Crafted with 💛",
-                color = Color(0xFFFFC107),
-                fontSize = 16.sp,
-                fontWeight = FontWeight.Bold
-            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Crafted with ",
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        fontFamily = RubikMono,
+                        fontSize = 25.sp,
+                        brush = Brush.linearGradient(
+                            colors = listOf(
+                                Color(0xFF3B82F6), // Blue
+                                Color(0xFF8B5CF6)  // Purple
+                            )
+                        )
+                    )
+                )
+
+                Text(
+                    text = "💛",
+                    fontSize = 30.sp,
+                    modifier = Modifier
+                        .padding(start = 4.dp)
+                        .animateContentSize()
+                )
+            }
         }
     }
 }

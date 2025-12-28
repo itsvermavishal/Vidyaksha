@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -158,20 +159,28 @@ private fun BannerHeaderSmall(font: FontFamily) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 1.dp)
+            .padding(top = 8.dp)
     ) {
         Text(
-            text = "Soul breathing?",
+            text = "Soul breathing",
             fontFamily = font,
-            color = Color(0xFF444444).copy(alpha = 0.85f),
-            fontSize = 36.sp
+            fontSize = 40.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFFBFC5CF),
+            letterSpacing = 0.5.sp,
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(6.dp))
+
+        Spacer(modifier = Modifier.height(4.dp))
+
         Text(
-            text = "Then keep learning! ☠️",
+            text = "Then keep learning",
             fontFamily = font,
-            color = Color(0xFF777777),
-            fontSize = 22.sp
+            fontSize = 30.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFFBFC5CF),
+            letterSpacing = 0.3.sp,
+            textAlign = TextAlign.Center
         )
     }
 }
