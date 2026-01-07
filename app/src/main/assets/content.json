@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": 1,
+      "title": "Basics",
+      "image": "stockmarkets",
+      "description": "Build strong foundations in stock markets.",
+      "levels": [
+        {
+          "id": 1,
+          "name": "HUSTLER",
+          "image": "hustler",
+          "chapters": [
+            {
+              "id": 1,
+              "title": "Stock Market Basics",
+              "description": "Understand what stocks are and how markets work.",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "What is Stock Market?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "A stock market is a place where shares are bought and sold."
+                    },
+                    {
+                      "type": "IMAGE",
+                      "images": ["slide_stock_intro", "slide_stock_chart"]
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Returns Comparison",
+                  "blocks": [
+                    {
+                      "type": "TABLE",
+                      "headers": ["Asset", "10Y CAGR"],
+                      "rows": [
+                        ["FD", "6%"],
+                        ["Gold", "8%"],
+                        ["Equity", "12%"]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "Power of Compounding",
+                  "blocks": [
+                    {
+                      "type": "MARKDOWN",
+                      "markdown": "### Compounding\nMoney grows exponentially over time."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Fundamentals",
+      "image": "fundametal",
+      "description": "Understand financial statements and valuation.",
+      "levels": [
+        {
+          "id": 1,
+          "name": "HUSTLER",
+          "image": "hustler",
+          "chapters": [
+            {
+              "id": 1,
+              "title": "Balance Sheet",
+              "description": "Learn how to read balance sheets.",
+              "image": "balance_sheet",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "What is Balance Sheet?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "A balance sheet shows assets, liabilities and equity."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

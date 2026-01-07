@@ -18,8 +18,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
-import com.example.vidyaksha.data.local.ModuleRepository
+import com.example.vidyaksha.data.local.ContentMapper
+import com.example.vidyaksha.data.local.LevelType
+import com.example.vidyaksha.data.local.SlideBlock
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.launch
@@ -30,21 +33,22 @@ import kotlinx.coroutines.launch
 fun SlideReaderScreen(
     moduleId: Int,
     chapterId: Int,
-    navigator: DestinationsNavigator
+    navigator: DestinationsNavigator,
+    viewModel: SlideViewModel = hiltViewModel()
 ) {
-    val module = ModuleRepository.modules.first { it.id == moduleId }
-    val chapter = module.chapters.first { it.id == chapterId }
-    val slides = chapter.slides
+
+    /* ---------- DATA FROM JSON ---------- */
+    val slides = viewModel.getSlides(
+        moduleId = moduleId,
+        level = LevelType.HUSTLER, // 🔒 fixed level for now (can be passed later)
+        chapterId = chapterId
+    )
 
     val pagerState = rememberPagerState(pageCount = { slides.size })
     val coroutineScope = rememberCoroutineScope()
 
-    // ✅ Hide the main bottom nav bar (if using one)
-    // You can control this via shared state if your app uses a bottom nav
-
     Scaffold(
         topBar = {
-            // Centered top bar with back button + title
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -53,6 +57,7 @@ fun SlideReaderScreen(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Box(modifier = Modifier.fillMaxWidth()) {
+
                     IconButton(
                         onClick = { navigator.popBackStack() },
                         modifier = Modifier.align(Alignment.CenterStart)
@@ -65,7 +70,7 @@ fun SlideReaderScreen(
                     }
 
                     Text(
-                        text = "Chapter: ${chapter.id.toString().padStart(2, '0')} | ${chapter.title}",
+                        text = "Chapter: ${chapterId.toString().padStart(2, '0')}",
                         fontSize = 14.sp,
                         color = Color.Gray,
                         modifier = Modifier.align(Alignment.Center)
@@ -73,10 +78,10 @@ fun SlideReaderScreen(
                 }
             }
         },
+
         bottomBar = {
             val currentPage = pagerState.currentPage
 
-            // Floating bottom navigation bar style
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -90,7 +95,7 @@ fun SlideReaderScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Left button: Exit or Previous
+
                     TextButton(
                         onClick = {
                             if (currentPage > 0) {
@@ -110,7 +115,6 @@ fun SlideReaderScreen(
                         )
                     }
 
-                    // Center slide indicator
                     Text(
                         text = "${currentPage + 1} / ${slides.size}",
                         fontSize = 14.sp,
@@ -118,23 +122,23 @@ fun SlideReaderScreen(
                         color = Color.DarkGray
                     )
 
-                    // Right button: Next or Next Topic
                     TextButton(
                         onClick = {
-                            if (currentPage < slides.size - 1) {
+                            if (currentPage < slides.lastIndex) {
                                 coroutineScope.launch {
                                     pagerState.animateScrollToPage(currentPage + 1)
                                 }
                             } else {
-                                // Navigate to next chapter/topic here
-                                // For now, go back or show message
                                 navigator.popBackStack()
                             }
                         }
                     ) {
                         Text(
-                            text = if (currentPage < slides.size - 1) "Next" else "Next Topic",
-                            color = if (currentPage < slides.size - 1) Color(0xFF1A237E) else Color(0xFF2E7D32),
+                            text = if (currentPage < slides.lastIndex) "Next" else "Next Topic",
+                            color = if (currentPage < slides.lastIndex)
+                                Color(0xFF1A237E)
+                            else
+                                Color(0xFF2E7D32),
                             fontSize = 15.sp,
                             fontWeight = FontWeight.Medium
                         )
@@ -143,12 +147,14 @@ fun SlideReaderScreen(
             }
         }
     ) { innerPadding ->
+
         HorizontalPager(
             state = pagerState,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
         ) { page ->
+
             val slide = slides[page]
 
             Column(
@@ -158,9 +164,10 @@ fun SlideReaderScreen(
                     .padding(horizontal = 24.dp, vertical = 8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Slide title
+                /* ---------- SLIDE TITLE ---------- */
                 Text(
                     text = slide.title,
                     fontSize = 20.sp,
@@ -169,28 +176,70 @@ fun SlideReaderScreen(
                     modifier = Modifier.padding(vertical = 8.dp)
                 )
 
-                // Slide image
-                slide.imageRes?.let {
-                    AsyncImage(
-                        model = it,
-                        contentDescription = slide.title,
-                        contentScale = ContentScale.Fit,
-                        modifier = Modifier
-                            .fillMaxWidth(0.8f)
-                            .height(180.dp)
-                            .padding(vertical = 16.dp)
-                    )
+                /* ---------- SLIDE BLOCKS ---------- */
+                slide.blocks.forEach { block ->
+                    when (block) {
+
+                        is SlideBlock.Text -> {
+                            Text(
+                                text = block.text,
+                                fontSize = 16.sp,
+                                lineHeight = 22.sp,
+                                color = Color.DarkGray,
+                                modifier = Modifier.padding(vertical = 12.dp)
+                            )
+                        }
+
+                        is SlideBlock.Markdown -> {
+                            Text(
+                                text = block.markdown,
+                                fontSize = 16.sp,
+                                lineHeight = 22.sp,
+                                color = Color.DarkGray,
+                                modifier = Modifier.padding(vertical = 12.dp)
+                            )
+                        }
+
+                        is SlideBlock.Image -> {
+                            block.images.forEach { imageName ->
+                                AsyncImage(
+                                    model = ContentMapper.imageRes(imageName),
+                                    contentDescription = null,
+                                    contentScale = ContentScale.Fit,
+                                    modifier = Modifier
+                                        .fillMaxWidth(0.8f)
+                                        .height(180.dp)
+                                        .padding(vertical = 16.dp)
+                                )
+                            }
+                        }
+
+                        is SlideBlock.Table -> {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 12.dp)
+                            ) {
+                                block.headers.forEach { header ->
+                                    Text(
+                                        text = header,
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 14.sp
+                                    )
+                                }
+                                Spacer(Modifier.height(4.dp))
+                                block.rows.forEach { row ->
+                                    Text(
+                                        text = row.joinToString("  |  "),
+                                        fontSize = 14.sp
+                                    )
+                                }
+                            }
+                        }
+                    }
                 }
 
-                // Slide content
-                Text(
-                    text = slide.textContent,
-                    fontSize = 16.sp,
-                    lineHeight = 22.sp,
-                    color = Color.DarkGray,
-                    textAlign = TextAlign.Start,
-                    modifier = Modifier.padding(bottom = 120.dp)
-                )
+                Spacer(modifier = Modifier.height(120.dp))
             }
         }
     }

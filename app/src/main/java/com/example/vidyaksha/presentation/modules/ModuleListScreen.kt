@@ -8,20 +8,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.vidyaksha.data.local.ModuleRepository
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.vidyaksha.presentation.destinations.ModuleDetailScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Destination
 @Composable
-fun ModuleListScreen(navigator: DestinationsNavigator) {
+fun ModuleListScreen(
+    navigator: DestinationsNavigator,
+    viewModel: ModuleViewModel = hiltViewModel()
+) {
+
+    // ✅ JSON-driven modules
+    val modules = viewModel.getModules()
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
+
         Text(
             text = "Select a Module",
             fontSize = 22.sp,
@@ -30,14 +37,13 @@ fun ModuleListScreen(navigator: DestinationsNavigator) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Loop through all available modules
-        ModuleRepository.modules.forEach { module ->
+        // ✅ Same UI – new data source
+        modules.forEach { module ->
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp)
                     .clickable {
-                        // ✅ Correct navigation call
                         navigator.navigate(
                             ModuleDetailScreenDestination(
                                 moduleNumber = module.id,

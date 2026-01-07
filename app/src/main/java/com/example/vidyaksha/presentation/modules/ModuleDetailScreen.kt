@@ -6,39 +6,15 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -52,33 +28,25 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.vidyaksha.R
-import com.example.vidyaksha.data.local.ModuleRepository
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.vidyaksha.data.local.ContentMapper
+import com.example.vidyaksha.data.local.Level
 import com.example.vidyaksha.presentation.destinations.ChapterDetailScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
-
-data class ModuleLevel(
-    val imageRes: Int,
-    val title: String,
-    val progress: Int
-)
 
 @Destination
 @Composable
 fun ModuleDetailScreen(
     navigator: DestinationsNavigator,
     moduleNumber: Int,
-    moduleTitle: String
+    moduleTitle: String,
+    viewModel: ModuleViewModel = hiltViewModel()
 ) {
-    val description =
-        "Detailed description for $moduleTitle. This can be very long; prefer loading from ViewModel using moduleNumber."
 
-    val levels = listOf(
-        ModuleLevel(R.drawable.bull_logo, "Hustler", 35),
-        ModuleLevel(R.drawable.bull_logo, "MasterMind", 60),
-        ModuleLevel(R.drawable.bull_logo, "Unstoppable", 85)
-    )
+    /* ---------- JSON DATA ---------- */
+    val module = viewModel.getModule(moduleNumber)
+    val levels = module.levels   // ✅ from JSON
 
     val scrollState = rememberScrollState()
 
@@ -93,7 +61,8 @@ fun ModuleDetailScreen(
                 .fillMaxSize()
                 .verticalScroll(scrollState)
         ) {
-            // 🟢 Header Card
+
+            /* ---------- HEADER CARD (UNCHANGED UI) ---------- */
             Surface(
                 tonalElevation = 2.dp,
                 shape = RoundedCornerShape(12.dp),
@@ -107,20 +76,20 @@ fun ModuleDetailScreen(
                         .fillMaxSize()
                         .background(
                             Brush.verticalGradient(
-                                colors = listOf(Color(0xFFDFFFD9), Color(0xFFFFFFFF))
+                                listOf(Color(0xFFDFFFD9), Color.White)
                             )
                         )
                         .padding(16.dp)
                 ) {
-                    Column(modifier = Modifier.fillMaxWidth()) {
+                    Column {
                         Text(
-                            text = "Module : ${"%02d".format(moduleNumber)}",
+                            text = "Module : ${"%02d".format(module.id)}",
                             fontSize = 14.sp,
                             color = Color(0xFF2E7D32),
                             fontWeight = FontWeight.SemiBold
                         )
                         Text(
-                            text = moduleTitle,
+                            text = module.title,
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF1B1B1B),
@@ -130,7 +99,7 @@ fun ModuleDetailScreen(
                         Divider(color = Color(0xFFBDBDBD))
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = description,
+                            text = module.description,
                             fontSize = 14.sp,
                             color = Color(0xFF444444)
                         )
@@ -140,61 +109,57 @@ fun ModuleDetailScreen(
 
             Spacer(modifier = Modifier.height(30.dp))
 
-            // 🟢 Dashed connector + Level Cards
-            // 🔹 Use a BoxWithConstraints to make the Canvas fill available height dynamically
-            BoxWithConstraints(
-                modifier = Modifier
-                    .fillMaxWidth()
-            ) {
-                // 🟢 Dashed vertical line aligned with green dots
+            /* ---------- CONNECTOR + LEVELS ---------- */
+            BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+
                 Canvas(
                     modifier = Modifier
                         .matchParentSize()
-                        .padding(start = 7.dp, top = 10.dp, bottom = 10.dp) // <-- Adjusted to dot center
+                        .padding(start = 7.dp, top = 10.dp, bottom = 10.dp)
                 ) {
-                    val pathEffect = PathEffect.dashPathEffect(floatArrayOf(14f, 12f), 0f)
+                    val pathEffect = PathEffect.dashPathEffect(floatArrayOf(14f, 12f))
                     drawLine(
                         color = Color(0xFF66BB6A),
-                        start = Offset(x = 0f, y = 0f),
-                        end = Offset(x = 0f, y = size.height),
+                        start = Offset(0f, 0f),
+                        end = Offset(0f, size.height),
                         strokeWidth = 3f,
                         pathEffect = pathEffect,
                         cap = StrokeCap.Round
                     )
                 }
 
-                // Level cards
                 Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(start = 0.dp), // no horizontal shift
-                    verticalArrangement = Arrangement.spacedBy(56.dp)
+                    verticalArrangement = Arrangement.spacedBy(56.dp),
+                    modifier = Modifier.fillMaxWidth()
                 ) {
                     levels.forEachIndexed { index, level ->
                         LevelExpandableCard(
                             level = level,
                             navigator = navigator,
-                            moduleNumber = moduleNumber,
-                            levelId = index
+                            moduleNumber = module.id,
+                            levelId = level.id
                         )
                     }
                 }
             }
-
 
             Spacer(modifier = Modifier.height(32.dp))
         }
     }
 }
 
+/* ---------- LEVEL CARD (UI SAME) ---------- */
+
 @Composable
-fun LevelExpandableCard(level: ModuleLevel,
-                        navigator: DestinationsNavigator,
-                        moduleNumber: Int,
-                        levelId: Int) {
+fun LevelExpandableCard(
+    level: Level,
+    navigator: DestinationsNavigator,
+    moduleNumber: Int,
+    levelId: Int
+) {
     var expanded by remember { mutableStateOf(false) }
     val animatedProgress by animateFloatAsState(
-        targetValue = if (expanded) level.progress / 100f else 0f,
+        targetValue = if (expanded) 1f else 0f,
         label = ""
     )
 
@@ -202,50 +167,55 @@ fun LevelExpandableCard(level: ModuleLevel,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()
     ) {
-        // Green dot indicator
+
         Box(
             modifier = Modifier
                 .size(14.dp)
-                .background(Color(0xFF66BB6A), shape = RoundedCornerShape(50))
+                .background(Color(0xFF66BB6A), RoundedCornerShape(50))
         )
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        // Main Level Card
         Card(
             shape = RoundedCornerShape(16.dp),
-            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+            elevation = CardDefaults.cardElevation(8.dp),
             colors = CardDefaults.cardColors(containerColor = Color(0xFFF9F9F9)),
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { expanded = !expanded }
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(Modifier.padding(16.dp)) {
+
                 Row(
-                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
+
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Image(
-                            painter = painterResource(id = level.imageRes),
-                            contentDescription = level.title,
+                            painter = painterResource(
+                                ContentMapper.imageRes(level.image)
+                            ),
+                            contentDescription = level.name.name,
                             contentScale = ContentScale.Fit,
                             modifier = Modifier
                                 .size(50.dp)
                                 .clip(RoundedCornerShape(10.dp))
                                 .background(Color(0xFFF3F3F3))
                         )
+
                         Spacer(modifier = Modifier.width(12.dp))
+
                         Column {
                             Text(
-                                text = level.title,
+                                text = level.name.name,
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color(0xFF1A237E)
                             )
                             Text(
-                                text = "Short subtitle or progress",
+                                text = "Fixed level",
                                 fontSize = 12.sp,
                                 color = Color(0xFF757575),
                                 modifier = Modifier.padding(top = 4.dp)
@@ -254,7 +224,9 @@ fun LevelExpandableCard(level: ModuleLevel,
                     }
 
                     Icon(
-                        imageVector = if (expanded) Icons.Filled.KeyboardArrowUp else Icons.Filled.KeyboardArrowDown,
+                        imageVector =
+                            if (expanded) Icons.Filled.KeyboardArrowUp
+                            else Icons.Filled.KeyboardArrowDown,
                         contentDescription = null,
                         tint = Color(0xFF1A237E)
                     )
@@ -262,11 +234,7 @@ fun LevelExpandableCard(level: ModuleLevel,
 
                 AnimatedVisibility(visible = expanded) {
                     Column(modifier = Modifier.padding(top = 12.dp)) {
-                        Text(
-                            text = "Level progress: ${level.progress}%",
-                            fontSize = 14.sp,
-                            color = Color.DarkGray
-                        )
+
                         LinearProgressIndicator(
                             progress = { animatedProgress },
                             color = Color(0xFF81C784),
@@ -276,14 +244,15 @@ fun LevelExpandableCard(level: ModuleLevel,
                                 .height(8.dp)
                                 .clip(RoundedCornerShape(10.dp))
                         )
+
                         Spacer(modifier = Modifier.height(12.dp))
+
                         Button(
                             onClick = {
-
                                 navigator.navigate(
                                     ChapterDetailScreenDestination(
                                         moduleNumber = moduleNumber,
-                                        moduleTitle = level.title
+                                        moduleTitle = level.name.name
                                     )
                                 )
                             },

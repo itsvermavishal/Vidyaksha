@@ -1,5 +1,7 @@
 package com.example.vidyaksha.di
 
+import com.example.vidyaksha.data.local.ContentRepository
+import com.example.vidyaksha.data.repository.ContentRepositoryImpl
 import com.example.vidyaksha.data.repository.NoteRepositoryImpl
 import com.example.vidyaksha.data.repository.SessionRepositoryImpl
 import com.example.vidyaksha.data.repository.SubjectRepositoryImpl
@@ -41,4 +43,11 @@ abstract class RepositoryModule {
     abstract fun bindNoteRepository(
         impl: NoteRepositoryImpl
     ): NoteRepository
+
+
+    @Binds
+    abstract fun bindContentRepository(
+        impl: ContentRepositoryImpl
+    ): ContentRepository
+
 }

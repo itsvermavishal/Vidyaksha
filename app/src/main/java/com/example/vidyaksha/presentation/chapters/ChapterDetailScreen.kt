@@ -19,25 +19,25 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.vidyaksha.R
+import com.example.vidyaksha.data.local.ContentMapper
 import com.example.vidyaksha.presentation.destinations.SlideReaderScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
-import com.example.vidyaksha.R
 
 @Destination
 @Composable
 fun ChapterDetailScreen(
     moduleNumber: Int,
     moduleTitle: String,
-    navigator: DestinationsNavigator
+    navigator: DestinationsNavigator,
+    viewModel: ChapterViewModel = hiltViewModel()
 ) {
-    val chapters = listOf(
-        Triple("Chapter:1", "Stock Market Basics", "Understand what stocks are, how they work, and how they are traded."),
-        Triple("Chapter:2", "IPO", "Learn what an Initial Public Offering is and how companies get listed."),
-        Triple("Chapter:3", "Investing", "Grasp key investing principles that drive financial growth."),
-        Triple("Chapter:4", "Compounding", "Explore the power of compounding to multiply wealth."),
-        Triple("Chapter:5", "Budget Planning", "Master the art of managing your income and expenses smartly.")
-    )
+
+    /* ---------- JSON DATA ---------- */
+    val levelId = 1 // 🔒 fixed for now (HUSTLER)
+    val chapters = viewModel.getChapters(moduleNumber, levelId)
 
     Column(
         modifier = Modifier
@@ -45,7 +45,8 @@ fun ChapterDetailScreen(
             .background(Color(0xFFF9FFF4))
             .padding(horizontal = 20.dp, vertical = 16.dp)
     ) {
-        // 🟢 Static top banner card
+
+        /* ---------- TOP BANNER (UNCHANGED UI) ---------- */
         Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(16.dp),
@@ -77,23 +78,23 @@ fun ChapterDetailScreen(
 
         Spacer(modifier = Modifier.height(5.dp))
 
-        // 🟣 Scrollable chapter list
+        /* ---------- CHAPTER LIST (JSON DRIVEN) ---------- */
         Column(
             modifier = Modifier
-                .verticalScroll(rememberScrollState())// 🔧 Add top padding to allow the first badge to show above
+                .verticalScroll(rememberScrollState())
                 .padding(top = 12.dp),
             verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
-            chapters.forEachIndexed { index, (chapterNo, title, description) ->
+            chapters.forEachIndexed { index, chapter ->
                 ChapterCard(
-                    chapterNo = chapterNo,
-                    title = title,
-                    description = description,
+                    chapterNo = "Chapter:${chapter.id}",
+                    title = chapter.title,
+                    description = chapter.description,
                     onUnleashClick = {
                         navigator.navigate(
                             SlideReaderScreenDestination(
-                                moduleId = 1,
-                                chapterId = index + 1
+                                moduleId = moduleNumber,
+                                chapterId = chapter.id
                             )
                         )
                     }
@@ -102,6 +103,8 @@ fun ChapterDetailScreen(
         }
     }
 }
+
+/* ---------- CARD UI (UNCHANGED) ---------- */
 
 @Composable
 fun ChapterCard(
@@ -115,7 +118,6 @@ fun ChapterCard(
             .fillMaxWidth()
             .height(190.dp)
     ) {
-        // 🟣 Main card
         Card(
             modifier = Modifier
                 .matchParentSize()
@@ -128,7 +130,7 @@ fun ChapterCard(
                 modifier = Modifier.fillMaxSize(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // 🟡 Left vertical image strip
+
                 Image(
                     painter = painterResource(id = R.drawable.stock),
                     contentDescription = null,
@@ -139,7 +141,6 @@ fun ChapterCard(
                     contentScale = ContentScale.Crop
                 )
 
-                // 🟢 Right section
                 Column(
                     modifier = Modifier
                         .fillMaxHeight()
@@ -162,7 +163,6 @@ fun ChapterCard(
                         )
                     }
 
-                    // 🟣 Unleash button at bottom
                     Text(
                         text = "Unleash",
                         color = Color(0xFF3F51B5),
@@ -176,7 +176,6 @@ fun ChapterCard(
             }
         }
 
-        // 🟦 Floating chapter badge (overlapping top-left border)
         Box(
             modifier = Modifier
                 .offset(x = 20.dp, y = (-10).dp)

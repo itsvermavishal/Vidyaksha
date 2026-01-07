@@ -98,7 +98,7 @@ dependencies {
     //Desugaring
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.6.0")
 
     implementation("com.airbnb.android:lottie-compose:6.3.0")
 
@@ -106,5 +106,12 @@ dependencies {
 
     implementation("androidx.compose.foundation:foundation:1.7.0")
 
+    //Markwon
 
+    implementation("io.noties.markwon:core:4.6.2")
+    implementation("io.noties.markwon:html:4.6.2")
+    implementation("io.noties.markwon:image:4.6.2")
+
+    //gson
+    implementation("com.google.code.gson:gson:2.10.1")
 }
