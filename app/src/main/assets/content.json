@@ -1,5 +1,83 @@
 {
   "version": 1,
+
+  "highlights": [
+    {
+      "id": "market_trends",
+      "title": "Market Trends",
+      "slides": [
+        {
+          "id": 1,
+          "title": "Global Market Rally",
+          "blocks": [
+            {
+              "type": "TEXT",
+              "text": "Global markets rallied strongly amid easing inflation concerns."
+            },
+            {
+              "type": "IMAGE",
+              "images": ["market_rally_1", "market_rally_2"]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Sector Rotation",
+          "blocks": [
+            {
+              "type": "MARKDOWN",
+              "markdown": "### Sector Rotation\nCapital is shifting from IT to banking and FMCG."
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "top_gainers",
+      "title": "Top Gainers",
+      "slides": [
+        {
+          "id": 1,
+          "title": "Stock ABC",
+          "blocks": [
+            {
+              "type": "TEXT",
+              "text": "Stock ABC gained 8% today due to strong quarterly results."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Stock XYZ",
+          "blocks": [
+            {
+              "type": "TEXT",
+              "text": "Stock XYZ surged after a major institutional buy."
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "latest_news",
+      "title": "Latest News",
+      "slides": [
+        {
+          "id": 1,
+          "title": "RBI Policy Update",
+          "blocks": [
+            {
+              "type": "TEXT",
+              "text": "RBI kept repo rate unchanged citing inflation risks."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
   "modules": [
     {
       "id": 1,
@@ -25,35 +103,6 @@
                     {
                       "type": "TEXT",
                       "text": "A stock market is a place where shares are bought and sold."
-                    },
-                    {
-                      "type": "IMAGE",
-                      "images": ["slide_stock_intro", "slide_stock_chart"]
-                    }
-                  ]
-                },
-                {
-                  "id": 2,
-                  "title": "Returns Comparison",
-                  "blocks": [
-                    {
-                      "type": "TABLE",
-                      "headers": ["Asset", "10Y CAGR"],
-                      "rows": [
-                        ["FD", "6%"],
-                        ["Gold", "8%"],
-                        ["Equity", "12%"]
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": 3,
-                  "title": "Power of Compounding",
-                  "blocks": [
-                    {
-                      "type": "MARKDOWN",
-                      "markdown": "### Compounding\nMoney grows exponentially over time."
                     }
                   ]
                 }
@@ -63,10 +112,11 @@
         }
       ]
     },
+
     {
       "id": 2,
       "title": "Fundamentals",
-      "image": "fundametal",
+      "image": "fundamental",
       "description": "Understand financial statements and valuation.",
       "levels": [
         {

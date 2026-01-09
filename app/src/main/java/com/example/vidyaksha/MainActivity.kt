@@ -99,14 +99,12 @@ class MainActivity : ComponentActivity() {
                         DestinationsNavHost(
                             navGraph = NavGraphs.root,
                             navController = navController,
-                            startRoute = HomeScreenDestination, // 🔴 FORCE START
                             dependenciesContainerBuilder = {
                                 if (isBound) {
                                     dependency(SessionScreenRouteDestination) { timerService }
                                 }
                             }
                         )
-
                     }
                 }
             }
@@ -128,6 +126,9 @@ class MainActivity : ComponentActivity() {
     override fun onStop() {
         super.onStop()
         unbindService(connection)
-        isBound = false
+        if (isBound) {
+            unbindService(connection)
+            isBound = false
+        }
     }
 }

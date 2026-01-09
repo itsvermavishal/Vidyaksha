@@ -3,7 +3,20 @@ package com.example.vidyaksha.data.local
 /* ---------- ROOT ---------- */
 data class AppContent(
     val version: Int,
-    val modules: List<Module>
+    val modules: List<Module>,
+    val highlights: List<HighlightSection> = emptyList()
+)
+/* ---------- TOP CAROUSEL CONTENT ---------- */
+data class HighlightSection(
+    val id: String,              // market_trends | top_gainers | latest_news
+    val title: String,
+    val slides: List<HighlightSlide>
+)
+
+data class HighlightSlide(
+    val title: String,
+    val description: String,
+    val image: String
 )
 
 /* ---------- MODULE ---------- */
@@ -18,7 +31,7 @@ data class Module(
     val id: Int,
     val title: String,
     val image: String,
-    val description: String,
+    val description: String = "",
     val levels: List<Level>
 )
 

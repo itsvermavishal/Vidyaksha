@@ -31,18 +31,23 @@ class ContentRepositoryImpl @Inject constructor(
     override fun loadContent(): AppContent {
         if (cached != null) return cached!!
 
-        return runCatching {
+        return try {
             val json = context.assets
                 .open("content.json")
                 .bufferedReader()
                 .use { it.readText() }
 
-            gson.fromJson(json, AppContent::class.java)
-        }.getOrElse { e ->
-            e.printStackTrace()
-            throw IllegalStateException("❌ Invalid content.json format", e)
-        }.also {
-            cached = it
+            android.util.Log.d("CONTENT", "✅ content.json loaded successfully")
+            android.util.Log.d("CONTENT", json.take(300)) // first 300 chars
+
+            val content = gson.fromJson(json, AppContent::class.java)
+                ?: throw IllegalStateException("Parsed AppContent is null")
+
+            cached = content
+            content
+        } catch (e: Exception) {
+            android.util.Log.e("CONTENT", "❌ FAILED TO LOAD OR PARSE content.json", e)
+            throw e
         }
     }
 

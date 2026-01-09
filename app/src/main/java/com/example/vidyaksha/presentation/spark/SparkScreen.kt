@@ -31,6 +31,10 @@ import com.example.vidyaksha.presentation.destinations.*
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.delay
+import com.example.vidyaksha.presentation.destinations.MarketTrendsScreenDestination
+import com.example.vidyaksha.presentation.destinations.TopGainersScreenDestination
+import com.example.vidyaksha.presentation.destinations.LatestNewsScreenDestination
+
 
 /* ---------- UI MODELS (ONLY FOR CAROUSEL) ---------- */
 
@@ -77,13 +81,6 @@ fun SparkScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            // 🔴 DEBUG LINE — ADD THIS
-            Text(
-                text = "Modules count: ${modules.size}",
-                color = Color.Red,
-                fontSize = 16.sp
-            )
-
             Spacer(Modifier.height(12.dp))
 
             // 🔵 Your existing UI continues here
@@ -91,11 +88,11 @@ fun SparkScreen(
             AutoSlidingCarousel(
                 items = carouselItems,
                 onItemClick = { index ->
-//                    when (index) {
-//                        0 -> navigator.navigate(MarketTrendsScreenDestination())
-//                        1 -> navigator.navigate(TopGainersScreenDestination())
-//                        2 -> navigator.navigate(LatestNewsScreenDestination())
-//                    }
+                    when (index) {
+                        0 -> navigator.navigate(MarketTrendsScreenDestination())
+                        1 -> navigator.navigate(TopGainersScreenDestination())
+                        2 -> navigator.navigate(LatestNewsScreenDestination())
+                    }
                 }
             )
 

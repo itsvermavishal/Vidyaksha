@@ -11,4 +11,25 @@ class SparkViewModel @Inject constructor(
 ) : ViewModel() {
 
     val modules = repository.getModules()
+
+    fun getMarketTrends() =
+        repository.loadContent()
+            .highlights.first { it.id == "market_trends" }
+            ?.slides
+            ?: emptyList()
+
+    fun getTopGainers() =
+        repository.loadContent()
+            .highlights.first { it.id == "top_gainers" }
+            ?.slides
+            ?: emptyList()
+
+    fun getLatestNews() =
+        repository.loadContent()
+            .highlights.first { it.id == "latest_news" }
+            ?.slides
+            ?: emptyList()
+
+
 }
+

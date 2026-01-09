@@ -16,7 +16,7 @@ class SlideBlockAdapter : JsonDeserializer<SlideBlock> {
 
         val obj = json.asJsonObject
 
-        return when (obj["type"].asString) {
+        return when (obj["type"].asString.trim().uppercase()) {
 
             "TEXT" -> SlideBlock.Text(
                 obj["text"].asString
