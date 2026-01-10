@@ -6,12 +6,35 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -26,14 +49,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.vidyaksha.R
+import com.example.vidyaksha.data.local.ContentMapper
 import com.example.vidyaksha.data.local.Module
-import com.example.vidyaksha.presentation.destinations.*
+import com.example.vidyaksha.presentation.destinations.LatestNewsScreenDestination
+import com.example.vidyaksha.presentation.destinations.MarketTrendsScreenDestination
+import com.example.vidyaksha.presentation.destinations.ModuleDetailScreenDestination
+import com.example.vidyaksha.presentation.destinations.TopGainersScreenDestination
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.delay
-import com.example.vidyaksha.presentation.destinations.MarketTrendsScreenDestination
-import com.example.vidyaksha.presentation.destinations.TopGainersScreenDestination
-import com.example.vidyaksha.presentation.destinations.LatestNewsScreenDestination
 
 
 /* ---------- UI MODELS (ONLY FOR CAROUSEL) ---------- */
@@ -53,17 +78,42 @@ fun SparkScreen(
 ) {
     val modules = viewModel.modules   // ✅ JSON driven
 
+    val systemUiController = rememberSystemUiController()
+    val isDark = isSystemInDarkTheme()
+
+    val backgroundBrush = if (isDark) {
+        // 🌙 Dark mode – soft, NOT pure black
+        Brush.verticalGradient(
+            listOf(
+                Color(0xFF0F172A), // deep blue-black
+                Color(0xFF020617)  // near-black but rich
+            )
+        )
+    } else {
+        // ☀️ Light mode – your existing background
+        Brush.verticalGradient(
+            listOf(
+                Color(0xFFFFF9E3),
+                Color(0xFFF8F8FF)
+            )
+        )
+    }
+
+    SideEffect {
+        systemUiController.setSystemBarsColor(
+            color = Color.Transparent,
+            darkIcons = !isDark
+        )
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                Brush.verticalGradient(
-                    listOf(Color(0xFFFFF9E3), Color(0xFFF8F8FF))
-                )
-            )
+            .background(backgroundBrush)
     ) {
 
-        val carouselItems = listOf(
+
+    val carouselItems = listOf(
             CarouselItem(R.drawable.markettrendd, "Market Trends"),
             CarouselItem(R.drawable.bullvsbear, "Top Gainers"),
             CarouselItem(R.drawable.latestnews, "Latest News")
@@ -137,11 +187,13 @@ fun AutoSlidingCarousel(
     items: List<CarouselItem>,
     onItemClick: (index: Int) -> Unit
 ) {
-    var currentIndex by remember { mutableStateOf(0) }
+    var currentIndex by rememberSaveable { mutableStateOf(0) }
 
-    LaunchedEffect(currentIndex) {
-        delay(3000)
-        currentIndex = (currentIndex + 1) % items.size
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(3000)
+            currentIndex = (currentIndex + 1) % items.size
+        }
     }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -270,6 +322,9 @@ fun GridItemCard(
     navigator: DestinationsNavigator,
     modifier: Modifier = Modifier
 ) {
+    val imageRes = remember(module.image) {
+        ContentMapper.imageRes(module.image)
+    }
     Card(
         shape = RoundedCornerShape(20.dp),
         elevation = CardDefaults.cardElevation(8.dp),
@@ -290,9 +345,7 @@ fun GridItemCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(
-                    id = com.example.vidyaksha.data.local.ContentMapper.imageRes(module.image)
-                ),
+                painter = painterResource(imageRes),
                 contentDescription = module.title,
                 modifier = Modifier
                     .fillMaxWidth()
