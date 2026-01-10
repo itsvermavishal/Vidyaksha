@@ -13,6 +13,14 @@ data class HighlightSection(
     val slides: List<Slide>
 )
 
+// Top card
+
+data class TopCard(
+    val title: String,
+    val description: String,
+    val image: String? = null
+)
+
 
 /* ---------- MODULE ---------- */
 /*
@@ -25,8 +33,8 @@ Top card in Level screen uses:
 data class Module(
     val id: Int,
     val title: String,
+    val topCard: TopCard,
     val image: String,
-    val description: String = "",
     val levels: List<Level>
 )
 
@@ -34,6 +42,7 @@ data class Module(
 data class Level(
     val id: Int,
     val name: LevelType,
+    val topCard: TopCard,
     val image: String,
     val chapters: List<Chapter>
 )

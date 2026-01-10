@@ -30,14 +30,15 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 @Composable
 fun ChapterDetailScreen(
     moduleNumber: Int,
-    moduleTitle: String,
+    levelId: Int,
     navigator: DestinationsNavigator,
     viewModel: ChapterViewModel = hiltViewModel()
 ) {
 
     /* ---------- JSON DATA ---------- */
-    val levelId = 1 // 🔒 fixed for now (HUSTLER)
-    val chapters = viewModel.getChapters(moduleNumber, levelId)
+    val module = viewModel.getModule(moduleNumber)
+    val level = viewModel.getLevel(moduleNumber, levelId)
+    val chapters = level.chapters
 
     Column(
         modifier = Modifier
@@ -55,21 +56,21 @@ fun ChapterDetailScreen(
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
                 Text(
-                    text = "Module : ${"%02d".format(moduleNumber)}",
+                    text = "Module : ${"%02d".format(module.id)}",
                     color = Color(0xFF2E7D32),
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp
                 )
                 Spacer(modifier = Modifier.height(6.dp))
                 Text(
-                    text = moduleTitle,
+                    text = level.topCard.title,
                     color = Color.Black,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Start with this module if you are new to the topic. Learn key fundamentals, progress through levels, and earn your certificate.",
+                    text = level.topCard.description,
                     fontSize = 14.sp,
                     color = Color.DarkGray
                 )

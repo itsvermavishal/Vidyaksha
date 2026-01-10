@@ -88,8 +88,9 @@ fun ModuleDetailScreen(
                             color = Color(0xFF2E7D32),
                             fontWeight = FontWeight.SemiBold
                         )
+                        Spacer(Modifier.height(6.dp))
                         Text(
-                            text = module.title,
+                            text = module.topCard.title,
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF1B1B1B),
@@ -99,7 +100,7 @@ fun ModuleDetailScreen(
                         Divider(color = Color(0xFFBDBDBD))
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = module.description,
+                            text = module.topCard.description,
                             fontSize = 14.sp,
                             color = Color(0xFF444444)
                         )
@@ -209,13 +210,13 @@ fun LevelExpandableCard(
 
                         Column {
                             Text(
-                                text = level.name.name,
+                                text = level.topCard.title,
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color(0xFF1A237E)
                             )
                             Text(
-                                text = "Fixed level",
+                                text = level.topCard.description,
                                 fontSize = 12.sp,
                                 color = Color(0xFF757575),
                                 modifier = Modifier.padding(top = 4.dp)
@@ -252,7 +253,7 @@ fun LevelExpandableCard(
                                 navigator.navigate(
                                     ChapterDetailScreenDestination(
                                         moduleNumber = moduleNumber,
-                                        moduleTitle = level.name.name
+                                        levelId = level.id
                                     )
                                 )
                             },

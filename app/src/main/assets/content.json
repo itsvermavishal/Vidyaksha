@@ -84,12 +84,19 @@
       "id": 1,
       "title": "Basics",
       "image": "stockmarkets",
-      "description": "Build strong foundations in stock markets.",
+      "topCard": {
+        "title": "Basics",
+        "description": "Build strong foundations in stock markets."
+      },
       "levels": [
         {
           "id": 1,
           "name": "HUSTLER",
           "image": "hustler",
+          "topCard": {
+            "title": "HUSTLER",
+            "description": "Start here if you are completely new to the stock market."
+          },
           "chapters": [
             {
               "id": 1,
@@ -110,6 +117,28 @@
               ]
             }
           ]
+        },
+
+        {
+          "id": 2,
+          "name": "MASTERMIND",
+          "image": "mastermind",
+          "topCard": {
+            "title": "MASTERMIND",
+            "description": "Dive deeper into analysis, valuation, and company fundamentals."
+          },
+          "chapters": []
+        },
+
+        {
+          "id": 3,
+          "name": "UNSTOPPABLE",
+          "image": "unstoppable",
+          "topCard": {
+            "title": "UNSTOPPABLE",
+            "description": "Advanced strategies, mindset, and professional-level insights."
+          },
+          "chapters": []
         }
       ]
     },
@@ -118,12 +147,19 @@
       "id": 2,
       "title": "Fundamentals",
       "image": "fundamental",
-      "description": "Understand financial statements and valuation.",
+      "topCard": {
+        "title": "Fundamentals",
+        "description": "Understand financial statements, ratios, and valuation methods."
+      },
       "levels": [
         {
           "id": 1,
           "name": "HUSTLER",
           "image": "hustler",
+          "topCard": {
+            "title": "HUSTLER",
+            "description": "Learn the basics of financial statements and accounting."
+          },
           "chapters": [
             {
               "id": 1,

@@ -9,7 +9,9 @@ import javax.inject.Inject
 class ChapterViewModel @Inject constructor(
     private val repository: ContentRepository
 ) : ViewModel() {
+    fun getModule(moduleId: Int) =
+        repository.getModule(moduleId)
 
-    fun getChapters(moduleId: Int, levelId: Int) =
-        repository.getLevel(moduleId, levelId).chapters
+    fun getLevel(moduleId: Int, levelId: Int) =
+        repository.getLevel(moduleId, levelId)
 }
