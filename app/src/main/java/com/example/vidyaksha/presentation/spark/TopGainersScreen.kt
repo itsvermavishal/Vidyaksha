@@ -1,9 +1,12 @@
 package com.example.vidyaksha.presentation.spark
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.vidyaksha.data.mapper.toCardItem
-import com.example.vidyaksha.presentation.common.SwipeableCardPager
+import com.example.vidyaksha.presentation.slide.SwipeableSlidePager
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Destination
@@ -11,11 +14,18 @@ import com.ramcosta.composedestinations.annotation.Destination
 fun TopGainersScreen(
     viewModel: SparkViewModel = hiltViewModel()
 ) {
-    val cards = viewModel.getTopGainers()
-        .map { it.toCardItem() }
+    val systemUiController = rememberSystemUiController()
+    val isDark = isSystemInDarkTheme()
 
-    SwipeableCardPager(
+    SideEffect {
+        systemUiController.setStatusBarColor(
+            color = if (isDark) Color(0xFF020617) else Color(0xFFF1F5FF),
+            darkIcons = !isDark
+        )
+    }
+
+    SwipeableSlidePager(
         title = "Top Gainers",
-        cards = cards
+        slides = viewModel.getTopGainers()
     )
 }

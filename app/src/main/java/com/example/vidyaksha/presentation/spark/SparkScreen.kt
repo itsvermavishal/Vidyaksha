@@ -180,7 +180,7 @@ fun AutoSlidingCarousel(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color(0xFF7C4DFF))
+                            .background(Color.Black)
                             .padding(8.dp),
                         contentAlignment = Alignment.Center
                     ) {

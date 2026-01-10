@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import kotlin.math.abs
+import com.example.vidyaksha.R
 
 /* ---------- UI MODEL ---------- */
 data class CardItem(
@@ -36,8 +37,8 @@ fun SwipeableCardPager(
     pagerHeight: Dp = 360.dp,
     enableGestures: Boolean = true
 ) {
-    var currentIndex by remember { mutableStateOf(0) }
-    var dragOffset by remember { mutableStateOf(0f) }
+    var currentIndex by remember { mutableIntStateOf(0) }
+    var dragOffset by remember { mutableFloatStateOf(0f) }
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -53,7 +54,8 @@ fun SwipeableCardPager(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(pagerHeight)
+                .fillMaxHeight()
+                .weight(1f)
                 .padding(horizontal = 16.dp)
                 .pointerInput(enableGestures) {
                     if (enableGestures) {
@@ -99,14 +101,19 @@ fun SwipeableCardPager(
                 elevation = CardDefaults.cardElevation(8.dp)
             ) {
                 Column {
-                    Image(
-                        painter = painterResource(item.imageRes),
-                        contentDescription = item.heading,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(pagerHeight * 0.55f),
-                        contentScale = ContentScale.Crop
-                    )
+
+                    // ✅ SAFE IMAGE RENDERING
+                    if (item.imageRes != R.drawable.placeholder_image) {
+                        Image(
+                            painter = painterResource(item.imageRes),
+                            contentDescription = item.heading,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(pagerHeight * 0.55f),
+                            contentScale = ContentScale.Crop
+                        )
+                    }
+
                     Column(Modifier.padding(16.dp)) {
                         Text(
                             text = item.heading,
@@ -120,6 +127,7 @@ fun SwipeableCardPager(
                     }
                 }
             }
+
 
             if (currentIndex > 0) {
                 IconButton(

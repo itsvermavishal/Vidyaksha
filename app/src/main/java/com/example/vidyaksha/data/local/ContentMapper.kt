@@ -6,11 +6,15 @@ import com.example.vidyaksha.R
 object ContentMapper {
 
     fun imageRes(name: String?): Int {
+        if (name.isNullOrBlank()) {
+            Log.e("ContentMapper", "❌ Image name is null or blank")
+            return R.drawable.placeholder_image
+        }
         val key = name
-            ?.trim()
-            ?.lowercase()
-            ?.replace("-", "_")
-            ?.replace(" ", "_")
+            .trim()
+            .lowercase()
+            .replace("-", "_")
+            .replace(" ", "_")
 
         return when (key) {
 
@@ -32,6 +36,8 @@ object ContentMapper {
             "balance_sheet" -> R.drawable.balance_sheet1
             "slide_stock_intro" -> R.drawable.stock
             "slide_stock_chart" -> R.drawable.stock
+            "market_rally_1" -> R.drawable.stock
+            "market_rally_2" -> R.drawable.stock
 
             else -> {
                 Log.e("ContentMapper", "❌ Unknown image key: $name")

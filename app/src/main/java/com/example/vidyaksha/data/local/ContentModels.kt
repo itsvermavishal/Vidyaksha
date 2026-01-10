@@ -8,16 +8,11 @@ data class AppContent(
 )
 /* ---------- TOP CAROUSEL CONTENT ---------- */
 data class HighlightSection(
-    val id: String,              // market_trends | top_gainers | latest_news
+    val id: String,
     val title: String,
-    val slides: List<HighlightSlide>
+    val slides: List<Slide>
 )
 
-data class HighlightSlide(
-    val title: String,
-    val description: String,
-    val image: String
-)
 
 /* ---------- MODULE ---------- */
 /*
