@@ -3,6 +3,7 @@ package com.example.vidyaksha.presentation.modules
 import androidx.lifecycle.ViewModel
 import com.example.vidyaksha.data.local.ContentRepository
 import com.example.vidyaksha.data.local.LearningLevelProgress
+import com.example.vidyaksha.data.local.Level
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject   // ✅ CORRECT IMPORT
 
@@ -26,6 +27,10 @@ class ModuleViewModel @Inject constructor(
         }
 
         return completedSlides.toFloat() / totalSlides
+    }
+
+    fun calculateChapterCount(level: Level): Int {
+        return level.chapters.size
     }
 
 }

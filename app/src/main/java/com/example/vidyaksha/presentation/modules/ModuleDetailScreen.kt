@@ -189,6 +189,9 @@ fun LevelExpandableCard(
     val progress = remember(learningProgress) {
         viewModel.calculateLevelProgress(learningProgress)
     }
+    val chapterCount = remember(level) {
+        viewModel.calculateChapterCount(level)
+    }
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -291,41 +294,76 @@ fun LevelExpandableCard(
 
                         Spacer(modifier = Modifier.height(14.dp))
 
-                        Text(
-                            text = if (explored) "Continue" else "Explore",
-                            color = Color.White,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier
-                                .align(Alignment.CenterHorizontally)
-                                .background(
-                                    brush = if (explored)
-                                        Brush.horizontalGradient(
-                                            listOf(
-                                                Color(0xFF66BB6A),
-                                                Color(0xFF43A047)
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+
+                            // 🔥 LEFT — CHAPTER COUNT (ONLY WHEN EXPANDED)
+                            FireGradientText(
+                                text = "$chapterCount Chapters",
+                                fontSize = 14
+                            )
+
+                            // 👉 RIGHT — Explore / Continue
+                            Text(
+                                text = if (explored) "Continue" else "Explore",
+                                color = Color.White,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier
+                                    .background(
+                                        brush = if (explored)
+                                            Brush.horizontalGradient(
+                                                listOf(
+                                                    Color(0xFF66BB6A),
+                                                    Color(0xFF43A047)
+                                                )
+                                            )
+                                        else
+                                            Brush.horizontalGradient(
+                                                listOf(Color.LightGray, Color.Gray)
+                                            ),
+                                        shape = RoundedCornerShape(50)
+                                    )
+                                    .padding(horizontal = 26.dp, vertical = 10.dp)
+                                    .clickable {
+                                        explored = true
+                                        navigator.navigate(
+                                            ChapterDetailScreenDestination(
+                                                moduleNumber = moduleNumber,
+                                                levelId = level.id
                                             )
                                         )
-                                    else
-                                        Brush.horizontalGradient(
-                                            listOf(Color.LightGray, Color.Gray)
-                                        ),
-                                    shape = RoundedCornerShape(50)
-                                )
-                                .padding(horizontal = 26.dp, vertical = 10.dp)
-                                .clickable {
-                                    explored = true
-                                    navigator.navigate(
-                                        ChapterDetailScreenDestination(
-                                            moduleNumber = moduleNumber,
-                                            levelId = level.id
-                                        )
-                                    )
-                                }
-                        )
+                                    }
+                            )
+                        }
                     }
                 }
             }
         }
     }
 }
+
+@Composable
+fun FireGradientText(
+    text: String,
+    fontSize: Int = 14
+) {
+    Text(
+        text = text,
+        fontSize = fontSize.sp,
+        fontWeight = FontWeight.Bold,
+        style = androidx.compose.ui.text.TextStyle(
+            brush = Brush.horizontalGradient(
+                colors = listOf(
+                    Color(0xFFFF3D00), // Fire Red
+                    Color(0xFFFFC107)  // Fire Yellow
+                )
+            )
+        )
+    )
+}
+
+
 

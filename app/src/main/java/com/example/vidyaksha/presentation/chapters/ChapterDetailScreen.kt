@@ -38,6 +38,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.style.TextOverflow
+import com.example.vidyaksha.data.local.ChapterProgressUI
 
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -119,10 +120,14 @@ fun ChapterDetailScreen(
             contentPadding = PaddingValues(horizontal = 8.dp)
         ){
             items(chapters) { chapter ->
+                val progressUI = remember(chapter) {
+                    viewModel.buildChapterProgress(chapter)
+                }
                 ChapterCard(
                     chapterNo = "Chapter:${chapter.id}",
                     title = chapter.title,
                     description = chapter.description,
+                    progressUI = progressUI,
                     onUnleashClick = {
                         navigator.navigate(
                             SlideReaderScreenDestination(
@@ -150,6 +155,7 @@ fun ChapterCard(
     chapterNo: String,
     title: String,
     description: String,
+    progressUI: ChapterProgressUI,
     onUnleashClick: () -> Unit
 ) {
     Box(
@@ -199,7 +205,7 @@ fun ChapterCard(
 
                 /* ---------- SECOND ROW ---------- */
                 Row(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.weight(1f)
                 ) {
 
                     /* IMAGE COLUMN */
@@ -221,7 +227,7 @@ fun ChapterCard(
 
                     Spacer(modifier = Modifier.width(14.dp))
 
-                    /* TEXT + BUTTON COLUMN */
+                    /* TEXT DESCRIPTION */
                     Column(
                         modifier = Modifier
                             .fillMaxHeight(),
@@ -234,28 +240,47 @@ fun ChapterCard(
                             color = Color.DarkGray,
                             lineHeight = 18.sp
                         )
-
-                        Text(
-                            text = "Unleash",
-                            color = Color.DarkGray,
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 14.sp,
-                            modifier = Modifier
-                                .align(Alignment.CenterHorizontally)
-                                .background(
-                                    brush = Brush.horizontalGradient(
-                                        colors = listOf(
-                                            Color(0xFFFCD7FB), // Indigo
-                                            Color(0xFFAEC6FF)  // Deep Blue (matches tag & theme)
-                                        )
-                                    ),
-                                    shape = RoundedCornerShape(50)
-                                )
-                                .padding(horizontal = 22.dp, vertical = 9.dp)
-                                .clickable { onUnleashClick() }
-                        )
                     }
                 }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+
+                    /* LEFT — SLIDES COUNT */
+                    Text(
+                        text = "${progressUI.totalSlides} Slides",
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = Color(0xFF455A64)
+                    )
+
+                    /* CENTER — UNLEASH */
+                    Text(
+                        text = "Unleash",
+                        color = Color.DarkGray,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .background(
+                                brush = Brush.horizontalGradient(
+                                    listOf(Color(0xFFFCD7FB), Color(0xFFAEC6FF))
+                                ),
+                                shape = RoundedCornerShape(50)
+                            )
+                            .padding(horizontal = 22.dp, vertical = 9.dp)
+                            .clickable { onUnleashClick() }
+                    )
+
+                    /* RIGHT — CIRCULAR PROGRESS */
+                    CircularProgressWithText(
+                        progress = progressUI.progress
+                    )
+                }
+
             }
         }
 
@@ -305,3 +330,27 @@ fun DotsIndicator(
     }
 }
 
+@Composable
+fun CircularProgressWithText(
+    progress: Float
+) {
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier.size(44.dp)
+    ) {
+        CircularProgressIndicator(
+            progress = progress,
+            strokeWidth = 4.dp,
+            color = Color(0xFF3F51B5),
+            trackColor = Color(0xFFE0E0E0),
+            modifier = Modifier.fillMaxSize()
+        )
+
+        Text(
+            text = "${(progress * 100).toInt()}%",
+            fontSize = 10.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF3F51B5)
+        )
+    }
+}

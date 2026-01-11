@@ -228,7 +228,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "In the previous chapter, we learned that investing in equities is essential for achieving returns that can outpace inflation. The next question is how one actually invests in equities. Before going deeper into this topic, it is important to understand the overall market system and the different participants that make the capital market function smoothly.\n\nJust as we visit a nearby kirana store or a supermarket to buy daily essentials, we approach the stock market to carry out investment transactions. The stock market is the place where people come to buy and sell shares. In this context, a transaction simply means the purchase or sale of company shares. The main role of the stock market is to enable these transactions by bringing buyers and sellers together. If you wish to buy shares of a company, the stock market helps connect you with someone who wants to sell them, and vice versa.\n\nUnlike a physical marketplace, the stock market does not exist as a brick-and-mortar location. It operates entirely in electronic form. Investors access the stock market digitally through computers or mobile devices to place buy or sell orders. It is also important to note that individuals cannot access the stock market directly; transactions are carried out through registered intermediaries known as stockbrokers. Stockbrokers will be discussed in more detail later.\n\nIn India, there are two main stock exchanges — the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE). Although several regional stock exchanges existed earlier, most of them have either merged with BSE or NSE or have ceased operations. Therefore, when we refer to the Indian stock market today, we are primarily referring to either the NSE or the BSE."
                     }
                   ]
                 },
@@ -238,7 +238,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "The stock market includes individuals and organizations from a wide range of backgrounds. Anyone who buys or sells securities in the stock market is known as a market participant. These participants can be broadly grouped into the following categories:\n\nDomestic retail participants – Individual investors like you and me who trade in the stock markets.\n\nNRIs and OCIs – People of Indian origin who reside outside India but participate in Indian markets.\n\nDomestic institutions – Indian-based corporate entities that invest or trade in the markets.\n\nDomestic Asset Management Companies (AMCs) – Mutual fund houses operating in India, such as SBI Mutual Fund, HDFC AMC, Edelweiss, ICICI Prudential, and others.\n\nForeign Institutional Investors (FIIs) – Non-Indian institutional entities, which may include foreign asset management firms, hedge funds, and other overseas investors.\n\nRegardless of the category, the common objective for all market participants is to carry out profitable transactions — simply put, to make money.\n\nHowever, when money is involved, emotions like greed and fear tend to influence decision-making. This makes it necessary to have proper rules, oversight, and regulation to ensure fair practices and protect the interests of all participants in the market."
                     }
                   ]
                 },
@@ -248,7 +248,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "In India, the stock market is regulated by the Securities and Exchange Board of India (SEBI). SEBI’s role is to support the growth of stock markets, safeguard the interests of retail investors, and supervise the activities of market participants and financial intermediaries. Broadly, SEBI ensures the following:\n\nStock exchanges operate in a fair and transparent manner\n\nStockbrokers conduct their business honestly\n\nMarket participants do not engage in unfair or unethical practices\n\nCompanies do not misuse the markets for personal or undue benefit\n\nThe interests of small and retail investors are protected\n\nLarge investors with significant capital do not manipulate the markets\n\nOverall development and stability of the financial markets\n\nGiven these responsibilities, it is essential for SEBI to regulate all entities that are involved in the stock market ecosystem. Any wrongdoing by these entities can disturb the smooth and fair functioning of the Indian markets.\n\nTo ensure proper conduct, SEBI has laid down specific rules and regulations for each type of market participant. All entities are required to operate within the legal framework defined by SEBI. Detailed regulations applicable to each entity are published by SEBI on its official website under the “Legal Framework” section."
                     }
                   ]
                 },
@@ -258,7 +258,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Many corporate entities work together to make sure that transactions in the stock market are carried out smoothly. From the moment you place a trade on a trading platform (for example, to buy shares) until those shares are credited to your DEMAT account, several intermediaries coordinate behind the scenes to ensure the entire process happens without any disruption.\n\nThese entities perform their functions quietly in the background, strictly following the rules and guidelines set by SEBI. Their role is to ensure that your experience in the stock market remains simple, efficient, and hassle-free. Such entities are commonly known as financial intermediaries or market intermediaries.\n\nCollectively, these financial intermediaries depend on one another and form an ecosystem through which the financial markets function. Let us now briefly look at some of the key market intermediaries and understand the roles they play within this ecosystem."
                     }
                   ]
                 },
@@ -268,7 +268,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "A stockbroker is one of the most important financial intermediaries you should be familiar with. A stockbroker is a corporate organization that is registered as a trading member with a stock exchange and holds a valid stockbroking license. This license is issued by SEBI after proper verification, and the broker is required to follow all rules and regulations laid down by SEBI.\n\nA stockbroker acts as your entry point to the stock markets, enabling you to invest in shares, bonds, ETFs, and mutual funds. To trade in the stock market, you must first open an account with a broker of your choice. There are many brokers registered in India, and investors usually select one based on personal preferences. Some common factors people consider while choosing a broker include:\n\nEase of use and simplicity of the broker’s trading platform\n\nQuality and responsiveness of customer support\n\nAvailability of useful reports such as Profit & Loss statements, trade history, and tax reports\n\nFinancial strength of the broker (it is better to avoid brokers with weak financials)\n\nValue-added initiatives such as investor education and learning resources\n\nOnce you choose a broker and open a trading and DEMAT account, you can begin participating in the stock market. After your account is active, there are a few standard ways through which you can place trades using your broker:\n\nPlacing orders via phone – You can contact your broker, verify your identity using your client or account code, and request the dealer to place a trade on your behalf. The dealer executes the order and confirms the transaction status during the call.\n\nSelf-directed trading – This is the most commonly used method today. The broker provides access to a digital trading platform or trading terminal. After logging in, you can view live market prices and place buy or sell orders on your own. For example, Zerodha’s trading platform is known as Kite.\n\nProgrammatic trading via APIs – Experienced users can connect to the market using APIs provided by certain brokers. These services are usually offered for an additional fee and are suitable for advanced or automated trading strategies.\n\nThe key services typically offered by a stockbroker include:\n\nProviding access to the stock markets and enabling trade execution\n\nOffering margin facilities for trading (this will be discussed later)\n\nCustomer support through calls, emails, or chat to resolve issues and provide guidance\n\nIssuing contract notes for all trades — a contract note is an official record of the transactions carried out during the day\n\nEnabling fund transfers between your trading account and linked bank account\n\nProviding access to a back-office system, which is a portal containing detailed reports and account information (for example, Zerodha’s back-office platform is called Console)."
                     }
                   ]
                 },
@@ -278,7 +278,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "When you purchase a property, ownership is proved by showing valid property documents. This makes it important to keep those documents safe and secure.\n\nIn a similar way, when you buy shares (which represent partial ownership in a company), ownership was earlier established through a share certificate. A share certificate is simply a document that confirms your ownership in a company. Until 1996, share certificates existed only in physical form. After that, they were converted into electronic form. This process of converting physical share certificates into digital form is known as dematerialization, commonly called DEMAT.\n\nThe move to digital shareholding gained momentum after major market events highlighted the need for a safer and more transparent system. Digitization helped improve efficiency, reduce fraud, and simplify share ownership.\n\nOnce shares are converted into DEMAT form, they must be stored electronically. This digital storage is known as a DEMAT account. A depository is a financial intermediary that provides DEMAT account services. You can think of a DEMAT account as a secure digital locker where your shares are stored. Your trading account with the broker and your DEMAT account with the depository are linked to each other.\n\nFor example, if you want to buy shares of a company like Infosys, you simply place a buy order through your trading account. Once the transaction is completed, the shares are automatically credited to your DEMAT account.\n\nSimilarly, when you decide to sell shares, you place a sell order using your trading account. While the selling action happens through the trading platform, the linked DEMAT account is debited in the background for the shares that are sold.\n\nCurrently, there are only two depositories in India that provide DEMAT account services: National Securities Depository Limited (NSDL) and Central Depository Services (India) Limited (CDSL). There is very little difference between the two, and both operate under strict regulations prescribed by SEBI."
                     }
                   ]
                 },
@@ -288,7 +288,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "You cannot directly visit the National Stock Exchange (NSE) to open a trading account. In the same way, you cannot approach a depository such as NSDL or CDSL directly to open a DEMAT account. To open a DEMAT account, you need to contact a Depository Participant (DP).\n\nA Depository Participant helps you create and manage your DEMAT account with a depository. The DP acts as a link between you and the depository, handling all account-related activities on your behalf. Just like other market entities, Depository Participants are also regulated and governed by the rules and guidelines set by SEBI.\n\nFor example, Zerodha acts as a Depository Participant for Central Depository Services (India) Limited (CDSL)."
                     }
                   ]
                 },
@@ -298,7 +298,7 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Banks play a simple but essential role in the market ecosystem. Their primary function is to enable the transfer of funds between your bank account and your trading account. Once your bank details are verified, the broker links your bank account with your trading account to allow smooth fund movement.\n\nYou are allowed to link more than one bank account to your trading account. These linked accounts can be used to add funds and place trades. However, regardless of how many bank accounts are connected, withdrawals can be made only to one designated bank account. This account is known as the primary bank account.\n\nFor instance, with platforms like Zerodha, you can link one primary bank account and up to two additional secondary bank accounts. Funds can be deposited from any of the linked accounts, but withdrawals are processed only to the primary bank account.\n\nIn addition, payouts such as dividends and proceeds from share buybacks are credited directly to the primary bank account. This primary account is connected not only to your trading account but also to the depository, registrar, and transfer agents (RTA).\n\nBy now, it should be clear that key financial intermediaries operate through separate accounts — a bank account, a trading account, and a DEMAT account — all working together to ensure smooth functioning of stock market transactions."
                     }
                   ]
                 },
@@ -308,13 +308,1212 @@
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "NSE Clearing Limited and Indian Clearing Corporation Limited (ICCL) are fully owned subsidiaries of the National Stock Exchange and the Bombay Stock Exchange respectively.\n\nThe primary responsibility of a clearing corporation is to ensure that all trades and transactions are settled without fail. For example, if you buy one share of a company at a certain price, there must be a corresponding seller willing to sell that share at the same price. In such a transaction, the buyer’s trading account is debited for the amount, and the seller is credited with the same amount. The clearing corporation oversees this entire process to make sure it is completed correctly.\n\nIn a typical transaction, the clearing corporation ensures the following:\n\nIt identifies the buyer and the seller and properly matches the debit and credit obligations.\n\nIt guarantees that there are no defaults by either party. Once a trade is executed, the seller cannot withdraw from the transaction, and the buyer must fulfill the payment obligation. This prevents any party from backing out after the trade is confirmed.\n\nFor most investors and traders, there is no need to understand the internal workings of NSE Clearing Limited or ICCL in detail. This is because market participants do not interact with the clearing corporation directly. Its role is to function silently in the background, ensuring that every trade in the market is completed smoothly and reliably."
                     }
                   ]
                 },
                 {
                   "id": 10,
                   "title": "Some More Players",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Hidden Players of the Stock Market (Beyond Banks, Brokers & Regulators)\n\nWhen people think about the stock market, they usually imagine retail investors trading through brokers, with regulators like SEBI overseeing everything and depositories like CDSL or NSDL holding shares. This is only the visible surface. In reality, the stock market is a complex ecosystem where many players operate behind the scenes. These players may not place trades the way retail investors do, but they strongly influence price movement, liquidity, volatility, and long-term trends.\n\nUnderstanding these hidden participants helps explain why markets behave irrationally at times and why prices often move even when there is no obvious news.\n\nMarket Makers and Liquidity Providers\n\nMarket makers and liquidity providers ensure that there is always a buyer or seller available in the market. They continuously quote buy and sell prices and earn through spreads rather than directional bets.\n\nKey points:\n\nThey reduce sudden price gaps and extreme volatility.\n\nThey make it possible for retail traders to enter and exit positions easily.\n\nThey benefit from seeing aggregated order flow, which gives them structural advantages.\n\nWithout them, markets would become illiquid and chaotic, especially during volatile periods.\n\nCustodians and Clearing Institutions\n\nCustodians and clearing banks handle the actual settlement of trades. While brokers execute orders, these institutions ensure that shares and money are exchanged correctly between parties.\n\nTheir role includes:\n\nHolding securities on behalf of institutions.\n\nManaging settlement, dividends, bonuses, and corporate actions.\n\nReducing counterparty risk.\n\nRetail investors rarely hear about them, but if these entities fail or delay settlement, the entire market can freeze.\n\nMutual Funds and Active Fund Managers\n\nMutual funds pool money from thousands or millions of investors and deploy it through professional fund managers. Their trades are large enough to influence prices and valuations.\n\nImportant aspects:\n\nThey create sustained buying or selling pressure.\n\nTheir entry often legitimizes a stock or sector.\n\nTheir exits can trigger panic among retail investors.\n\nThey do not just follow trends; in many cases, they define them.\n\nPassive Funds, Index Funds, and ETFs\n\nPassive funds do not analyze stocks individually. They simply replicate indices. Despite this simplicity, they control enormous amounts of capital.\n\nWhy they matter:\n\nTheir buying and selling is automatic and rule-based.\n\nStocks included in indices receive consistent inflows.\n\nWhen markets fall, these funds sell mechanically, increasing volatility.\n\nThey move markets not through intelligence, but through scale.\n\nProprietary Trading Firms\n\nProprietary trading firms trade using their own capital rather than client money. They focus on short-term opportunities, arbitrage, and derivatives.\n\nCharacteristics:\n\nExtremely fast execution.\n\nHeavy use of data and models.\n\nDominant presence in intraday and futures trading.\n\nRetail traders often mistake their activity for “smart money,” but they are operating on a completely different battlefield.\n\nHigh-Frequency Trading (HFT) Systems\n\nHFTs are algorithmic systems designed to exploit speed advantages. They place and cancel thousands of orders within milliseconds.\n\nTheir influence includes:\n\nCreating the illusion of liquidity.\n\nIncreasing short-term volatility.\n\nAmplifying crashes when they suddenly withdraw from the market.\n\nIn times of stress, these systems often shut down, leaving markets exposed.\n\nForeign Institutional Investors (FIIs / FPIs)\n\nForeign investors move capital across countries based on global conditions rather than local fundamentals.\n\nThey are influenced by:\n\nInterest rates in developed economies.\n\nCurrency movements.\n\nGeopolitical risks and global liquidity.\n\nA single month of foreign selling can overpower years of retail inflows, making them one of the strongest market-moving forces.\n\nCredit Rating Agencies\n\nCredit rating agencies evaluate the creditworthiness of companies and financial instruments. Their opinions affect institutional participation.\n\nWhy they matter:\n\nDowngrades can trigger sharp sell-offs.\n\nMany institutions are restricted from investing below certain ratings.\n\nTheir actions influence perception more than fundamentals.\n\nMarkets often react more strongly to ratings than to actual balance sheet changes.\n\nResearch Analysts, Media, and Market Narratives\n\nFinancial media, brokerage research, and market commentators shape how information is perceived.\n\nTheir role:\n\nFraming narratives around results, budgets, and policies.\n\nInfluencing retail sentiment and expectations.\n\nAmplifying fear or optimism.\n\nMarkets move on expectations, and these players largely control those expectations.\n\nCorporate Promoters and Insiders\n\nPromoters and senior management are closest to the real condition of a company.\n\nTheir influence comes from:\n\nTiming of fund-raising, buybacks, and dividends.\n\nStrategic disclosures.\n\nCapital allocation decisions.\n\nEven when acting legally, their decisions often precede visible market movements.\n\nAuditors and Professional Consultants\n\nAuditors, valuation experts, and consultants validate the financial information that markets rely on.\n\nTheir importance lies in:\n\nEstablishing trust in reported numbers.\n\nPreventing misinformation from spreading.\n\nMaintaining confidence in corporate disclosures.\n\nWhen this trust breaks, stock prices can collapse instantly.\n\nTechnology and Infrastructure Providers\n\nStock markets depend heavily on technology providers who build and maintain trading, risk, and data systems.\n\nThey control:\n\nMarket uptime and stability.\n\nData accuracy and speed.\n\nSystemic risk management.\n\nA technical failure can halt trading and shake investor confidence within minutes.\n\nThe Bigger Reality\n\nThe stock market is not driven purely by supply and demand between buyers and sellers. It is shaped by a layered structure of influence where capital size, speed, information access, and narrative control matter more than individual intelligence.\n\nRetail investors are participants, but not controllers.\n\nUnderstanding these hidden players does not guarantee profits, but it provides something far more valuable:\nclarity about why markets behave the way they do and protection from emotional decision-making."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "The first few chapters helped build a foundation around the basic concepts of financial markets. At this point, it becomes important to address a key question — why do companies decide to go public? Understanding this topic clearly is essential, as it forms the base for many concepts that will be discussed later.\n\nIn this chapter and the one that follows, we will explore the reasons behind companies going public. Along the way, we will also get introduced to a few important financial ideas related to this process.\n\nBefore directly answering why companies choose to go public, let us first understand a basic concept — how a typical business begins and evolves. We will use a simple, familiar storyline to explain this. By breaking the journey into multiple stages, we will see how a business grows, how its funding needs change over time, and what situations eventually lead a company to list itself in the public markets."
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Let us begin our story. Imagine an enthusiastic entrepreneur who has a business idea — to manufacture trendy, organic cotton t-shirts. The designs are distinctive, the pricing is appealing, and premium quality cotton is used to produce the t-shirts. The entrepreneur is confident that the idea will succeed and is excited to turn it into a business.\n\nAs expected, the entrepreneur soon faces a common challenge — arranging funds to start the business. Since there is no prior business background, attracting professional investors at this early stage is difficult. In most such cases, the entrepreneur reaches out to close family members and friends to present the idea and raise initial capital.\n\nAssume that the entrepreneur invests some personal savings and also convinces two close friends to put money into the venture. These two friends decide to invest based on trust and belief in the entrepreneur. In this scenario, these friends are known as angel investors. It is important to note that angel funding is not a loan; it is an investment made in the business.\n\nNow, let us assume that the promoter (entrepreneur) along with the angel investors raise ₹5 crore as capital. This first round of funding, which helps the business begin its operations, is known as the Seed Fund. It is also sometimes referred to as a Friends and Family round. An important point to remember is that this money is deposited into the company’s bank account, not the personal account of the entrepreneur.\n\nAngel funding does not always come only from friends or relatives. There are also professional angel investors who invest in early-stage companies they believe have strong potential.\n\nIn exchange for this initial investment, the three individuals involved (the promoter and the two angels) are issued shares of the company, which gives them ownership in the business. At this stage, the company’s primary asset is cash. Therefore, the value of the company is largely based on the cash it holds. In this example, the valuation is ₹5 crore. One could argue that the company’s value should also include the strength of the business idea, which may push the valuation higher, but we will not go into that discussion here.\n\nIssuing shares at this stage is straightforward. The company assumes a face value of ₹10 per share. Since the total share capital is ₹5 crore, the company issues 50 lakh shares, each having a face value of ₹10. In this context, ₹10 is referred to as the Face Value (FV) of the share. The face value can typically be any amount, commonly ranging from ₹1 to ₹10."
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "The entrepreneur’s efforts start showing results, and the business begins to generate steady revenues. By the end of the first two years, the company reaches a break-even point. The promoter is no longer inexperienced; instead, they now have a better understanding of the business and greater confidence in its potential. With this confidence, the promoter plans to scale the business by setting up an additional manufacturing unit and opening a few more retail outlets in the city. After working through the expansion plan, the entrepreneur estimates that ₹7 crore of fresh capital will be required.\n\nCompared to two years earlier, the entrepreneur is now in a much stronger position. The key difference is that the business is earning revenue. This consistent inflow validates both the business model and the product offering. At this stage, the entrepreneur can approach more informed and professional investors. Investors who typically fund businesses at this growth stage are known as Venture Capitalists (VCs), and the funding received at this point is referred to as Series A funding.\n\nLet us assume the entrepreneur successfully raises the required ₹7 crore for expansion. Generally, when new capital is infused into a business, the following outcomes occur:\n\nThe promoter’s ownership gets diluted as new shares are issued.\n\nThe overall valuation of the company increases.\n\nAs a result, the early investors (in this case, the angel investors) begin to see notional gains on their initial investment. With the entry of venture capital funding, the company’s valuation rises, leading to an increase in notional wealth for all existing shareholders."
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Another three years go by, and the company achieves remarkable success. The business now plans to expand its retail presence to at least three additional cities. To support this expansion, the company needs to increase its manufacturing capacity and hire more resources. Any spending done to strengthen and grow the business in this manner is referred to as Capital Expenditure, commonly known as CAPEX.\n\nThe management estimates that around ₹40 crore will be required to meet these CAPEX needs. This raises an important question — how does the company arrange such a large amount of money, or in other words, how can the business fund its CAPEX plans?\n\nThere are a few common ways through which a company can raise funds for CAPEX:\n\nInternal accruals\nOver the past few years, the company has generated profits. A portion of the required CAPEX can be funded using these retained earnings. This method of funding is known as internal accruals.\n\nAnother round of venture capital funding\nThe company may approach another venture capitalist and raise fresh funds by issuing additional shares. This type of funding round is usually referred to as Series B funding.\n\nBank loan (Debt)\nThe company can also approach a bank for a loan. Since the business has been performing well, the bank may be willing to lend money. Such borrowing is commonly called debt.\n\nLet us assume the company uses all three options to fund its CAPEX. It contributes ₹15 crore from internal accruals, raises ₹10 crore by giving up some equity in a Series B funding round, and borrows ₹15 crore as debt from a bank.\n\nIt is important to note that the company’s valuation increases again due to the ₹10 crore raised through Series B funding. As valuations rise, earlier investors benefit by seeing higher notional gains on their investments."
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "A few more years pass, and the company continues to perform well. With the success of this now 8-year-old business, ambitions grow larger. The company decides to expand its operations across the country. At the same time, it plans to diversify by entering new product categories such as fashion accessories, premium cosmetics, and perfumes.\n\nTo support these larger goals, the CAPEX requirement increases to ₹60 crore. The company chooses not to raise this money through debt because interest costs, also known as finance charges, reduce profitability. For example, if a company earns ₹100 in profit but pays ₹20 as interest, the effective profit comes down to ₹80. This impact of debt on profits will be discussed in more detail later in the Fundamental Analysis module.\n\nAt this stage, the company opts for Series C funding. Raising funds from a typical venture capitalist is not suitable anymore, as VC investments are generally smaller and usually limited to a few crores. This is where a Private Equity (PE) investor steps in. You can think of a PE investor as a more powerful and mature version of a VC. Some key differences between Venture Capital and Private Equity are outlined below:\n\nVenture Capital firms usually invest smaller amounts, whereas Private Equity firms invest significantly larger sums.\n\nVCs typically invest in early-stage businesses and take higher risks. PEs invest in more mature companies and therefore face relatively lower risk.\n\nPrivate Equity investors often take a seat on the company’s board and actively monitor and guide the company’s operations.\n\nPrivate Equity investors are generally highly experienced and professionally skilled. They invest substantial capital with the objective of long-term value creation. In addition, they place their representatives on the board of the investee company to ensure the business moves in the intended strategic direction."
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Fast forward five years after the private equity investment, the company has grown significantly. It has successfully expanded its product range and established a presence in all major cities across the country. Revenues are strong, profitability is stable, and investors are satisfied. However, the promoter is not content with stopping here.\n\nThe promoter now aims to take the business global. The company plans to make its brand available in major international cities, with at least two outlets in each key global market.\n\nTo achieve this, the company needs to invest heavily in market research to understand international consumers, hire skilled talent, and further increase manufacturing capacity. In addition, the company must invest in real estate across different countries. The required CAPEX is substantial, and the management estimates this at around ₹200 crore. To fund this large CAPEX requirement, the company has several possible options:\n\nFund a part of the CAPEX using internal accruals\n\nRaise Series D funding from another private equity investor\n\nBorrow money from banks in the form of debt\n\nIssue bonds, which is another method of raising debt\n\nLaunch an Initial Public Offer (IPO)\n\nUse a combination of the above options\n\nFor simplicity, let us assume the company decides to fund a portion of the CAPEX through internal accruals and raise the remaining amount by launching an IPO. When a company files for an IPO, it offers its shares to the general public for the first time. Members of the public can choose to buy these shares by paying a specified price. Since this is the company’s first offer of shares to public investors, it is called an Initial Public Offer.\n\nAt this stage, we reach an important turning point where several key questions arise:\n\nWhy did the company choose to file for an IPO?\n\nIn general, why do companies decide to go public?\n\nWhy did the company not opt for an IPO during the earlier Series A, B, or C funding stages?\n\nWhat happens to the existing shareholders once the company goes public?\n\nWhat factors does the general public consider before subscribing to an IPO?\n\nHow does the IPO process unfold step by step?\n\nWhich financial intermediaries are involved in the IPO process?"
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "The previous sections helped explain how a business grows from an initial idea to a stage where it considers launching an IPO. The purpose of that illustrative journey was to show how companies mature over time. While several real-world complexities were intentionally simplified, the focus was on highlighting the different growth phases of a business and the funding choices available at each stage.\n\nUnderstanding the reasons behind an IPO is very important, as the IPO market—also known as the primary market—often attracts first-time investors. In this section, we will explore the IPO process and the various factors that influence a company’s decision to go public.\n\nWe ended the earlier section with an important question: why does a company choose to file for an IPO? More broadly, what motivates companies to enter the public markets?\n\nWhen a company plans an IPO, one of the primary reasons is to raise capital to fund its CAPEX requirements. Apart from this, there are several other motivations. In some cases, companies use IPO proceeds to reduce expensive debt. In other situations, an IPO allows early investors to partially or fully exit their investments. Think of any company that went public recently and look up its IPO rationale—you will understand the reason behind its listing.\n\nFor promoters, taking a company public offers several key advantages:\n\nRaising funds for CAPEX needs\nAn IPO provides access to large amounts of capital required for expansion and long-term growth.\n\nReducing dependence on debt\nBy raising equity instead of borrowing, the company avoids interest costs, which improves overall profitability.\n\nRisk distribution\nThe promoter can spread business risk across a large base of investors rather than relying on a single large investor. Having thousands of retail investors is often preferable to depending on one private equity firm.\n\nThere are additional benefits of going public:\n\nExit opportunity for early investors\nOnce the company is listed, its shares can be freely traded in the market. Existing shareholders such as promoters, angel investors, venture capitalists, or private equity funds can sell their shares and realize returns on their initial investments (subject to lock-in rules).\n\nEmployee rewards through ownership\nEmployees may be granted shares as part of incentive plans known as Employee Stock Option Plans (ESOPs). These shares are usually allotted at a discounted price. After listing, employees can benefit from appreciation in the company’s share price, aligning their interests with the company’s growth."
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Once a company decides to go public, it needs to complete several important steps to ensure a smooth and successful IPO. One of the very first and most critical steps is appointing a merchant banker. Merchant bankers are also known as Book Running Lead Managers (BRLMs) or Lead Managers (LMs).\n\nThe primary responsibility of a merchant banker is to guide and support the company through different stages of the IPO process. Their key roles include:\n\nDue diligence – Conduct a detailed review of the company planning to launch an IPO, ensure regulatory and legal compliance, and issue a due diligence certificate.\n\nPreparation of IPO documents – Work closely with the company to draft and finalize important listing documents, including the Draft Red Herring Prospectus (DRHP). This will be discussed in more detail later.\n\nUnderwriting the issue – In underwriting, merchant bankers agree to subscribe to the portion of the IPO that remains unsubscribed. This applies to newly issued shares in the IPO. If the subscription falls short of a specified threshold, the IPO is considered unsuccessful, and investors’ blocked funds are released. If the subscription is above the threshold but not fully subscribed, the merchant banker absorbs the remaining shares.\n\nPrice band determination – Assist the company in deciding the IPO price band, which defines the lower and upper price limits at which shares are offered to investors. For example, an IPO may have a price band ranging between two specified prices.\n\nRoadshows and promotion – Support the company in conducting roadshows, which are marketing and promotional activities aimed at generating investor interest in the IPO.\n\nAppointment of other intermediaries – Help the company select and appoint other key entities involved in the IPO process, such as registrars, bankers, and advertising agencies.\n\nOverall, merchant bankers play a central role in coordinating the IPO process and ensuring that the company meets regulatory requirements while successfully raising capital from the public markets."
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Every step in the IPO journey must follow SEBI regulations. Broadly, an IPO moves through the following stages:\n\nAppointment of a merchant banker\nThe company first appoints a merchant banker. In the case of a large public issue, more than one merchant banker may be appointed.\n\nFiling with SEBI (Registration Statement)\nThe company submits a registration statement to SEBI. This document explains the company’s business, the reason for going public, and its financial condition.\n\nSEBI’s approval\nAfter reviewing the registration statement, SEBI decides whether to grant approval or reject the proposal. Only after a positive nod can the company proceed further.\n\nDraft Red Herring Prospectus (DRHP)\nOnce SEBI grants initial approval, the company prepares the DRHP. This document is circulated to the public and contains detailed information such as:\n\nEstimated size of the IPO\n\nApproximate number of shares to be offered\n\nPurpose of raising funds and planned utilization timeline\n\nBusiness overview, revenue model, and expense structure\n\nComplete financial statements\n\nManagement Discussion and Analysis (future outlook of the business)\n\nKey risks associated with the business\n\nDetails of management and their background\n\nMarketing the IPO\nThe company promotes its IPO through advertisements and media campaigns to create investor awareness. This phase is commonly referred to as the IPO roadshow.\n\nFinalizing the price band\nThe company decides the lower and upper price limits at which shares will be offered. The price band must align with investor expectations; otherwise, the IPO may fail to attract subscriptions.\n\nBook Building\nAfter the roadshow and price band announcement, the IPO subscription window opens. Investors bid for shares within the price band. The process of collecting bids at different price levels is called Book Building, which helps discover the most appropriate issue price.\n\nClosure of the issue\nOnce the subscription window closes (usually after a few days), the final issue price is determined. This price is typically the level at which maximum demand is received.\n\nListing day\nOn the listing day, the company’s shares are listed on the stock exchange. The listing price is decided by market demand and supply and may be at a premium, at par, or at a discount compared to the issue price."
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "During the bidding phase, investors place bids for shares at a chosen price within the declared price band. This entire mechanism is known as the Primary Market, where investors apply for shares around the time of the issue.\n\nOnce the shares are listed and begin trading on the stock exchange, they become available for public trading. This stage is referred to as the Secondary Market.\n\nAfter moving from the primary market to the secondary market, the stock is traded on a daily basis on the exchange. Investors regularly buy and sell these listed shares in the open market.\n\nWhy do people trade shares? Why do stock prices move up and down? These questions, along with several others, will be explored in detail in the upcoming chapters."
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Before concluding the discussion on IPOs, let us go through some commonly used IPO-related terms.\n\nUnder-subscription – Suppose a company plans to offer 1,00,000 shares to the public. During the book-building process, if bids are received for only 90,000 shares, the issue is said to be under-subscribed. This usually reflects weak demand and unfavorable public sentiment.\n\nOversubscription – If the company offers 1,00,000 shares and receives bids for 2,00,000 shares, the IPO is considered oversubscribed by two times (2x). This indicates strong investor interest.\n\nGreen Shoe Option – This is a provision in the issue document that allows the company to issue additional shares (generally up to 15%) in case of excess demand. It is also known as the over-allotment option.\n\nFixed Price IPO – In some IPOs, the company decides a single fixed price for the shares instead of offering a price band. Such offerings are referred to as fixed-price IPOs.\n\nPrice Band and Cut-off Price – A price band represents the lower and upper price range within which investors can bid. For example, if the price band is ₹100 to ₹130 and the shares are finally allotted at ₹125, then ₹125 is known as the cut-off price.\n\nRecent IPOs in India\n\nBelow is a snapshot of some recent IPOs in India. With the concepts covered so far, understanding this information should now be straightforward.\n\nThe previous sections aim to give you a clear understanding of why companies choose to go public and how the IPO process works end-to-end."
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Before we conclude the IPO discussion, it is important to understand a few commonly used terms related to IPO subscriptions.\n\nConsider this example: a company decides to offer 1,000 shares to the public as part of its IPO. The company is very popular and attracts strong investor interest. Against the 1,000 shares available, applications are received for 2,200 shares, which is 1,200 shares more than what is on offer. This situation is known as oversubscription.\n\nOn the other hand, if out of the 1,000 shares offered, bids are received for only 900 shares, then the IPO is said to be undersubscribed.\n\nNow, think about what happens after the company gets listed. What if the share price starts declining immediately after listing? This can certainly happen. To address such situations, there is a mechanism known as the Greenshoe Option. Under this option, the underwriters are allowed to purchase up to an additional 15% of the shares at the issue price if the newly listed stock begins to trade below its offer price. This process helps stabilize and support the falling share price in the market."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 2,
+          "name": "MASTERMIND",
+          "image": "mastermind",
+          "topCard": {
+            "title": "MASTERMIND",
+            "description": "Dive deeper into analysis, valuation, and company fundamentals."
+          },
+          "chapters": [
+            {
+              "id": 1,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "id": 3,
+          "name": "UNSTOPPABLE",
+          "image": "unstoppable",
+          "topCard": {
+            "title": "UNSTOPPABLE",
+            "description": "Advanced strategies, mindset, and professional-level insights."
+          },
+          "chapters": [
+            {
+              "id": 1,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "Fundamentals",
+      "image": "fundamental",
+      "topCard": {
+        "title": "Fundamentals",
+        "description": "Understand financial statements, ratios, and valuation methods."
+      },
+      "levels": [
+        {
+          "id": 1,
+          "name": "HUSTLER",
+          "image": "hustler",
+          "topCard": {
+            "title": "HUSTLER",
+            "description": "Learn the basics of financial statements and accounting."
+          },
+          "chapters": [
+            {
+              "id": 1,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
                   "blocks": [
                     {
                       "type": "TEXT",
@@ -463,7 +1662,392 @@
             "title": "MASTERMIND",
             "description": "Dive deeper into analysis, valuation, and company fundamentals."
           },
-          "chapters": []
+          "chapters": [
+            {
+              "id": 1,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
 
         {
@@ -474,42 +2058,386 @@
             "title": "UNSTOPPABLE",
             "description": "Advanced strategies, mindset, and professional-level insights."
           },
-          "chapters": []
-        }
-      ]
-    },
-
-    {
-      "id": 2,
-      "title": "Fundamentals",
-      "image": "fundamental",
-      "topCard": {
-        "title": "Fundamentals",
-        "description": "Understand financial statements, ratios, and valuation methods."
-      },
-      "levels": [
-        {
-          "id": 1,
-          "name": "HUSTLER",
-          "image": "hustler",
-          "topCard": {
-            "title": "HUSTLER",
-            "description": "Learn the basics of financial statements and accounting."
-          },
           "chapters": [
             {
               "id": 1,
-              "title": "Balance Sheet",
-              "description": "Learn how to read balance sheets.",
-              "image": "balance_sheet",
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
               "slides": [
                 {
                   "id": 1,
-                  "title": "What is Balance Sheet?",
+                  "title": "How a business founded ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": "A balance sheet shows assets, liabilities and equity."
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
                     }
                   ]
                 }

@@ -102,4 +102,13 @@ data class LearningLevelProgress(
     val chapters: List<LearningChapterProgress>
 )
 
+data class ChapterProgressUI(
+    val totalSlides: Int,
+    val completedSlides: Int
+) {
+    val progress: Float
+        get() =
+            if (totalSlides == 0) 0f
+            else completedSlides.toFloat() / totalSlides
+}
 
