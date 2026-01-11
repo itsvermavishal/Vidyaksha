@@ -87,4 +87,19 @@ enum class LevelType {
     UNSTOPPABLE
 }
 
+data class LearningSlideProgress(
+    val slideId: Int,
+    val isCompleted: Boolean
+)
+
+data class LearningChapterProgress(
+    val chapterId: Int,
+    val slides: List<LearningSlideProgress>
+)
+
+data class LearningLevelProgress(
+    val levelId: Int,
+    val chapters: List<LearningChapterProgress>
+)
+
 

@@ -86,7 +86,7 @@
       "image": "stockmarkets",
       "topCard": {
         "title": "Basics",
-        "description": "Build strong foundations in stock markets."
+        "description": "Build strong foundations in stock markets. This will help in learning IPO, stock market, trading terminologies and commonly used terms of stock market and investmnet for wealth."
       },
       "levels": [
         {
@@ -95,22 +95,358 @@
           "image": "hustler",
           "topCard": {
             "title": "HUSTLER",
-            "description": "Start here if you are completely new to the stock market."
+            "description": "Start here if you are completely new to the stock market. This will help you in developing beasic understanding and creating foundation of you investment journey."
           },
           "chapters": [
             {
               "id": 1,
-              "title": "Stock Market Basics",
-              "description": "Understand what stocks are and how markets work.",
+              "title": "Why we need to invest ?",
+              "description": "This is first chapter which deals with why we need to invest. and will learn about more investment opportunities available.",
               "image": "stock",
               "slides": [
                 {
                   "id": 1,
-                  "title": "What is Stock Market?",
+                  "title": "Why anyone invests ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": "A stock market is a place where shares are bought and sold."
+                      "text": "Before addressing the investment question, let's consider the consequences of not investing. Imagine earning ₹50,000 per month, with ₹30,000 spent on daily living expenses such as housing, food, transport, shopping, medical care, etc. The remaining ₹20,000 is your monthly savings.\nFor simplicity, let's disregard the impact of taxes in this discussion.\nTo illustrate the point, consider a few basic assumptions:\nYour employer provides a 10% salary increase each year.\nThe cost of living is expected to rise by 8% annually.\nYou are 30 years old and plan to retire at 50, resulting in 20 working years.\nThere is no intention of working after retirement.\nExpenses are fixed, with no anticipated additional costs.\nThe monthly surplus of ₹20,000 is kept as physical cash."
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Math behind every income",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Going by the assumptions in the previous card, here is what the cash balance will look like in 20 years.\nIf one were to analyze these numbers, one would soon realize this is a scary situation.\nA few things are quite obvious\nAfter 20 years of hard work, you have accumulated Rs.1.7Crs.\nSince your expenses are fixed, your lifestyle has not changed over the years, and you probably even suppressed your lifelong aspirations a better home, car, vacations, etc.\nAfter you retire, assuming the expenses will continue to grow at 8%, the retirement corpus of Rs.1.7Crs is good enough to sail you through roughly...\nExplanation of Content\nThe image content discusses the importance of investing by presenting a hypothetical financial scenario over 20 years.\nScenario: A person works for 20 years, maintaining fixed expenses and suppressing aspirations to save money.\nResult: After two decades, the total savings accumulated is Rs. 1.7 Crores.\nAnalysis: The text describes this outcome as a \"scary situation\" because this corpus is only sufficient for a limited time after retirement, assuming an 8% annual growth in expenses.\nCore Message: The passage implies that simply saving with fixed expenses is insufficient for a comfortable or sustainable retirement, highlighting the need for effective investment strategies."
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "Financial investments",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "At this stage, you might feel that the assumptions used here are too simple and that real life does not function this way. That thought is fair. However, the key takeaway from the calculation above is that when no investments are made, the cash that is saved does not grow and remains almost flat over time.\n\nNow let us look at a different situation. Instead of keeping the surplus money idle, assume you decide to invest it in an option that grows at around 12% per year. For instance, in the first year you manage to save ₹2,40,000. If this amount is invested at a 12% annual return and allowed to grow for nearly 20 years (assuming the investment is made at the end of the first year), it can grow to about ₹20,67,000 by the end of the twentieth year.\n\nFor those curious about how this growth is calculated, it follows a simple compounding formula:\n\n₹2,40,000 × (1 + 12%)¹⁹\n\nFinal value ≈ ₹20,67,000\n\nThere is no need to focus on the mathematics right now. The detailed explanation of this calculation will be covered later in this module and in other learning sections as well.\n\nBelow is a representation of how your yearly savings can grow over time when surplus cash is invested consistently.\n\nWhen surplus income is invested, the final cash balance increases significantly. In this scenario, the total amount grows to approximately ₹4.26 crore, compared to about ₹1.7 crore when no investments are made. This means the invested amount grows to nearly 2.4 times the value achieved without investing.\n\nClearly, choosing to invest places you in a much stronger financial position, especially when planning for life after retirement.\n\nComing back to the original question — why should one invest?\nThere are a few strong reasons:\n\nBeat Inflation\nInvesting helps protect money against inflation, which is the continuous rise in the cost of living over time.\n\nBuild Wealth\nThrough investing, it is possible to create a larger financial corpus by the end of a chosen time period. This goal could be retirement, children’s education, buying a house, marriage expenses, travel, or any other long-term objective."
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Where we should invest ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Having understood the reasons for investing, the next natural question is — where should one invest, and what kind of returns can be expected? While investing, it is important to select an asset category that matches an individual’s comfort with risk and expected returns. For example, some people are willing to take higher risks with their money, while others prefer moderate risk, and some may choose options with minimal or no risk.\n\nAn asset class can be thought of as a type of investment option that is categorized based on its risk level and potential returns. Below are some commonly used asset classes:\n\nFixed income instruments\n\nEquity\n\nReal estate\n\nCommodities (such as precious metals)"
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Fixed Income Tools",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Fixed-income instruments are investment options where the invested amount (principal) is generally considered secure. In these instruments, the investor lends money to an entity, which in return pays a fixed interest on the invested amount. One of the most common examples of a fixed-income instrument is a bank’s fixed deposit.\n\nThe interest earned on such investments can be paid at regular intervals such as quarterly, half-yearly, or yearly. Once the investment tenure is completed, the original invested amount is returned to the investor. This duration is commonly referred to as the maturity period.\n\nSome common examples of fixed-income instruments include:\n\nBank fixed deposits\n\nBonds issued by the Government of India (also known as government securities and treasury bills)\n\nBonds issued by government-backed organizations such as GAIL, HUDCO, NHAI, and similar agencies\n\nBonds issued by private companies (for example, Tata, Bajaj, Reliance, Adani)\n\nTypically, returns from fixed-income instruments vary depending on the level of risk involved. Bank fixed deposits usually offer moderate returns, government bonds provide slightly higher returns with high safety, and certain corporate bonds may offer higher returns due to increased risk. Among these, government bonds are generally viewed as the safest option because they carry minimal default risk."
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "Equity",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Investing in equity means purchasing shares of companies that are publicly listed. These shares are bought and sold on stock exchanges such as the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE).\n\nUnlike fixed-income investments, equity investments do not offer any guarantee on the invested capital. However, this higher level of risk comes with the potential for significantly better returns. Historically, Indian equity markets have delivered average returns of around 12% CAGR (compound annual growth rate) over the last 10 to 15 years.\n\nIn fact, investments made in some of the strongest and well-managed Indian companies have generated returns of more than 20% CAGR over the long term. Finding such high-quality investment opportunities requires proper analysis, consistent effort, and long-term patience."
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "What is Real Estate ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Real estate investing involves the purchase and sale of both commercial and residential properties. Common examples include buying vacant land, residential apartments, and commercial spaces such as offices or shops.\n\nIncome from real estate investments generally comes from two sources: rental earnings and the increase in property value over time. Rental returns are usually in the range of 2–3%, which may not be very attractive. Property price appreciation tends to occur only in specific locations and is not consistent across all areas.\n\nReal estate transactions can be fairly complicated, as they require legal checks and verification of documents. Additionally, investing in real estate typically demands a large amount of capital. There is also no standard or widely accepted measure to accurately calculate returns from real estate investments, making it difficult to assess performance objectively."
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "What is commodity ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Gold and silver are among the most widely preferred investment choices. Over long periods, both metals have shown steady value appreciation. Historically, investments in gold and silver have delivered an average return of around 5–8% CAGR over the past two decades.\n Note: But in recent years it given more thant 100% return in a year\n\nThere are multiple ways to invest in these precious metals. Investors may choose to buy physical forms such as jewelry, or opt for financial instruments like Exchange Traded Funds (ETFs) and Sovereign Gold Bonds, commonly known as SGBs."
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "How to allocate our Assets ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Returning to the earlier example of investing surplus money, it is useful to see how the final savings change over a 20-year period when the entire amount is invested in just one asset category — fixed income, equity, or bullion.\n\nIf the surplus is invested in fixed-income instruments at an average return of 9% per year (such as quality corporate bonds), the total corpus would grow to around ₹3.3 crore.\n\nIf the same amount is invested entirely in equities at an average return of 15% per year, the corpus would increase to approximately ₹5.4 crore.\n\nInvesting the amount in bullion at an average return of 8% per year would result in a corpus of about ₹3.09 crore.\n\nAmong these options, equities generally provide the highest returns, especially when investments are made with a long-term perspective.\n\nSome readers may question why cryptocurrencies are not included as an asset class here. When investing hard-earned money, it is important to have strong regulations, checks, and safeguards in place to protect investors. At present, cryptocurrencies lack a clear regulatory framework, and therefore it may be prudent to avoid them until proper regulations are established.\n\nIdeally, investments should not be concentrated in a single asset class. A balanced mix across different asset categories helps reduce risk and improve stability. Distributing money across various asset classes is known as asset allocation, a concept that will be discussed in detail later.\n\nFor example, a young working professional can afford to take higher risks due to a longer investment horizon. Such an investor may allocate around 60% of investable funds to equity, 20% to precious metals, and 20% to fixed-income instruments. This allocation gradually changes with age and risk tolerance. A retired individual, for instance, may prefer to invest a larger portion — possibly 80% — in safer fixed-income options such as government bonds."
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things to keep in mind before investing ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Investing plays a key role in financial planning. However, before beginning your investment journey, it is important to keep the following points in mind:\n\nRisk and return are closely linked.\nHigher potential returns usually come with higher risk, while lower risk investments generally offer lower returns.\n\nFixed-income investments focus on capital protection.\nThese options are comparatively safer and aim to protect the invested amount. However, after adjusting for inflation, real returns may turn negative. For example, if an investment gives a return of 9% while inflation is at 10%, the actual purchasing power reduces by about 1% annually. The risk level increases further when investing in corporate fixed-income instruments.\n\nEquity investments are effective for long-term growth.\nOver extended periods, equities have shown the ability to outperform inflation. Historically, equity markets have delivered average returns in the range of 14–15%. That said, equity investments carry higher volatility and risk.\n\nReal estate requires large capital and lacks liquidity.\nProperty investments usually need a substantial upfront amount and cannot be made with small sums. Additionally, real estate is not very liquid, meaning it may not be easy to buy or sell property whenever needed.\n\nGold and silver are relatively stable investments.\nPrecious metals are generally considered safer options, but their long-term returns are usually lower compared to equities. They are better suited for stability and diversification rather than high growth."
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Why anyone invests in GOLD ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Investment in gold and silver (bullion) is widely regarded as one of the safest forms of investment. This belief is common across countries and cultures around the world.\n\nOver long periods, gold and silver have shown consistent appreciation in value. Historically, investments in these precious metals have delivered average returns of around 7–8% over the past two decades.\n\nThere are multiple ways to invest in gold and silver. Investors may choose physical forms such as jewellery, or opt for financial options like Exchange Traded Funds (ETFs) or government-issued gold bonds."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "title": "Financial Intermediaries and Regulatory bodies",
+              "description": "Learn this chapter to know market ecosystem, role of regulatory bodies and financial intermediaries and how they work ?",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "What we mean from Stock Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Intermediate participants and their requirement to regulate",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "The regulatory authorities",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "The Intermediators",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Brokers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "Depositories",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Participants of Depository",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "Role of banks in stock market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "Clearing Corporations",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "Some More Players",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
                     }
                   ]
                 }

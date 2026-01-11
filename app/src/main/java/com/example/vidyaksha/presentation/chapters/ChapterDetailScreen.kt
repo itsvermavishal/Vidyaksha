@@ -1,5 +1,7 @@
 package com.example.vidyaksha.presentation.chapters
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -7,6 +9,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
+import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -25,7 +30,17 @@ import com.example.vidyaksha.data.local.ContentMapper
 import com.example.vidyaksha.presentation.destinations.SlideReaderScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.text.style.TextOverflow
 
+
+@OptIn(ExperimentalAnimationApi::class)
 @Destination
 @Composable
 fun ChapterDetailScreen(
@@ -39,6 +54,22 @@ fun ChapterDetailScreen(
     val module = viewModel.getModule(moduleNumber)
     val level = viewModel.getLevel(moduleNumber, levelId)
     val chapters = level.chapters
+    val listState = rememberLazyListState()
+    val snapBehavior = rememberSnapFlingBehavior(lazyListState = listState)
+    val currentIndex by remember {
+        derivedStateOf {
+            val layoutInfo = listState.layoutInfo
+            val viewportCenter =
+                (layoutInfo.viewportStartOffset + layoutInfo.viewportEndOffset) / 2
+
+            layoutInfo.visibleItemsInfo.minByOrNull { item ->
+                kotlin.math.abs(
+                    (item.offset + item.size / 2) - viewportCenter
+                )
+            }?.index ?: 0
+        }
+    }
+
 
     Column(
         modifier = Modifier
@@ -80,13 +111,14 @@ fun ChapterDetailScreen(
         Spacer(modifier = Modifier.height(5.dp))
 
         /* ---------- CHAPTER LIST (JSON DRIVEN) ---------- */
-        Column(
-            modifier = Modifier
-                .verticalScroll(rememberScrollState())
-                .padding(top = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(20.dp)
-        ) {
-            chapters.forEachIndexed { index, chapter ->
+        LazyRow(
+            state = listState,
+            flingBehavior = snapBehavior,
+            modifier = Modifier.padding(top = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(20.dp),
+            contentPadding = PaddingValues(horizontal = 8.dp)
+        ){
+            items(chapters) { chapter ->
                 ChapterCard(
                     chapterNo = "Chapter:${chapter.id}",
                     title = chapter.title,
@@ -102,6 +134,12 @@ fun ChapterDetailScreen(
                 )
             }
         }
+
+        DotsIndicator(
+            totalDots = chapters.size,
+            selectedIndex = currentIndex
+        )
+
     }
 }
 
@@ -116,8 +154,8 @@ fun ChapterCard(
 ) {
     Box(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(190.dp)
+            .width(300.dp)
+            .height(450.dp)
     ) {
         Card(
             modifier = Modifier
@@ -127,56 +165,101 @@ fun ChapterCard(
             colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(4.dp)
         ) {
-            Row(
-                modifier = Modifier.fillMaxSize(),
-                verticalAlignment = Alignment.CenterVertically
+
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
             ) {
 
-                Image(
-                    painter = painterResource(id = R.drawable.stock),
-                    contentDescription = null,
+                /* ---------- TOP ROW : TITLE ---------- */
+                Box(
                     modifier = Modifier
-                        .width(100.dp)
-                        .fillMaxHeight()
-                        .clip(RoundedCornerShape(topStart = 16.dp, bottomStart = 16.dp)),
-                    contentScale = ContentScale.Crop
-                )
-
-                Column(
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .padding(start = 16.dp, end = 16.dp, top = 28.dp, bottom = 12.dp),
-                    verticalArrangement = Arrangement.SpaceBetween
+                        .padding(top = 25.dp, bottom = 25.dp)
+                        .height(40.dp),
+                    contentAlignment = Alignment.CenterStart
                 ) {
-                    Column {
+                    this@Column.AnimatedVisibility(
+                        visible = true,
+                        enter = fadeIn() + slideInVertically(initialOffsetY = { -20 })
+                    ) {
                         Text(
                             text = title,
-                            fontSize = 17.sp,
+                            fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF1A237E)
+                            color = Color(0xFF1A237E),
+                            maxLines = 2,
+                            lineHeight = 20.sp,
+                            overflow = TextOverflow.Ellipsis,
+                            softWrap = true
                         )
-                        Spacer(modifier = Modifier.height(6.dp))
+                    }
+                }
+
+
+                /* ---------- SECOND ROW ---------- */
+                Row(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+
+                    /* IMAGE COLUMN */
+                    Image(
+                        painter = painterResource(id = R.drawable.stock),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .width(110.dp)
+                            .fillMaxHeight()              // 👈 reaches bottom
+                            .padding(top = 4.dp)          // 👈 small top margin
+                            .clip(
+                                RoundedCornerShape(
+                                    topStart = 12.dp,
+                                    bottomStart = 12.dp
+                                )
+                            ),
+                        contentScale = ContentScale.Crop // 👈 crops from right if needed
+                    )
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    /* TEXT + BUTTON COLUMN */
+                    Column(
+                        modifier = Modifier
+                            .fillMaxHeight(),
+                        verticalArrangement = Arrangement.SpaceBetween
+                    ) {
+
                         Text(
                             text = description,
                             fontSize = 13.sp,
                             color = Color.DarkGray,
                             lineHeight = 18.sp
                         )
-                    }
 
-                    Text(
-                        text = "Unleash",
-                        color = Color(0xFF3F51B5),
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 15.sp,
-                        modifier = Modifier
-                            .align(Alignment.CenterHorizontally)
-                            .clickable { onUnleashClick() }
-                    )
+                        Text(
+                            text = "Unleash",
+                            color = Color.DarkGray,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 14.sp,
+                            modifier = Modifier
+                                .align(Alignment.CenterHorizontally)
+                                .background(
+                                    brush = Brush.horizontalGradient(
+                                        colors = listOf(
+                                            Color(0xFFFCD7FB), // Indigo
+                                            Color(0xFFAEC6FF)  // Deep Blue (matches tag & theme)
+                                        )
+                                    ),
+                                    shape = RoundedCornerShape(50)
+                                )
+                                .padding(horizontal = 22.dp, vertical = 9.dp)
+                                .clickable { onUnleashClick() }
+                        )
+                    }
                 }
             }
         }
 
+        /* ---------- CHAPTER TAG (UNCHANGED) ---------- */
         Box(
             modifier = Modifier
                 .offset(x = 20.dp, y = (-10).dp)
@@ -193,3 +276,32 @@ fun ChapterCard(
         }
     }
 }
+
+@Composable
+fun DotsIndicator(
+    totalDots: Int,
+    selectedIndex: Int
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 12.dp),
+        horizontalArrangement = Arrangement.Center
+    ) {
+        repeat(totalDots) { index ->
+            Box(
+                modifier = Modifier
+                    .padding(horizontal = 4.dp)
+                    .size(if (index == selectedIndex) 10.dp else 8.dp)
+                    .background(
+                        color = if (index == selectedIndex)
+                            Color(0xFF3F51B5)
+                        else
+                            Color.LightGray,
+                        shape = RoundedCornerShape(50)
+                    )
+            )
+        }
+    }
+}
+
