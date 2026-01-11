@@ -461,132 +461,142 @@
           "image": "mastermind",
           "topCard": {
             "title": "MASTERMIND",
-            "description": "Dive deeper into analysis, valuation, and company fundamentals."
+            "description": "Dive deeper into price movement of stocks and also understand ways to compare return on investments"
           },
           "chapters": [
             {
               "id": 1,
-              "title": "The way to IPO",
-              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "title": "Stock Market",
+              "description": "It will help you to build understanding why and how price moves of a specific stock on exchanges continuously ",
               "image": "stock",
               "slides": [
                 {
                   "id": 1,
-                  "title": "How a business founded ?",
+                  "title": "What is a public limited company ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Now that we have understood the IPO process and the situations that prompt a company to offer its shares to the public in order to raise capital, we are ready to take the discussion a step further and explore how stock markets function.\n\nOnce a company becomes publicly listed, it is legally required to disclose all relevant information about its business to the public. The shares of a public limited company are traded daily on stock exchanges. There are several reasons why different market participants buy and sell stocks, and in this chapter, we will look into some of those reasons in detail."
                     }
                   ]
                 },
                 {
                   "id": 2,
-                  "title": "Angel investors",
+                  "title": "What is stock market ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "As discussed earlier, the stock market is an electronic marketplace where buyers and sellers express their opinions through buying and selling activity.\n\nFor example, consider a situation involving Infosys. At a certain point in time, Infosys faces a management transition issue, with several senior executives stepping down. This leadership uncertainty negatively impacts the company’s image. As a result, the stock price falls from Rs. 3,500 to Rs. 3,000. Now, assume there are two traders — A and B.\n\nTrader A’s view on Infosys – A believes that the stock price may decline further because the company could struggle to appoint a new CEO quickly. Based on this perspective, A decides to sell Infosys shares.\n\nTrader B’s view on Infosys – B interprets the same situation differently. She feels the stock has overreacted to the management issue and believes the company will soon appoint a strong leader. Over time, she expects the stock price to recover and move higher.\n\nIf B acts based on her viewpoint, she would choose to buy Infosys shares.\n\nTherefore, at Rs. 3,000, trader A becomes a seller, while trader B becomes a buyer of Infosys stock.\n\nBoth A and B place their respective buy and sell orders through their stockbrokers. These orders are then routed to the stock exchange. The exchange’s responsibility is to match the buy and sell orders and ensure that the trade is successfully executed. This is the core function of the stock market — to enable smooth transactions between various market participants.\n\nIn simple terms, the stock market allows participants to access shares of publicly listed companies and trade them based on their individual views and expectations."
                     }
                   ]
                 },
                 {
                   "id": 3,
-                  "title": "venture capitalists",
+                  "title": "How stock moves ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Let us continue with the Infosys example to understand how stock prices react to events. Assume you are a market participant closely tracking Infosys.\n\nAt 10:00 AM, Infosys is trading at Rs. 3,000 per share. The company then releases a press statement announcing that a new CEO has been appointed. The management expresses confidence that the new CEO will lead the company towards stronger growth and improved performance.\n\nThis raises two important questions:\n\nHow is Infosys’ stock price likely to respond to this announcement?\n\nIf you were to take a position in Infosys, would you choose to buy or sell the stock?\n\nThe answer to the first question is fairly straightforward. Since the news is positive, the stock price is expected to rise. Infosys was previously facing a leadership concern, and this uncertainty has now been resolved. Whenever positive developments are announced, market participants generally respond by buying the stock at prevailing prices, which often triggers a price rally.\n\nLet’s understand this with a simple illustration.\n\nYou will notice that buyers are willing to accept higher prices quoted by sellers. This behavior indicates a bullish market. In a bullish environment, stock prices tend to move upward as demand outweighs supply.\n\nAs you can see, the stock price increases by Rs. 16 within just 5 minutes. Although this is a hypothetical example, it closely reflects real market behavior. Stock prices typically rise when the news is favorable or when future expectations improve.\n\nIn this scenario, the upward movement in the stock price is driven by positive sentiment and renewed confidence in the company’s leadership."
                     }
                   ]
                 },
                 {
                   "id": 4,
-                  "title": "Bankers and other investors",
+                  "title": "What moves the stock ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Now, moving ahead on the same day, at 12:30 PM, the National Association of Software & Services Companies (NASSCOM) releases a statement saying that IT budgets of clients are expected to decline by 15%, which could negatively impact the IT sector going forward. For those unfamiliar, NASSCOM is a trade body representing the Indian IT industry.\n\nBy 12:30 PM, let us assume Infosys is trading at Rs. 3030. A few questions arise now:\n\nHow does this new information affect Infosys?\n\nIf you were to place a fresh trade based on this update, what would you do?\n\nWhat impact would this news have on other IT stocks?\n\nBefore answering these questions, let us understand the NASSCOM statement in detail.\n\nA likely 15% reduction in IT budgets means that IT companies may see lower revenues and profits in the future. This is clearly negative news for the IT industry as a whole.\n\nNow let us answer the above questions:\n\nInfosys is a leading IT company, and the market will react to this news. Since there was already positive news earlier in the day, the reaction may be mixed. However, a 15% drop in revenue expectations is serious, and hence Infosys’ stock is likely to face selling pressure.\n\nAt Rs. 3030, if one were to initiate a new trade based on this information, it would most likely be a sell on Infosys.\n\nThe statement issued by NASSCOM affects the entire IT sector, not just Infosys. Therefore, most IT stocks are likely to witness selling pressure.\n\nAs you can see, market participants constantly react to news and events, and these reactions directly translate into price movements. This is essentially what causes stock prices to move.\n\nAt this point, you may wonder whether prices move only when there is news. The answer is yes and no, depending on the company and the context.\n\nFor example, consider two companies where there is no specific news:\n\nReliance Industries Limited\n\nShree Lakshmi Sugar Mills\n\nReliance Industries is a large, widely tracked company. Even in the absence of news, market participants actively buy and sell its shares, which causes continuous price movement.\n\nThe second company is relatively lesser-known and may not attract much attention when there is no news. In such cases, the stock price may not move much, or the movement may be very small.\n\nTo summarize, stock prices move based on expectations driven by news and events. These events may relate to the company itself, the industry it belongs to, or even the broader economy. For instance, the appointment of Narendra Modi as the Prime Minister of India was perceived as positive news, which led to a rise in the overall stock market.\n\nIn some situations, even when there is no news, prices can still move purely due to demand and supply dynamics in the market."
                     }
                   ]
                 },
                 {
                   "id": 5,
-                  "title": "Private Equity Investors",
+                  "title": "How stock got traded ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Suppose you decide to buy 200 shares of Infosys at Rs. 3030 and plan to hold them for one year. How does this actually work? What is the exact process of purchasing the stock, and what happens once the transaction is completed?\n\nBehind the scenes, multiple systems work together smoothly to ensure that your transaction is executed without issues.\n\nOnce you decide to buy Infosys shares, you need to log in to your trading account (provided by your stock broker) and place a buy order. When you place the order, the following details are verified:\n\nYour trading account details through which you are placing the order\n\nThe price at which you wish to buy Infosys shares\n\nThe number of shares you intend to purchase\n\nBefore sending the order to the stock exchange, your broker checks whether you have sufficient funds in your account to complete the purchase. If sufficient funds are available, the order is forwarded to the stock exchange.\n\nOnce the order reaches the exchange, its order-matching system looks for a seller who is willing to sell 200 shares of Infosys at Rs. 3030.\n\nThe seller could be a single person selling all 200 shares, or multiple sellers selling smaller quantities—such as ten sellers offering 20 shares each, or two sellers offering 1 and 199 shares respectively. From your point of view, this breakdown does not matter. What matters is that your requirement of 200 shares at Rs. 3030 is fulfilled. The stock exchange ensures this as long as sellers are available in the market.\n\nAfter the trade is executed, the shares are electronically credited to your DEMAT account. At the same time, the shares are electronically debited from the seller’s DEMAT account, completing the transaction."
                     }
                   ]
                 },
                 {
                   "id": 6,
-                  "title": "The Initial public Offering",
+                  "title": "How you own a stock ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Once you purchase shares, they are credited to your DEMAT account. At this point, you officially become a part-owner of the company, in proportion to the number of shares you hold. To put this into perspective, if you own 200 shares of Infosys, you hold approximately 0.000035% ownership in the company (at the time this chapter was written).\n\nAs a shareholder, you are entitled to various corporate benefits, such as dividends, stock splits, bonus issues, rights issues, and voting rights, among others. We will explore each of these shareholder privileges in more detail at a later stage."
                     }
                   ]
                 },
                 {
                   "id": 7,
-                  "title": "Why companies need to list on Market",
+                  "title": "Holding period",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "The holding period refers to the length of time you plan to keep a stock after purchasing it. Interestingly, this duration can range from just a few minutes to an entire lifetime. In fact, when the legendary investor Warren Buffett was once asked about his preferred holding period, his answer was simple — “forever.”\n\nEarlier in this chapter, we saw an example where Infosys moved from ₹3000 to ₹3016 within just five minutes. That’s actually a decent return for such a short holding period. If you’re happy with the gain, you can exit the trade and look for the next opportunity.\n\nIt’s important to remember that such price movements are very much possible in real markets. When market conditions are active and sentiment is strong, short-term price jumps like these are quite common."
                     }
                   ]
                 },
                 {
                   "id": 8,
-                  "title": "The merchant bankers",
+                  "title": "Calculate Returns",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Now, when it comes to the markets, everything ultimately boils down to one core objective — earning a reasonable return. If a trade delivers good returns, most past mistakes tend to be overlooked. Returns are generally measured on an annual basis, and there are multiple ways to look at and calculate them. The following section will help you understand the different types of returns and how they are computed.\n\nAbsolute Return –\nThis refers to the total return generated by an investment or trade in simple percentage terms. It helps answer a straightforward question such as:\n“I bought Infosys at ₹3030 and sold it at ₹3550. What percentage gain did I make?”\n\nThe formula to calculate Absolute Return is:\n\nAbsolute Return\n=\n(\nEnding Value\nStarting Value\n−\n1\n)\n×\n100\nAbsolute Return=(\nStarting Value\nEnding Value\n\t\u200B\n\n−1)×100\n\nExample:\n\n(\n3550\n3030\n−\n1\n)\n×\n100\n(\n3030\n3550\n\t\u200B\n\n−1)×100\n=\n0.1716\n×\n100\n=0.1716×100\n=\n17.16\n%\n=17.16%\n\nA return of 17.16% is definitely a healthy outcome for any investment."
                     }
                   ]
                 },
                 {
                   "id": 9,
-                  "title": "The way to IPO event",
+                  "title": "CAGR",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Compounded Annual Growth Rate (CAGR) –\nAbsolute returns can sometimes be misleading, especially when you want to compare investments held over different time periods. CAGR helps answer questions like:\n“I bought Infosys at ₹3030, held it for two years, and sold it at ₹3550. At what yearly rate did my investment grow during this period?”\n\nCAGR takes the time factor into account, which we ignored while calculating absolute returns.\n\nThe formula to calculate CAGR is:\n\nCAGR\n=\n(\nEnding Value\nBeginning Value\n)\n1\nNumber of Years\n−\n1\nCAGR=(\nBeginning Value\nEnding Value\n\t\u200B\n\n)\nNumber of Years\n1\n\t\u200B\n\n−1\n\nApplying this to the example:\n\n(\n3550\n3030\n)\n1\n2\n−\n1\n=\n8.2\n%\n(\n3030\n3550\n\t\u200B\n\n)\n2\n1\n\t\u200B\n\n−1=8.2%\n\nThis means the investment grew at an annual rate of 8.2% over two years.\nConsidering that bank fixed deposits currently offer around 5.5% with capital protection, an 8.2% return appears reasonably attractive in comparison.\n\nSo, as a rule of thumb, use CAGR when evaluating returns over multiple years. Absolute returns are more suitable when the investment period is one year or less."
                     }
                   ]
                 },
                 {
                   "id": 10,
-                  "title": "What things happens after listing on Market ?",
+                  "title": "Are you a trader ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Every participant in the market follows a distinct way of operating. This style evolves as you gain experience and observe different market cycles. Your approach is also influenced by the level of risk you are comfortable taking. Broadly, regardless of the method you choose, you will fall into one of two categories — a trader or an investor.\n\nA trader is someone who identifies opportunities and enters trades with the intention of exiting them profitably at the earliest suitable moment. Traders typically have a short-term outlook on the markets. They remain alert during market hours and continuously assess opportunities by balancing risk and reward. A trader is neutral about market direction and can take positions on both the upside (long) and downside (short). The concepts of going long and going short will be explained later.\n\nThere are different types of traders:\n\nDay Trader –\nA day trader opens and closes positions within the same trading day and does not carry positions overnight. This approach avoids overnight risk. For example, buying 100 shares of TCS at ₹2212 at 9:15 AM and selling them at ₹2220 at 3:20 PM results in a profit of ₹800 in a single day. A day trader usually trades in 5–6 stocks daily, sometimes even more.\n\nScalper –\nA scalper is a specialized form of a day trader. Scalpers trade very large quantities of shares for extremely short durations, aiming for small but quick profits. For instance, buying 10,000 shares of TCS at ₹2212 at 9:15 AM and selling them at ₹2212.1 at 9:16 AM yields a profit of ₹1000. Scalpers may repeat such trades multiple times during the day and are typically highly risk-averse.\n\nSwing Trader –\nA swing trader holds positions for a relatively longer period compared to a day trader. The holding duration can range from a few days to several weeks, aiming to capture short- to medium-term price movements."
                     }
                   ]
                 },
                 {
                   "id": 11,
-                  "title": "Some most important jargon",
+                  "title": "Do you fit into investor ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "An investor is someone who purchases a stock with the expectation that its value will grow meaningfully over time. Unlike a trader, an investor is patient and allows the investment to mature. Investors are comfortable waiting for the business to grow and deliver results. Typically, an investor’s holding period spans several years rather than days or weeks. Broadly, investors can be grouped into two popular categories.\n\n1. Growth Investors\n\nThe goal of a growth investor is to identify companies that are expected to expand rapidly due to favorable industry dynamics, innovation, or long-term macroeconomic trends. These investors focus on future potential rather than current valuations.\n\nA classic example in the Indian market would be investing in companies like Hindustan Unilever, Infosys, or Gillette India during the 1990s. As industries evolved and consumer demand increased, these companies experienced substantial growth, creating enormous wealth for long-term shareholders.\n\n2. Value Investors\n\nValue investors aim to find fundamentally strong companies whose stock prices have fallen significantly due to temporary negative sentiment or short-term challenges. These stocks may belong to either growing or mature businesses but are available at attractive valuations.\n\nA recent example of value investing can be seen during the market crash caused by Covid in March 2020. Due to widespread fear and uncertainty, many high-quality stocks were heavily sold off. However, as sentiment improved, these stocks staged a strong V-shaped recovery in the following months, rewarding patient value investors."
                     }
                   ]
                 },
                 {
                   "id": 12,
-                  "title": "How to take subscription of an IPO",
+                  "title": "Other Stocks",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "What if there is no fresh news? Does that mean the stock price will remain unchanged? Not necessarily. Price movement depends largely on the company being observed. Let us assume there is no news related to:\n\nReliance Industries\n\nShree Lakshmi Sugar Mills\n\nReliance is among the largest companies in India. With or without news, market participants actively buy and sell its shares. Due to this constant interest and liquidity, the stock price keeps moving regularly.\n\nThe second company is relatively lesser known. As a result, it may not attract much attention from market participants. In such cases, the stock price may remain stagnant, or even if it moves, the movement is usually minimal.\n\nTo sum up, stock prices are primarily influenced by news and events. These developments may be directly linked to the company, the industry it operates in, or the overall economy. For example, the appointment of Narendra Modi as the Prime Minister of India was seen as a positive event, leading to a broad-based rise across the stock market.\n\nAt times, even in the absence of any news, stock prices can still change due to shifts in demand and supply dynamics."
+                    }
+                  ]
+                },
+                {
+                  "id": 13,
+                  "title": "Compounded Annual Growth Rate (CAGR)",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": "Absolute return can sometimes give a misleading picture when you are comparing two different investments. This is where Compounded Annual Growth Rate (CAGR) becomes useful. CAGR helps answer questions like:\n“I bought Infosys at ₹3030, held the stock for two years, and sold it at ₹3550. What return did this investment generate?”\n\nCAGR incorporates the time factor, which was ignored while calculating absolute returns.\n\nThe formula to calculate CAGR is:\n\nCAGR\n=\n(\nEnding Value\nBeginning Value\n)\n1\nNumber of Years\n−\n1\nCAGR=(\nBeginning Value\nEnding Value\n\t\u200B\n\n)\nNumber of Years\n1\n\t\u200B\n\n−1\n\nApplying this to the example:\n\n(\n3550\n3030\n)\n1\n2\n−\n1\n=\n8.2\n%\n(\n3030\n3550\n\t\u200B\n\n)\n2\n1\n\t\u200B\n\n−1=8.2%\n\nThis implies that the investment grew at an annual rate of 8.2% year-on-year over a period of two years.\n\nConsidering that fixed deposits generally offer returns close to 7% with capital protection, an 8.2% CAGR may not appear very attractive when compared to a fixed deposit.\n\nAs a guideline, use CAGR to evaluate returns over multiple years, and rely on absolute return when your investment horizon is one year or less.\n\nIf you had bought Infosys at ₹3030 and sold it at ₹3550 within six months, the return generated would be 17.16% in six months."
                     }
                   ]
                 }
@@ -594,127 +604,127 @@
             },
             {
               "id": 2,
-              "title": "The way to IPO",
-              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "title": "Indexes",
+              "description": "In this chapter you will understand indexes their importance and how they are useful in real world application or day to day trading. ",
               "image": "stock",
               "slides": [
                 {
                   "id": 1,
-                  "title": "How a business founded ?",
+                  "title": "An overview",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Imagine someone asks you:\n“What’s the traffic situation in your city right now?”\n\nYour city has thousands of roads, but you won’t check each road one by one.\nInstead, you’ll look at a few important roads and junctions in different areas.\n\nIf most of them are crowded → traffic is bad\n\nIf most are smooth → traffic is normal\n\nThose few important roads act as a summary or indicator of the entire city’s traffic.\n\nSame logic applies to the stock market\n\nNow think about the stock market:\n\nThere are ~5,000 companies on BSE\n\n~2,000 companies on NSE\n\nChecking every stock to know how the market is doing is impractical.\n\nSo instead:\n\nWe pick a few important companies\n\nThese companies belong to key industries\n\nWe observe how most of them are moving\n\n\uD83D\uDC49 If most are rising → market is up\n\uD83D\uDC49 If most are falling → market is down\n\uD83D\uDC49 If mixed → market is sideways/flat\n\nWhat is an Index then?\n\nAn Index is:\n\nA collection of selected important stocks\n\nThat represents the overall market\n\nJust like key roads represent city traffic\n\nWhenever someone asks:\n\n“How is the market today?”\n\nYou don’t look at every stock —\nYou simply check the index.\n\n✅ These selected stocks together form the stock market index.\n\nIn one line\n\nAn index is a benchmark that tells you how the overall market is performing by tracking a few representative stocks."
                     }
                   ]
                 },
                 {
                   "id": 2,
-                  "title": "Angel investors",
+                  "title": "Index",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "You do not need to track individual companies one by one to understand how the stock market is performing.\nInstead, a selected group of important companies is continuously monitored to give a quick and accurate sense of overall market movement.\n\nThis pre-packaged indicator of market sentiment is called a Stock Market Index.\n\nAn index acts like a summary of the market, helping investors understand whether the market is generally moving up, down, or sideways.\n\nImportant Indices in India\n\nIndia has several widely tracked stock market indices:\n\nSensex\nRepresents the Bombay Stock Exchange (BSE). It consists of 30 large, well-established companies.\n\nNifty 50\nRepresents the National Stock Exchange (NSE). It consists of 50 actively traded and influential companies.\n\nBank Nifty\nRepresents the banking sector as a whole. It tracks major banking stocks listed on the NSE.\n\nEach of these indices reflects the performance of a specific segment of the market.\n\nWhy “S&P” Sensex?\n\nS&P stands for Standard & Poor’s, a global credit rating and financial analytics company.\n\nS&P provides the technical expertise required to construct and maintain stock market indices.\n\nThis methodology is licensed to the BSE, which is why the index is called S&P BSE Sensex.\n\nFor the NSE:\n\nIndices are maintained by a separate entity called NSE Indices Limited.\n\nWhat Does Nifty 50 Represent?\n\nNifty 50 includes the most frequently traded and liquid stocks on the NSE.\n\nThese companies come from different sectors of the economy.\n\nTogether, they provide a reliable and updated representation of the overall market.\n\nAn ideal index:\n\nReflects market movements accurately\n\nIs regularly updated\n\nRepresents the broader economy, not just one company or sector\n\nIn short\n\nA stock market index is a carefully selected group of stocks that helps you understand how the overall market or a specific sector is performing—without tracking every individual company."
                     }
                   ]
                 },
                 {
                   "id": 3,
-                  "title": "venture capitalists",
+                  "title": "Use of index information",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Practical Uses of a Stock Market Index\n\nSome of the practical uses of a stock market index are discussed in this section.\n\nA stock market index reflects the overall sentiment and trend of the market. It broadly represents the state of the country’s economy.\n\nWhen the index is rising, it indicates that market participants are optimistic about the future.\n\nWhen the index is falling, it suggests pessimism about future economic prospects.\n\nUnderstanding Market Sentiment Using an Index\n\nFor example, the Nifty 50 value on 21st November 2022 was 18,150.\nAround six months earlier, the Nifty 50 was at 15,820.\n\nThis means:\n\nThe index moved up by 2,300 points\n\nA rise of approximately 14.75% in six months\n\nSuch a sharp upward movement indicates bullish sentiment in the market.\nIn other words, market participants were optimistic about the Indian economic future during this period.\n\nIndex Movement Across Different Time Frames\n\nThe time frame used to observe index movement can vary depending on the analysis.\n\nFor instance:\n\nAt 9:30 AM on 21st November, the index was at 18,140\n\nOne hour later, it dropped to 18,099\n\nThis represents a fall of nearly 40 points within an hour.\n\nSuch short-term movement indicates that:\n\nMarket participants were not enthusiastic in the short term\n\nShort-term sentiment can differ from long-term sentiment\n\nKey Takeaway\n\nA stock market index helps assess both long-term and short-term market sentiment\n\nLong-term trends reflect economic outlook\n\nShort-term movements reflect immediate reactions of market participants\n\nThis makes the index a powerful tool to understand how the market is feeling at any given point in time."
                     }
                   ]
                 },
                 {
                   "id": 4,
-                  "title": "Bankers and other investors",
+                  "title": "Practically benchmark index",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "A yardstick is required to measure performance for any trading or investing activity.\n\nAssume that over the last year:\n\nYou invested Rs. 100,000\n\nYou generated a return of Rs. 20,000\n\nYour total corpus became Rs. 120,000\n\nAt first glance, a 20% return appears impressive.\n\nHowever, consider this:\n\nWhat if the Nifty Index gained 30% during the same year?\n\nIn such a case, even though you made money, you actually underperformed the market.\n\nRole of the Index in Performance Evaluation\n\nThe primary objective of most market participants is to outperform the index, not just generate positive returns.\n\nWithout an index:\n\nYou cannot objectively judge how well you performed\n\nReturns lack context\n\nPerformance comparison becomes meaningless\n\nThe index provides a standard benchmark against which:\n\nTrading performance\n\nInvestment returns\n\nPortfolio efficiency\n\ncan be evaluated accurately.\n\nKey Takeaway\n\nAbsolute returns alone do not indicate good performance\n\nReturns must always be compared against a relevant market index\n\nThe index helps determine whether you have outperformed or underperformed the market."
                     }
                   ]
                 },
                 {
                   "id": 5,
-                  "title": "Private Equity Investors",
+                  "title": "How to trade an Index",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Trading on the index is one of the most popular uses of a stock market index.\n\nA majority of traders prefer trading the index rather than individual stocks. This is because index trading allows traders to take a broader view of the economy or overall market conditions and convert that view into a trade.\n\nIndex traders usually take short-term positions, aiming to benefit from near-term movements in the overall market rather than company-specific events.\n\nIllustrative Example\n\nConsider the following situation:\n\nAt 10:30 AM, the Finance Minister is scheduled to deliver the annual budget speech.\nAn hour before the announcement, the Nifty index is trading at 18,150 points.\n\nYou expect the budget to be favorable for the country’s economy.\n\nWhat do you think will happen to the index?\n\nIf the budget is perceived as positive, the index is likely to move upward, as it reflects the performance and expectations of the broader economy.\n\nTo express this view, you may choose to buy the index at 18,150.\n\nOutcome of the Trade\n\nAs expected, the budget announcement is positive.\nThe index rises to 18,450 points.\n\nYou can now:\n\nBook your profits\n\nExit the trade with a 300-point gain\n\nHow Is Index Trading Possible?\n\nTrading on the index is made possible through the derivatives segment of the stock market.\n\nWhile derivatives will be covered in detail later, it is important to understand at this stage that:\n\nDirect buying or selling of an index is not possible\n\nIndex exposure is achieved through derivative instruments\n\nKey Takeaway\n\nIndex trading allows traders to take a view on the overall market or economy\n\nIt is commonly used for short-term trading\n\nSuch trades are executed through the derivatives market"
                     }
                   ]
                 },
                 {
                   "id": 6,
-                  "title": "The Initial public Offering",
+                  "title": "Index-Portfolio Comparison",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Investors typically build a diversified portfolio of stocks.\nA standard equity portfolio often consists of 15 to 20 stocks, usually held with a long-term investment horizon.\n\nEven though these stocks are selected for long-term growth, investors may anticipate periods of prolonged market decline. Historical events such as the 2008 financial crisis demonstrate how broad market downturns can significantly erode portfolio value, even if the underlying companies remain fundamentally strong.\n\nIn such situations, investors can use the stock market index as a hedging tool.\n\nWhat Is Portfolio Hedging?\n\nPortfolio hedging refers to the practice of reducing or offsetting potential losses in an investment portfolio by taking an opposing position elsewhere.\n\nSince most diversified portfolios tend to move in line with the broader market:\n\nA market-wide fall can negatively impact the portfolio\n\nEven strong individual stocks may decline during market stress\n\nBy taking a position on the index, investors can protect their portfolio from large downside risks during adverse market conditions.\n\nRole of the Index in Hedging\n\nThe index represents the overall market movement.\nIf an investor expects a broad market decline, they can use index-based instruments to hedge their portfolio exposure."
                     }
                   ]
                 },
                 {
                   "id": 7,
-                  "title": "Why companies need to list on Market",
+                  "title": "How an index is constructed ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Index Construction Methodology\n\nUnderstanding how a stock market index is constructed is important, especially for participants who intend to trade or analyze the index in depth.\n\nAs discussed earlier, an index is a collection of selected stocks drawn from different sectors of the economy. These stocks together represent the overall state and movement of the economy.\n\nStock Selection Criteria\n\nTo be included in an index, a stock must satisfy certain predefined criteria. These criteria typically relate to:\n\nMarket capitalization\n\nLiquidity\n\nTrading frequency\n\nSector representation\n\nOnce a stock qualifies and becomes part of the index, it must continue to meet these criteria.\nIf a stock fails to maintain the required standards, it is removed and replaced by another eligible stock.\n\nThis ensures that the index remains relevant, representative, and efficient over time.\n\nWeightage of Stocks in an Index\n\nAfter the eligible stocks are selected, each stock is assigned a specific weight within the index.\n\nWeightage determines:\n\nHow much influence a stock has on index movement\n\nThe extent to which price changes in that stock affect the index\n\nFor example, if a stock has a weight of 3.85% in the index, it means approximately 3.85% of the index’s movement can be attributed to that stock’s price movement.\n\nHow Are Weights Assigned?\n\nThere are multiple ways to assign weights, but Indian stock exchanges follow the free-float market capitalization method.\n\nUnder this method:\n\nStocks with a larger free-float market capitalization receive higher weight\n\nStocks with smaller free-float market capitalization receive lower weight\n\nThis approach ensures that companies with greater market participation have a proportionally higher impact on the index.\n\nFree-Float Market Capitalization\n\nFree-float market capitalization is calculated as:\n\nNumber of shares available for public trading × Market price per share\n\nOnly shares that are freely available for trading are considered. Promoter-held shares and restricted shares are excluded.\n\nExample:\nIf a company has:\n\n100 shares available in the market\n\nShare price of ₹50\n\nThen, free-float market capitalization =\n100 × 50 = ₹5,000\n\nImpact of Heavyweight Stocks\n\nStocks with the highest weight in the index are called index heavyweights.\n\nMovements in these stocks have a significant impact on the index level.\nAs a result, the index tends to be more sensitive to price changes in heavyweight stocks compared to lower-weight stocks.\n\nKey Takeaways\n\nAn index is constructed using a defined stock selection process\n\nEach stock is assigned a weight based on free-float market capitalization\n\nHigher market capitalization leads to higher index weight\n\nHeavyweight stocks influence index movement the most"
                     }
                   ]
                 },
                 {
                   "id": 8,
-                  "title": "The merchant bankers",
+                  "title": "Sectoral indices",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Sector-Specific Indices\n\nWhile broad market indices such as the Sensex and Nifty represent the overall stock market, there are indices that track the performance of specific sectors of the economy. These are known as sectoral indices.\n\nSectoral indices help investors and traders understand how a particular industry or sector is performing, independent of the broader market.\n\nExamples of Sectoral Indices\n\nBank Nifty (NSE)\nRepresents the performance and sentiment of the banking sector. It includes major public and private sector banks listed on the NSE.\n\nCNX IT (NSE)\nRepresents the performance of the information technology sector and reflects the collective movement of IT stocks in the market.\n\nBoth the BSE and NSE maintain multiple sector-specific indices covering industries such as banking, IT, FMCG, metals, pharmaceuticals, energy, and infrastructure.\n\nPurpose of Sectoral Indices\n\nSectoral indices are useful for:\n\nTracking sector-specific trends and cycles\n\nComparing performance across different industries\n\nMaking sector rotation decisions\n\nTrading or investing based on industry-level outlooks\n\nConstruction and Maintenance\n\nThe construction and maintenance of sectoral indices follow the same principles as broader market indices:\n\nStock selection based on predefined eligibility criteria\n\nWeight assignment using free-float market capitalization\n\nPeriodic review and rebalancing\n\nThis ensures that sectoral indices remain representative of the sectors they track.\n\nKey Takeaway\n\nBroad indices reflect the overall market\n\nSectoral indices reflect the performance of individual industries\n\nThey provide deeper insight into sector-specific opportunities and risks"
                     }
                   ]
                 },
                 {
                   "id": 9,
-                  "title": "The way to IPO event",
+                  "title": "Indices",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Market Index\n\nFortunately, you do not need to track individual companies to understand how the overall stock market is performing. A selected group of important companies is pre-chosen and continuously monitored to provide a snapshot of the broader market’s performance.\n\nThese pre-selected stocks, when taken together, are referred to as the Market Index.\n\nMajor Market Indices in India\n\nThere are two primary stock market indices in India:\n\nS&P BSE Sensex – Represents the Bombay Stock Exchange (BSE)\n\nNifty 50 – Represents the National Stock Exchange (NSE)\n\nBoth indices are professionally constructed, maintained, and regularly monitored to reflect market sentiment accurately.\n\nAbout the S&P BSE Sensex\n\nS&P stands for Standard & Poor’s, a global credit rating agency.\nS&P provides the technical expertise required to construct the index, which has been licensed to the Bombay Stock Exchange. This is why the index carries the S&P prefix.\n\nAbout the Nifty 50\n\nThe Nifty 50 consists of the largest and most actively traded stocks listed on the National Stock Exchange. These stocks are selected based on liquidity, market capitalization, and representation across key sectors of the economy.\n\nThe Nifty 50 is maintained by India Index Services & Products Limited (IISL), a subsidiary of the NSE.\n\nKey Takeaway\n\nMarket indices provide a quick and reliable measure of overall market performance\n\nSensex represents the BSE, while Nifty 50 represents the NSE\n\nIndices eliminate the need to track individual stocks to understand market direction."
                     }
                   ]
                 },
                 {
                   "id": 10,
-                  "title": "What things happens after listing on Market ?",
+                  "title": "How to benchmark ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Benchmarking Performance Using the Index\n\nFor any trading or investing activity, a benchmark is required to evaluate performance objectively. Consider the following example.\n\nAssume that over the last one year, you invested Rs.100,000 and generated a return of Rs.20,000, resulting in a total corpus of Rs.120,000. On the surface, a 20% return appears to be a strong performance.\n\nHowever, suppose during the same period the Nifty index moved from 10,000 to 13,000, delivering a return of 30%.\n\nUnderstanding Relative Performance\n\nIn this situation, although your investment generated positive returns, it becomes evident that your portfolio underperformed the broader market.\n\nWithout referencing the market index, it would be difficult to determine whether your performance was good or poor. The index provides the necessary context to evaluate results accurately.\n\nRole of the Index as a Benchmark\n\nThe index serves as a benchmark to measure the performance of traders and investors. It allows participants to compare their returns against the broader market.\n\nIn most cases, the objective of a market participant is not merely to generate profits, but to outperform the index.\n\nKey Takeaway\n\nAbsolute returns alone do not indicate true performance\n\nThe index provides a standardized benchmark\n\nPerformance should always be evaluated relative to the market."
                     }
                   ]
                 },
                 {
                   "id": 11,
-                  "title": "Some most important jargon",
+                  "title": "What is market capitalization ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Index Weighting Methodology\n\nThere are several ways to assign weights to the stocks that make up an index. However, Indian stock exchanges follow a methodology known as free-float market capitalization.\n\nUnder this method, the weight assigned to a stock in the index depends on its free-float market capitalization. A company with a higher free-float market capitalization carries a higher weight in the index.\n\nFree-Float Market Capitalization\n\nFree-float market capitalization is calculated as the product of the total number of shares available for trading in the market and the current market price of the stock.\n\nIn simpler terms, it reflects the market value of shares that are actively traded and excludes shares held by promoters or other long-term holders that are not readily available in the market.\n\nIllustrative Example\n\nConsider a company, ABC, with 100 shares outstanding in the market. If the stock price is ₹50, the free-float market capitalization of the company would be:\n\n100 × 50 = ₹5,000\n\nThis value is used to determine the stock’s weight in the index relative to other constituent stocks."
                     }
                   ]
                 },
                 {
                   "id": 12,
-                  "title": "How to take subscription of an IPO",
+                  "title": "What is sector specific ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Sector-Specific Indices\n\nWhile indices such as the Sensex and Nifty represent the broader market, certain indices are designed to track the performance of specific sectors. These are referred to as sector-specific indices.\n\nFor example, the Bank Nifty index on the National Stock Exchange represents the performance of stocks belonging to the banking industry. It reflects the overall sentiment and movement specific to the banking sector.\n\nSimilarly, the IT Index on the National Stock Exchange represents the performance of Information Technology companies listed on the exchange. It captures the collective behavior of IT stocks in the market.\n\nConstruction of Sectoral Indices\n\nBoth the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE) maintain multiple sector-specific indices. The methodology used to construct and maintain these indices is similar to that of the broader market indices.\n\nStocks are selected based on predefined criteria, assigned appropriate weights, and reviewed periodically to ensure accurate representation of the sector.\n\nImportant Note\n\nIt is important to note that not all sector-specific indices are tradable in the same manner as broad indices like the Nifty 50. Some sectoral indices are meant primarily for analysis and benchmarking rather than active trading."
                     }
                   ]
                 }
@@ -722,127 +732,117 @@
             },
             {
               "id": 3,
-              "title": "The way to IPO",
-              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "title": "Common Jargons",
+              "description": "It will help you to understand some commonly/most used jargon in stock market. ",
               "image": "stock",
               "slides": [
                 {
                   "id": 1,
-                  "title": "How a business founded ?",
+                  "title": "Jargon",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Jargons\n\nThis chapter is intended to introduce you to some of the most commonly used terms in the stock market along with their meanings and practical context.\n\nBull Market (Bullish) – When you expect stock prices to rise, you are said to be bullish on the stock. From a broader market viewpoint, if the stock market index shows a sustained upward movement over a period of time, the market is described as being in a bull phase.\nExample – The stock market remained bullish from mid-2020 until early 2022.\n\nBear Market (Bearish) – When you anticipate stock prices to fall, you are considered bearish on the stock. At the market level, if the stock market index declines over a prolonged period, it is referred to as a bear market.\nExample – The market experienced a bearish phase from early 2008 to late 2009.\n\nTrend – The term “trend” generally indicates the overall direction in which the market is moving along with its momentum. For instance, if the market is falling sharply, the prevailing trend is described as bearish. If prices are moving within a narrow range without a clear direction, the trend is said to be sideways."
                     }
                   ]
                 },
                 {
                   "id": 2,
-                  "title": "Angel investors",
+                  "title": "Face Value",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Face value of a stock – The face value (FV), also known as par value, represents the nominal value of a share. Face value is mainly relevant from a corporate actions point of view. Corporate actions will be discussed in a separate chapter.\n\nGenerally, when companies announce dividends, stock splits, or bonus issues, these actions are structured with reference to the face value of the share.\n\nFor example, the face value of Infosys is ₹5. If the company declares an annual dividend of ₹63 per share, this translates to a dividend of 1260%, calculated as 63 divided by 5.\n\nIn short, face value does not indicate the market price of a stock, but it plays an important role in understanding dividends and other corporate announcements."
                     }
                   ]
                 },
                 {
                   "id": 3,
-                  "title": "venture capitalists",
+                  "title": "52-Week & All-time heigh/Low",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "The 52-week high is the highest price at which a stock has traded during the past 52 weeks, which roughly corresponds to one full calendar year.\nSimilarly, the 52-week low represents the lowest price at which the stock has traded during the same 52-week period.\n\nThe 52-week high and low help in understanding the price range within which a stock has moved over the last year. Many traders believe that when a stock approaches or breaks its 52-week high, it may signal a bullish trend in the near future. In the same way, when a stock touches its 52-week low, some traders interpret it as a sign of a bearish trend going forward.\n\nAll-time high / low\n\nThe all-time high is similar in concept to the 52-week high, except that it refers to the highest price the stock has ever traded at since it was first listed on the exchange.\nLikewise, the all-time low is the lowest price at which the stock has ever traded since its listing.\n\nThese levels give a long-term historical perspective of a stock’s price behavior and are often used by investors and traders to assess long-term strength or weakness."
                     }
                   ]
                 },
                 {
                   "id": 4,
-                  "title": "Bankers and other investors",
+                  "title": "What is circuit (Upper and Lower) ?",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "The stock exchange defines a price range within which a stock is allowed to trade on a particular trading day. This range is known as the upper and lower circuit.\n\nThe upper circuit limit is the maximum price a stock can reach during the day, while the lower circuit limit is the minimum price it can fall to. These limits are generally set at 2%, 5%, 10%, or 20%, depending on the stock and the exchange’s predefined criteria.\n\nCircuit limits are imposed to prevent excessive price fluctuations, especially when a stock reacts sharply to company-specific news or events. By restricting extreme price movements, the exchange aims to maintain orderly trading and protect market participants from sudden volatility.\n\nThe rules and limits related to circuits can differ for derivative stocks and indices, and these variations will be discussed in detail at a later stage."
                     }
                   ]
                 },
                 {
                   "id": 5,
-                  "title": "Private Equity Investors",
+                  "title": "Long position",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "A long position, or going long, refers to the direction of a trade where you expect the price of an asset to rise.\n\nFor example, if you have already bought, or plan to buy, shares of Biocon, you are said to be long on Biocon. Similarly, if you buy the Nifty index with the expectation that it will move higher, you are holding a long position on Nifty.\n\nIn simple terms, taking a long position means you are anticipating an upward movement in the price. When a trader or investor holds a long position in a stock or an index, they are considered bullish on that asset."
                     }
                   ]
                 },
                 {
                   "id": 6,
-                  "title": "The Initial public Offering",
+                  "title": "The short position",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "A short position, or going short, refers to a type of transaction where an asset is sold first with the intention of buying it back later at a lower price. This concept can feel a bit counter-intuitive at first, so let’s understand it with a simple real-life example.\n\nAround mid-2014, Xiaomi entered the Indian market through an exclusive partnership with Flipkart to sell its flagship smartphone, the Mi3. The expected price of the phone was around ₹14,000. To purchase the Mi3, users had to be registered on Flipkart, and the registration window was open only for a limited time.\n\nI registered promptly, but my colleague Rajesh did not. Even though he wanted the phone, he couldn’t buy it due to missing the registration deadline.\n\nOut of desperation, Rajesh approached me with an offer. He said he would buy the phone from me for ₹16,500 and asked me to sell it to him immediately. I agreed, even though I didn’t yet own the phone, and Rajesh paid me the money upfront.\n\nAt that point, I had effectively sold a phone that I did not own. However, I knew I could still purchase it later from Flipkart and deliver it to Rajesh. The risk in this situation was simple—if the phone’s actual price turned out to be higher than ₹16,500, I would incur a loss. For instance, if the price had been ₹18,000, the loss would have been ₹1,500 (18,000 − 16,500).\n\nAs it turned out, the phone was priced at ₹14,000 as expected. I bought it from Flipkart, delivered it to Rajesh, and made a profit of ₹2,500 (16,500 − 14,000).\n\nIf you look closely at the sequence of events, I sold the product first and bought it later. This “sell first, buy later” approach is exactly what defines a short trade."
                     }
                   ]
                 },
                 {
                   "id": 7,
-                  "title": "Why companies need to list on Market",
+                  "title": "Very short position",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "The idea of short selling often feels counter-intuitive because, in everyday life, we are not used to selling something we do not own—unless we think like a trader.\n\nLet us return to the stock market with a simple example.\n\nOn day 1, you buy Wipro shares at ₹405. Two days later (day 3), the stock price rises to ₹425, and you sell your shares. In this case, you make a profit of ₹20 per share.\n\nHere,\n\nFirst leg of the trade: Buy Wipro at ₹405\n\nSecond leg of the trade: Sell Wipro at ₹425\n\nYour view was bullish, and the profit came from a rise in price.\n\nNow consider a different situation.\n\nOn day 4, Wipro is trading at ₹425, but you are bearish and believe the stock will fall back to ₹405. Can you still make a profit? Yes—by short selling.\n\nYou sell Wipro at ₹425, and after two days, when the stock falls to ₹405, you buy it back.\n\nIn this case:\n\nFirst leg of the trade: Sell at ₹425\n\nSecond leg of the trade: Buy back at ₹405\n\nThis is how short selling works—you sell first at a higher price and buy later at a lower price.\n\nEffectively, this is the same trade as buying at ₹405 and selling at ₹425, but executed in reverse order.\n\nA common question arises here:\nHow can you sell Wipro shares without owning them?\n\nJust like the earlier example where a phone was sold before owning it, the stock market allows short selling under certain rules.\n\nAn important point to remember is that when you short a stock in the cash segment, you must buy it back on the same day before the market closes. This means short selling in the cash market is strictly an intraday activity.\n\nIn the derivatives segment, however, short positions can be carried forward for multiple days. For now, ignore derivatives and focus on the fact that all cash market short positions must be squared off before market close.\n\nKey Takeaways\n\nWhen you short a stock, you have a bearish view.\n\nYou profit if the stock price falls.\n\nYou incur a loss if the stock price rises.\n\nIn the cash market, short selling requires you to buy back the stock on the same day, unless you are using derivatives.\n\nShorting a stock is simple in execution—you select the stock and place a sell order—but it requires clear understanding and discipline."
                     }
                   ]
                 },
                 {
                   "id": 8,
-                  "title": "The merchant bankers",
+                  "title": "Square-off and Intraday",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Square off is a term used to indicate that you are closing an existing trading position.\n\nIf you hold a long position in a stock, squaring off means selling the stock. When you sell to close a long position, it is not considered short selling—you are simply exiting an already open long trade.\n\nIn the same way, if you are short on a stock, squaring off means buying the stock back. When you repurchase the stock, you are only closing your short position; this action does not mean you are taking a long position.\n\nIn simple terms, squaring off always refers to closing an existing position, regardless of whether the position is long or short.\n\nSummary:\n\nWhen you are long, square off by selling the stock\n\nWhen you are short, square off by buying the stock\n\nIntraday Position\n\nAn intraday position is a trade that is opened with the intention of being squared off on the same trading day.\n\nSuch positions cannot be carried forward to the next day. For example, all short positions in stocks (cash segment) are intraday positions and must be closed before the market closes.\n\nIntraday trading focuses on short-term price movements within a single trading session, and positions are automatically squared off by the broker if they are not closed manually."
                     }
                   ]
                 },
                 {
                   "id": 9,
-                  "title": "The way to IPO event",
+                  "title": "What is OHLC",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "OHLC in stock prices stands for Open, High, Low, and Close. These four values describe the complete price movement of a stock for a single trading day.\n\nOpen is the price at which the stock begins trading for the day.\n\nHigh is the highest price the stock reaches during the trading session.\n\nLow is the lowest price at which the stock trades during the day.\n\nClose is the final trading price of the stock when the market closes.\n\nThese values are widely used in price charts and technical analysis to understand intraday price behavior. The detailed interpretation of OHLC will be covered later in the technical analysis module.\n\nExample:\nIf the OHLC values of ACC on 17th June were 1486, 1511, 1467, and 1499, then:\n\nOpen = 1486\n\nHigh = 1511\n\nLow = 1467\n\nClose = 1499"
                     }
                   ]
                 },
                 {
                   "id": 10,
-                  "title": "What things happens after listing on Market ?",
+                  "title": "Understand Volume",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
+                      "text": "Volume refers to the total number of shares traded in a stock during a specific trading day. It includes both buy and sell transactions combined.\n\nVolume plays an important role in understanding market activity and price movement. A higher volume generally indicates greater participation and interest in a stock, while lower volume suggests reduced trading activity. The relationship between volume and price will be discussed in more detail in the technical analysis module.\n\nExample:\nOn 17th June, if the trading volume of ACC was 5,33,819 shares, it means that a total of 5,33,819 shares of ACC were bought and sold during that trading session."
                     }
                   ]
                 },
                 {
                   "id": 11,
-                  "title": "Some most important jargon",
+                  "title": "Market Segment",
                   "blocks": [
                     {
                       "type": "TEXT",
-                      "text": ""
-                    }
-                  ]
-                },
-                {
-                  "id": 12,
-                  "title": "How to take subscription of an IPO",
-                  "blocks": [
-                    {
-                      "type": "TEXT",
-                      "text": ""
+                      "text": "A market segment refers to a specific division of the stock exchange where a particular category of financial instruments is traded. Each type of instrument differs in terms of risk, return, and trading characteristics. Broadly, the exchange functions through multiple market segments.\n\n1. Capital Market (CM)\n\nThe capital market segment deals with tradable securities such as equity shares and exchange-traded funds (ETFs). Whenever you buy or sell shares of a company, the transaction takes place in the capital market segment.\nShort selling of stocks is also permitted in this segment. The capital market is often referred to as the cash market or spot market.\n\n2. Futures and Options (FO)\n\nThe Futures and Options segment, commonly known as the equity derivatives segment, is where leveraged instruments are traded. This segment allows traders to take positions using futures and options contracts.\nThe derivatives market will be covered in detail in the Futures and Options module.\n\n3. Currency Derivatives Segment (CDS)\n\nThe currency derivatives segment facilitates trading in currency pairs such as USD/INR, EUR/INR, and JPY/INR. Trading in this segment is conducted through futures and options contracts, which is why it is classified as a currency derivative market.\n\n4. Wholesale Debt Market (WDM)\n\nThe wholesale debt market focuses on fixed-income securities, including government bonds, treasury bills, and corporate debt instruments. This segment is primarily used by institutional participants rather than retail traders."
                     }
                   ]
                 }
@@ -1118,6 +1118,390 @@
             },
             {
               "id": 3,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "title": "The way to IPO",
+              "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
+              "image": "stock",
+              "slides": [
+                {
+                  "id": 1,
+                  "title": "How a business founded ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "title": "Angel investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "title": "venture capitalists",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "title": "Bankers and other investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "title": "Private Equity Investors",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "title": "The Initial public Offering",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "title": "Why companies need to list on Market",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "title": "The merchant bankers",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 9,
+                  "title": "The way to IPO event",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 10,
+                  "title": "What things happens after listing on Market ?",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 11,
+                  "title": "Some most important jargon",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 12,
+                  "title": "How to take subscription of an IPO",
+                  "blocks": [
+                    {
+                      "type": "TEXT",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 6,
               "title": "The way to IPO",
               "description": "Read this to understand why companies file for IPO and and how there shares lists in primary market to trade exchange. ",
               "image": "stock",

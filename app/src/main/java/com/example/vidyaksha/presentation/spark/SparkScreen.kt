@@ -164,7 +164,9 @@ fun SparkScreen(
                         fontFamily = rubikMono,
                         fontSize = 25.sp,
                         brush = Brush.linearGradient(
-                            listOf(Color(0xFF3B82F6), Color(0xFF8B5CF6))
+                            listOf(Color(0xFFFF3D00),
+                                Color(0xFFFFC107)
+                            )
                         )
                     )
                 )

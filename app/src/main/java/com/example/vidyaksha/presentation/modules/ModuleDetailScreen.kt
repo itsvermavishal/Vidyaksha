@@ -316,7 +316,7 @@ fun LevelExpandableCard(
                                         brush = if (explored)
                                             Brush.horizontalGradient(
                                                 listOf(
-                                                    Color(0xFF66BB6A),
+                                                    Color(0xFF66BB95),
                                                     Color(0xFF43A047)
                                                 )
                                             )
@@ -357,8 +357,8 @@ fun FireGradientText(
         style = androidx.compose.ui.text.TextStyle(
             brush = Brush.horizontalGradient(
                 colors = listOf(
-                    Color(0xFFFF3D00), // Fire Red
-                    Color(0xFFFFC107)  // Fire Yellow
+                    Color(0xFF3B82F6),// Fire Red
+                    Color(0xFF43A047)  // Fire green
                 )
             )
         )
